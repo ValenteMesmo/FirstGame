@@ -1,0 +1,67 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [igdumdim32.dll 10.18.10.3355]
+    Renderer: Intel(R) HD Graphics Family
+    Vendor:   Intel
+    VRAM:     1792 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 INTZ=1 NULL=1 RESZ=1 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\github\Projetos\Pinball\pinball_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\github\Projetos\Pinball\pinball_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\github\Projetos\Pinball\pinball_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\github\Projetos\Pinball\pinball_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\github\Projetos\Pinball\pinball_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\github\Projetos\Pinball\pinball_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\github\Projetos\Pinball\pinball_Data\Managed\UnityContracts.dll (this message is harmless)
+Loading C:\github\Projetos\Pinball\pinball_Data\Managed\UnityContracts.dll into Unity Child Domain
+Platform assembly: C:\github\Projetos\Pinball\pinball_Data\Managed\WrappedUnity.dll (this message is harmless)
+Loading C:\github\Projetos\Pinball\pinball_Data\Managed\WrappedUnity.dll into Unity Child Domain
+- Completed reload, in  0.129 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\github\Projetos\Pinball\pinball_Data\Managed\System.Core.dll (this message is harmless)
+right
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+left
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+right
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.752415 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 356.
+Total: 0.335132 ms (FindLiveObjects: 0.041501 ms CreateObjectMapping: 0.023651 ms MarkObjects: 0.260162 ms  DeleteObjects: 0.009371 ms)
+
+right
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+central
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.556471 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 356.
+Total: 0.275334 ms (FindLiveObjects: 0.035253 ms CreateObjectMapping: 0.023651 ms MarkObjects: 0.207951 ms  DeleteObjects: 0.006693 ms)
+
+right
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.450264 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 356.
+Total: 0.215537 ms (FindLiveObjects: 0.024989 ms CreateObjectMapping: 0.016957 ms MarkObjects: 0.168681 ms  DeleteObjects: 0.004462 ms)
+
