@@ -13,7 +13,7 @@ public class ChangeCameraOnTriggerEnter : MonoBehaviour
         new WarpOnTriggerEnter(this, TargetPosition.x, TargetPosition.y);
         new MoveCameraOnTriggerEnter(
             this,
-            new WrappedCamera(Camera.current),
+            new WrappedCamera(Camera.main),
             CameraPosition.x,
             CameraPosition.y,
             CameraZoom);
