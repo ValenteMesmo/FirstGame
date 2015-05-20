@@ -11,4 +11,6 @@ public class Ball : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
     }
+
+   
 }
