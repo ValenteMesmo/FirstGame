@@ -8,9 +8,7 @@ public class Ball : MonoBehaviour
         if (other.tag == "Finish")
         {
             GameConstants.Score = 0;
-            Application.LoadLevel(Application.loadedLevel);
+            Application.LoadLevel("menu");
         }
     }
-
-   
 }
