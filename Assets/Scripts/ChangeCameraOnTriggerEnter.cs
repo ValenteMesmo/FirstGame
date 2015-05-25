@@ -4,18 +4,18 @@ using System;
 
 public class ChangeCameraOnTriggerEnter : MonoBehaviour
 {
-    public Vector2 TargetPosition = new Vector2(62f, 7f);
-    public Vector3 CameraPosition = new Vector3(62f, 7f, -20f);
+    public Transform TargetPosition;
+    public Transform CameraPosition;
     public float CameraZoom = 13f;
 
     protected override void OnAwake()
     {
-        new WarpOnTriggerEnter(this, TargetPosition.x, TargetPosition.y);
+        new WarpOnTriggerEnter(this, TargetPosition.position.x, TargetPosition.position.y);
         new MoveCameraOnTriggerEnter(
             this,
             new WrappedCamera(Camera.main),
-            CameraPosition.x,
-            CameraPosition.y,
+            CameraPosition.position.x,
+            CameraPosition.position.y,
             CameraZoom);
     }
 }

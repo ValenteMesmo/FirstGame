@@ -27,11 +27,8 @@ public class DestructibleBoxBehavior : MonoBehaviour {
 
         void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)
         {
-            Debug.Log(e.Tag);
-
             if (e.Tag == "Player")
             {
-                //Animator.SetBool("Hit", true);
                 Animator.PlayAnimation("boxDestroyed");
                 Collider.DisableCollider2D();
             }
