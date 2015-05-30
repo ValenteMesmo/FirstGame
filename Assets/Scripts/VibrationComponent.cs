@@ -21,10 +21,37 @@ public class VibrateOnCollision
         Vibration = vibration;
         Milliseconds = milliseconds;
         collider.OnCollisionEnter += collider_OnCollisionEnter;
+        Logger.Log("OLá!");
     }
 
     void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)
     {
-        Vibration.Vibrate(Milliseconds);
+        try
+        {
+            Vibration.Vibrate(Milliseconds);
+        }
+        catch (System.Exception ex)
+        {
+            Logger.Log(ex.ToString());
+           // GuiTextDebug.debug(ex.ToString());
+        }
     }
+}
+
+
+public static class Logger
+{
+    static GUIText btnTexts;
+    public static void Log(string msg)
+    {
+        if (btnTexts == null)
+        {
+            GameObject go = new GameObject("GUIText ");
+            btnTexts = go.AddComponent < GUIText>();
+            go.transform.position = new Vector3(0.0f, 0.9f, 0.0f);
+            btnTexts.fontSize = 10;
+        }
+        btnTexts.text = msg;
+    }
+
 }
