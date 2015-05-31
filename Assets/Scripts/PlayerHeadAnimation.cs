@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Animator))]
 public class PlayerHeadAnimation : MonoBehaviour {
 
     Animator Animator;

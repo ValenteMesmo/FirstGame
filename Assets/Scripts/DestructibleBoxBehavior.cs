@@ -5,7 +5,7 @@ public class DestructibleBoxBehavior : MonoBehaviour {
 
     protected override void OnAwake()
     {
-        new DestructibleBox(this, this);
+        new DestructibleBox(this,  GetComponent<Animator>());
     }
 
     public void DestroyItself()
