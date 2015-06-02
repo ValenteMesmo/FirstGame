@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Collider2dHandler))]
 public class RepelColliders : MonoBehaviour
 {
     public float ExplosionStrength = 1400f;
 
     protected override void OnAwake()
     {
-        new MyClass(this, ExplosionStrength);
+        new MyClass(GetComponent<Collider2dHandler>(), ExplosionStrength);
     }
 }
 
@@ -17,7 +17,7 @@ public class MyClass
     float ExplosionStrength;
     ITransform Transform;
 
-    public MyClass(ICollider2D collider, float RepelStrength)
+    public MyClass(ICollider2DHandler collider, float RepelStrength)
     {
         ExplosionStrength = RepelStrength;
         Transform = collider;

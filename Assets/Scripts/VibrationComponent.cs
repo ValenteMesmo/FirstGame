@@ -7,7 +7,7 @@ public class VibrationComponent : MonoBehaviour
 
     protected override void OnAwake()
     {
-        new VibrateOnCollision(new VibrationHandler(), this, milliseconds);
+        new VibrateOnCollision(new VibrationHandler(), GetComponent<Collider2dHandler>(), milliseconds);
     }
 }
 
@@ -16,7 +16,7 @@ public class VibrateOnCollision
     IVibration Vibration;
     long Milliseconds;
 
-    public VibrateOnCollision(IVibration vibration, ICollider2D collider, long milliseconds)
+    public VibrateOnCollision(IVibration vibration, ICollider2DHandler collider, long milliseconds)
     {
         Vibration = vibration;
         Milliseconds = milliseconds;
@@ -33,7 +33,7 @@ public class VibrateOnCollision
         catch (System.Exception ex)
         {
             Logger.Log(ex.ToString());
-           // GuiTextDebug.debug(ex.ToString());
+            // GuiTextDebug.debug(ex.ToString());
         }
     }
 }
@@ -47,7 +47,7 @@ public static class Logger
         if (btnTexts == null)
         {
             GameObject go = new GameObject("GUIText ");
-            btnTexts = go.AddComponent < GUIText>();
+            btnTexts = go.AddComponent<GUIText>();
             go.transform.position = new Vector3(0.0f, 0.9f, 0.0f);
             btnTexts.fontSize = 10;
         }

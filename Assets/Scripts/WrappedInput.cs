@@ -3,6 +3,16 @@ using UnityEngine;
 
 public static class WrappedInput2
 {
+    static WrappedInput2()
+    {
+        Application.logMessageReceived += HandleLog;
+    }
+
+    private static void HandleLog(string logString, string stackTrace, LogType type)
+    {
+        Logger.Log(logString);
+    }
+
     public static bool LeftInputUp()
     {
         return CheckLeftTouch(TouchPhase.Ended)

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestructibleBoxBehavior : MonoBehaviour {
-
+public class DestructibleBoxBehavior : MonoBehaviour
+{
     protected override void OnAwake()
     {
-        new DestructibleBox(this,  GetComponent<Animator>());
+        new DestructibleBox(GetComponent<BoxCollider2DHandler>(), GetComponent<AnimatorHandler>());
     }
 
     public void DestroyItself()
@@ -15,10 +15,10 @@ public class DestructibleBoxBehavior : MonoBehaviour {
 
     public class DestructibleBox
     {
-        IAnimator Animator;
-        IBoxCollider2D Collider;
+        IAnimatorHandler Animator;
+        IBoxCollider2DHandler Collider;
 
-        public DestructibleBox(IBoxCollider2D collider, IAnimator animator)
+        public DestructibleBox(IBoxCollider2DHandler collider, IAnimatorHandler animator)
         {
             collider.OnCollisionEnter += collider_OnCollisionEnter;
             Animator = animator;
