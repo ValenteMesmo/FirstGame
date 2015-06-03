@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 
+[RequireComponent(typeof(Trigger2DHandler))]
 public class ChangeCameraOnTriggerEnter : MonoBehaviour
 {
     public Transform TargetPosition;
@@ -10,9 +11,10 @@ public class ChangeCameraOnTriggerEnter : MonoBehaviour
 
     protected override void OnAwake()
     {
-        new WarpOnTriggerEnter(this, TargetPosition.position.x, TargetPosition.position.y);
+        var trigger = GetComponent<Trigger2DHandler>();
+        new WarpOnTriggerEnter(trigger, TargetPosition.position.x, TargetPosition.position.y);
         new MoveCameraOnTriggerEnter(
-            this,
+            trigger,
             new WrappedCamera(Camera.main),
             CameraPosition.position.x,
             CameraPosition.position.y,
@@ -29,7 +31,7 @@ public class MoveCameraOnTriggerEnter
     ICamera Camera;
 
     public MoveCameraOnTriggerEnter(
-        ITrigger2D trigger,
+        ITrigger2DHandler trigger,
         ICamera camera,
         float destiny_x,
         float destiny_y,
@@ -55,7 +57,7 @@ public class WarpOnTriggerEnter
     float Destiny_Y;
 
     public WarpOnTriggerEnter(
-        ITrigger2D trigger,
+        ITrigger2DHandler trigger,
         float destiny_x,
         float destiny_y)
     {

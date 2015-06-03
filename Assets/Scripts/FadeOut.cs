@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRendererHandler))]
 public class FadeOut : MonoBehaviour
 {
     [Range(0.001f, 0.1f)]
@@ -8,16 +9,16 @@ public class FadeOut : MonoBehaviour
 
     protected override void OnAwake()
     {
-        new FadeOutSpriteRenderer(this, this, speed);
+        new FadeOutSpriteRenderer(GetComponent<SpriteRendererHandler>(), this, speed);
     }
 }
 
 public class FadeOutSpriteRenderer
 {
-    ISpriteRenderer SpriteRenderer;
+    ISpriteRendererHandler SpriteRenderer;
     float Speed;
 
-    public FadeOutSpriteRenderer(ISpriteRenderer spriteRenderer, IBehaviour behaviour, float speed)
+    public FadeOutSpriteRenderer(ISpriteRendererHandler spriteRenderer, IMonoBehaviour behaviour, float speed)
     {
         SpriteRenderer = spriteRenderer;
         behaviour.Updating += behaviour_Updating;

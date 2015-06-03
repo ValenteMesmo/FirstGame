@@ -7,7 +7,7 @@ public class VibrationComponent : MonoBehaviour
 
     protected override void OnAwake()
     {
-        new VibrateOnCollision(new VibrationHandler(), GetComponent<Collider2dHandler>(), milliseconds);
+        new VibrateOnCollision(new VibrationHandler(), GetComponent<BaseCollider2DHandler>(), milliseconds);
     }
 }
 

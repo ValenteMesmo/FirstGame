@@ -19,7 +19,7 @@ public class ScaleUpSpriteRenderer
     ITransform transform;
     float Speed;
 
-    public ScaleUpSpriteRenderer(ITransform spriteRenderer, IBehaviour behaviour, float speed)
+    public ScaleUpSpriteRenderer(ITransform spriteRenderer, IMonoBehaviour behaviour, float speed)
     {
         transform = spriteRenderer;
         behaviour.Updating += behaviour_Updating;

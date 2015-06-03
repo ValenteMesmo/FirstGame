@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Collider2dHandler))]
+[RequireComponent(typeof(BaseCollider2DHandler))]
 public class RepelColliders : MonoBehaviour
 {
     public float ExplosionStrength = 1400f;
 
     protected override void OnAwake()
     {
-        new MyClass(GetComponent<Collider2dHandler>(), ExplosionStrength);
+        new MyClass(GetComponent<BaseCollider2DHandler>(), ExplosionStrength);
     }
 }
 
