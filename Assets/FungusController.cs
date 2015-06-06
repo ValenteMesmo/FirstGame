@@ -1,0 +1,104 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class FungusController : MonoBehaviour
+{
+    public BaseCollider2DHandler LeftCollider;
+    public BaseCollider2DHandler MiddleCollider;
+    public BaseCollider2DHandler RightCollider;
+
+    private ISpriteRendererHandler LeftRenderer;
+    private ISpriteRendererHandler RightRenderer;
+    private ISpriteRendererHandler MiddleRenderer;
+
+    private IAnimatorHandler LeftAnimator;
+    private IAnimatorHandler RightAnimator;
+    private IAnimatorHandler MiddleAnimator;
+
+    protected bool leftDown;
+    protected bool middleDown;
+    protected bool rightDown;
+
+    private const string DIE = "die";
+    private const string REVIVE = "revive";
+
+    protected override void OnAwake()
+    {
+        base.OnAwake();
+
+        LeftRenderer = LeftCollider.gameObject.GetComponent<SpriteRendererHandler>();
+        MiddleRenderer = MiddleCollider.gameObject.GetComponent<SpriteRendererHandler>();
+        RightRenderer = RightCollider.gameObject.GetComponent<SpriteRendererHandler>();
+
+       
+
+        LeftAnimator = LeftCollider.gameObject.GetComponent<AnimatorHandler>();
+        MiddleAnimator = MiddleCollider.gameObject.GetComponent<AnimatorHandler>();
+        RightAnimator = RightCollider.gameObject.GetComponent<AnimatorHandler>();
+
+        LeftCollider.OnCollisionEnter += Left_OnCollisionEnter;
+        MiddleCollider.OnCollisionEnter += Middle_OnCollisionEnter;
+        RightCollider.OnCollisionEnter += Right_OnCollisionEnter;
+    }
+
+    void Start()
+    {
+        RightRenderer.SetRenderOrder(2);
+        MiddleRenderer.SetRenderOrder(1);
+        LeftRenderer.SetRenderOrder(0);
+    }
+
+    void Middle_OnCollisionEnter(object sender, Collision2DEventArgs e)
+    {
+        if (e.Tag == "Player")
+        {
+            middleDown = true;
+            MiddleAnimator.SetTrigger(DIE);
+            MiddleCollider.DisableCollider2D();            
+            ResetIfObjectiveComplete();
+        }
+    }
+
+    void Left_OnCollisionEnter(object sender, Collision2DEventArgs e)
+    {
+        if (e.Tag == "Player")
+        {
+            leftDown = true;
+            LeftAnimator.SetTrigger(DIE);
+            LeftCollider.DisableCollider2D();
+            ResetIfObjectiveComplete();
+        }
+    }
+
+    void Right_OnCollisionEnter(object sender, Collision2DEventArgs e)
+    {
+        if (e.Tag == "Player")
+        {
+            rightDown = true;
+            RightAnimator.SetTrigger(DIE);
+            RightCollider.DisableCollider2D();
+            ResetIfObjectiveComplete();
+        }
+    }
+
+    void ResetIfObjectiveComplete()
+    {
+        GameConstants.Score += 10;
+        if (leftDown && middleDown && rightDown)
+        {
+            GameConstants.Score += 500;
+
+            leftDown = false;
+            middleDown = false;
+            rightDown = false;
+
+            MiddleAnimator.SetTrigger(REVIVE);
+            LeftAnimator.SetTrigger(REVIVE);
+            RightAnimator.SetTrigger(REVIVE);
+
+            LeftCollider.EnableCollider2D();
+            MiddleCollider.EnableCollider2D();
+            RightCollider.EnableCollider2D();
+        }
+    }
+}
