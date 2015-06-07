@@ -7,16 +7,16 @@ public class KinghtBehaviour : MonoBehaviour
 {
     //assuming value 3 on animator too
     private int hitPoints = 1;//3;
-    CircleCollider2DHandler collider;
+    CircleCollider2DHandler Collider;
     AnimatorHandler animator;
 
     protected override void OnAwake()
     {
         base.OnAwake();
-        collider = GetComponent<CircleCollider2DHandler>();
+        Collider = GetComponent<CircleCollider2DHandler>();
         animator = GetComponent<AnimatorHandler>();
         
-        collider.OnCollisionEnter += loseOneHitPoints;
+        Collider.OnCollisionEnter += loseOneHitPoints;
     }
 
     void loseOneHitPoints(object sender, Collision2DEventArgs e)
@@ -24,8 +24,8 @@ public class KinghtBehaviour : MonoBehaviour
         animator.SetInt("hitPoints", --hitPoints);
         if (hitPoints <= 0)
         {
-            collider.OnCollisionEnter -= loseOneHitPoints;
-            collider.OnCollisionEnter += die;
+            Collider.OnCollisionEnter -= loseOneHitPoints;
+            Collider.OnCollisionEnter += die;
             Updating += KinghtBehaviour_Updating;
         }
     }
