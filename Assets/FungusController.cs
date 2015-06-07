@@ -7,10 +7,6 @@ public class FungusController : MonoBehaviour
     public BaseCollider2DHandler MiddleCollider;
     public BaseCollider2DHandler RightCollider;
 
-    private ISpriteRendererHandler LeftRenderer;
-    private ISpriteRendererHandler RightRenderer;
-    private ISpriteRendererHandler MiddleRenderer;
-
     private IAnimatorHandler LeftAnimator;
     private IAnimatorHandler RightAnimator;
     private IAnimatorHandler MiddleAnimator;
@@ -26,12 +22,6 @@ public class FungusController : MonoBehaviour
     {
         base.OnAwake();
 
-        LeftRenderer = LeftCollider.gameObject.GetComponent<SpriteRendererHandler>();
-        MiddleRenderer = MiddleCollider.gameObject.GetComponent<SpriteRendererHandler>();
-        RightRenderer = RightCollider.gameObject.GetComponent<SpriteRendererHandler>();
-
-       
-
         LeftAnimator = LeftCollider.gameObject.GetComponent<AnimatorHandler>();
         MiddleAnimator = MiddleCollider.gameObject.GetComponent<AnimatorHandler>();
         RightAnimator = RightCollider.gameObject.GetComponent<AnimatorHandler>();
@@ -41,20 +31,13 @@ public class FungusController : MonoBehaviour
         RightCollider.OnCollisionEnter += Right_OnCollisionEnter;
     }
 
-    void Start()
-    {
-        RightRenderer.SetRenderOrder(2);
-        MiddleRenderer.SetRenderOrder(1);
-        LeftRenderer.SetRenderOrder(0);
-    }
-
     void Middle_OnCollisionEnter(object sender, Collision2DEventArgs e)
     {
         if (e.Tag == "Player")
         {
             middleDown = true;
             MiddleAnimator.SetTrigger(DIE);
-            MiddleCollider.DisableCollider2D();            
+            MiddleCollider.DisableCollider2D();
             ResetIfObjectiveComplete();
         }
     }
@@ -87,18 +70,18 @@ public class FungusController : MonoBehaviour
         if (leftDown && middleDown && rightDown)
         {
             GameConstants.Score += 500;
-
-            leftDown = false;
-            middleDown = false;
-            rightDown = false;
-
-            MiddleAnimator.SetTrigger(REVIVE);
-            LeftAnimator.SetTrigger(REVIVE);
-            RightAnimator.SetTrigger(REVIVE);
-
-            LeftCollider.EnableCollider2D();
-            MiddleCollider.EnableCollider2D();
-            RightCollider.EnableCollider2D();
+            DelayExecution(() =>
+            {
+                leftDown = false;
+                middleDown = false;
+                rightDown = false;
+                MiddleAnimator.SetTrigger(REVIVE);
+                LeftAnimator.SetTrigger(REVIVE);
+                RightAnimator.SetTrigger(REVIVE);
+                LeftCollider.EnableCollider2D();
+                MiddleCollider.EnableCollider2D();
+                RightCollider.EnableCollider2D();
+            }, 3f);
         }
     }
 }
