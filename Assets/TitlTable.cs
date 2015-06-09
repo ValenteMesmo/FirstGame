@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class TitlTable : MonoBehaviour
 {
@@ -10,6 +11,15 @@ public class TitlTable : MonoBehaviour
     void Start()
     {
         Camera = Camera.main;
+        GetComponent<AccelerometerHandler>().OnShakingX += TitlTable_OnShakingX;
+    }
+
+    void TitlTable_OnShakingX(object sender, EventArgs<float> e)
+    {
+        if(e.Value > 0)
+            AddForceOnTilt.AddForce(new Vector2(forceAmount, 0));
+        else
+            AddForceOnTilt.AddForce(new Vector2(-forceAmount, 0));
     }
 
     void Update()
