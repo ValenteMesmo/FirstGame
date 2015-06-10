@@ -98,8 +98,7 @@ public static class WrappedInput2
         return UnityEngine.Input.GetKey(KeyCode.LeftArrow)
             || UnityEngine.Input.GetKey(KeyCode.Z)
             || UnityEngine.Input.GetKey(KeyCode.N)
-            || UnityEngine.Input.GetKey(KeyCode.LeftControl)
-            || UnityEngine.Input.GetKey(KeyCode.Escape);
+            || UnityEngine.Input.GetKey(KeyCode.LeftControl);
     }
 
     private static bool CheckLeftKeyUp()
@@ -107,8 +106,7 @@ public static class WrappedInput2
         return UnityEngine.Input.GetKeyUp(KeyCode.LeftArrow)
             || UnityEngine.Input.GetKeyUp(KeyCode.Z)
             || UnityEngine.Input.GetKeyUp(KeyCode.N)
-            || UnityEngine.Input.GetKeyUp(KeyCode.LeftControl)
-            || UnityEngine.Input.GetKeyUp(KeyCode.Escape);
+            || UnityEngine.Input.GetKeyUp(KeyCode.LeftControl);
     }
 
     private static bool CheckLeftKeyDown()
@@ -116,8 +114,7 @@ public static class WrappedInput2
         return UnityEngine.Input.GetKeyDown(KeyCode.LeftArrow)
             || UnityEngine.Input.GetKeyDown(KeyCode.Z)
             || UnityEngine.Input.GetKeyDown(KeyCode.N)
-            || UnityEngine.Input.GetKeyDown(KeyCode.LeftControl)
-            || UnityEngine.Input.GetKeyDown(KeyCode.Escape);
+            || UnityEngine.Input.GetKeyDown(KeyCode.LeftControl);
     }
 
     private static bool CheckRightKeyPressed()
@@ -125,8 +122,7 @@ public static class WrappedInput2
         return UnityEngine.Input.GetKey(KeyCode.RightArrow)
             || UnityEngine.Input.GetKey(KeyCode.X)
             || UnityEngine.Input.GetKey(KeyCode.M)
-            || UnityEngine.Input.GetKey(KeyCode.RightControl)
-            || UnityEngine.Input.GetKey(KeyCode.Menu);
+            || UnityEngine.Input.GetKey(KeyCode.RightControl);
     }
 
     private static bool CheckRightKeyUp()
@@ -134,8 +130,7 @@ public static class WrappedInput2
         return UnityEngine.Input.GetKeyUp(KeyCode.RightArrow)
             || UnityEngine.Input.GetKeyUp(KeyCode.X)
             || UnityEngine.Input.GetKeyUp(KeyCode.M)
-            || UnityEngine.Input.GetKeyUp(KeyCode.RightControl)
-            || UnityEngine.Input.GetKeyUp(KeyCode.Menu);
+            || UnityEngine.Input.GetKeyUp(KeyCode.RightControl);
     }
 
     private static bool CheckRightKeyDown()
@@ -143,7 +138,6 @@ public static class WrappedInput2
         return UnityEngine.Input.GetKeyDown(KeyCode.RightArrow)
             || UnityEngine.Input.GetKeyDown(KeyCode.X)
             || UnityEngine.Input.GetKeyDown(KeyCode.M)
-            || UnityEngine.Input.GetKeyDown(KeyCode.RightControl)
-            || UnityEngine.Input.GetKeyDown(KeyCode.Menu);
+            || UnityEngine.Input.GetKeyDown(KeyCode.RightControl);
     }
 }
