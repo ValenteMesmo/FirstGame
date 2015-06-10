@@ -46,10 +46,10 @@ public static class Logger
     {
         if (btnTexts == null)
         {
-            GameObject go = new GameObject("GUIText ");
+            GameObject go = new GameObject("GUIText");
             btnTexts = go.AddComponent<GUIText>();
             go.transform.position = new Vector3(0.0f, 0.9f, 0.0f);
-            btnTexts.fontSize = 10;
+            btnTexts.fontSize = 40;
         }
         btnTexts.text = msg;
     }
