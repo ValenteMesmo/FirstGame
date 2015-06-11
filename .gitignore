@@ -1,6 +1,7 @@
 WebPlayerBuild/
 htm5Build/
 BuildWindowsPhone8/
+pinball_Data/
 
 [Ll]ibrary/
 [Tt]emp/
@@ -16,6 +17,7 @@ BuildWindowsPhone8/
 /*.userprefs
 /*.pidb
 /*.booproj
+/*.ncrunchsolution
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
