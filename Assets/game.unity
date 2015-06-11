@@ -684,7 +684,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: .101196535, w: .99486649}
   m_LocalPosition: {x: 13.0299997, y: -26.0500011, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 393261693}
   m_Father: {fileID: 270311281}
   m_RootOrder: 2
 --- !u!61 &233942361
@@ -879,7 +880,7 @@ Transform:
   - {fileID: 1641537636}
   - {fileID: 2052342891}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!212 &296705786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1152,7 +1153,7 @@ Transform:
   m_Children:
   - {fileID: 44011842}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!212 &367692247
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1461,6 +1462,71 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 492574, guid: ffc5a6eb3bbe9734f94ccc946c5007d0, type: 2}
   m_PrefabInternal: {fileID: 2008717765}
+--- !u!1 &393261692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 393261693}
+  - 61: {fileID: 393261696}
+  - 114: {fileID: 393261695}
+  - 114: {fileID: 393261694}
+  m_Layer: 0
+  m_Name: FlipperBlocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &393261693
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393261692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 233942360}
+  m_RootOrder: 0
+--- !u!114 &393261694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393261692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a24a5316b5e30349a0bd8046996e0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &393261695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393261692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1505562071, guid: e34302d489f787f428b200e60d517d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &393261696
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393261692}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10}
 --- !u!4 &444013670 stripped
 Transform:
   m_PrefabParentObject: {fileID: 492574, guid: ffc5a6eb3bbe9734f94ccc946c5007d0, type: 2}
@@ -2366,14 +2432,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 664291947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.8500004, y: 9.97999954, z: 10}
+  m_LocalPosition: {x: 13.0100002, y: 9.57999992, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1883065430}
   - {fileID: 350219731}
   - {fileID: 33929027}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &712150823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,7 +3433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
 --- !u!114 &1291723185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3501,7 +3567,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &1300780169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3837,7 +3903,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1375097056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,7 +4811,7 @@ Transform:
   m_Children:
   - {fileID: 458399855}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!61 &1667603070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5860,7 +5926,7 @@ Transform:
   - {fileID: 38727745}
   - {fileID: 1686939105}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!212 &1943610245
 SpriteRenderer:
   m_ObjectHideFlags: 0

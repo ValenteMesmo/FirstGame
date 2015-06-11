@@ -27,13 +27,13 @@ public abstract class BaseFlipper : MonoBehaviour
 
     void FixedUpdate()
     {
-        //if (GameInfo.FlippersEnabled)
-        //{
+        if (GameFlags.FlippersEnabled)
+        {
             if (CheckButtomPressed())
                 MoveUp();
             else
-                MoveDown(); 
-        //}
+                MoveDown();
+        }
     }
 
     private void MoveDown()

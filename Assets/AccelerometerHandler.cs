@@ -57,3 +57,8 @@ public static class GlobalComponents
         return gameobject.GetComponent<T>();
     }
 }
+
+public static class GameFlags
+{
+    public static bool FlippersEnabled = false;
+}
