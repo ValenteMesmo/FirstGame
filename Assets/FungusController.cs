@@ -18,6 +18,8 @@ public class FungusController : MonoBehaviour
     private const string DIE = "die";
     private const string REVIVE = "revive";
 
+    private ScoreDisplayBehaviour ScoreDisplayBehaviour;
+
     protected override void OnAwake()
     {
         base.OnAwake();
@@ -29,6 +31,8 @@ public class FungusController : MonoBehaviour
         LeftCollider.OnCollisionEnter += Left_OnCollisionEnter;
         MiddleCollider.OnCollisionEnter += Middle_OnCollisionEnter;
         RightCollider.OnCollisionEnter += Right_OnCollisionEnter;
+
+        ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
     }
 
     void Middle_OnCollisionEnter(object sender, Collision2DEventArgs e)
@@ -66,10 +70,10 @@ public class FungusController : MonoBehaviour
 
     void ResetIfObjectiveComplete()
     {
-        GameConstants.Score += 10;
+        ScoreDisplayBehaviour.Score += 10;
         if (leftDown && middleDown && rightDown)
         {
-            GameConstants.Score += 500;
+            ScoreDisplayBehaviour.Score += 500;
             DelayExecution(() =>
             {
                 leftDown = false;

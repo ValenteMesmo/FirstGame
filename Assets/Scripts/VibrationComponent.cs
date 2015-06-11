@@ -21,7 +21,6 @@ public class VibrateOnCollision
         Vibration = vibration;
         Milliseconds = milliseconds;
         collider.OnCollisionEnter += collider_OnCollisionEnter;
-        Logger.Log("OLá!");
     }
 
     void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)

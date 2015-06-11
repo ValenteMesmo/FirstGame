@@ -27,10 +27,13 @@ public abstract class BaseFlipper : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (CheckButtomPressed())
-            MoveUp();
-        else
-            MoveDown();
+        //if (GameInfo.FlippersEnabled)
+        //{
+            if (CheckButtomPressed())
+                MoveUp();
+            else
+                MoveDown(); 
+        //}
     }
 
     private void MoveDown()
@@ -39,9 +42,6 @@ public abstract class BaseFlipper : MonoBehaviour
         {
             keyDown = false;
             rb2D.MoveRotation(rb2D.rotation - speed * Time.fixedDeltaTime);
-            //if(rb2D.rotation < LowerAngleLimit)
-            //    rb2D.MoveRotation(LowerAngleLimit);
-
         }
         else
             rb2D.MoveRotation(LowerAngleLimit);

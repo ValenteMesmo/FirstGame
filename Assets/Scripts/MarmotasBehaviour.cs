@@ -10,6 +10,9 @@ public class MarmotasBehaviour : MonoBehaviour
     SpriteRenderer centralRenderer;
     SpriteRenderer rightRenderer;
 
+    private ColorSequence ColorSequence;
+    private ScoreDisplayBehaviour ScoreDisplayBehaviour;
+
     void Start()
     {
         var left = transform.Find("left");
@@ -29,6 +32,9 @@ public class MarmotasBehaviour : MonoBehaviour
 
         MarmotaController = new MarmotaController();
         MarmotaController.OnAllActivated += MarmotaController_OnAllActivated;
+
+        ColorSequence = GlobalComponents.Get<ColorSequence>();
+        ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
     }
 
     void MarmotaController_OnAllActivated(object sender, EventArgs e)
@@ -36,8 +42,8 @@ public class MarmotasBehaviour : MonoBehaviour
         MarmotaController.ToggleRight();
         MarmotaController.ToggleCentral();
         MarmotaController.ToggleLeft();
-        GameConstants.Score += 1000;
-        GameInfo.ChangeColor();
+        ScoreDisplayBehaviour.Score += 1000;
+        ColorSequence.ChangeColor();
     }
 
     void right_OnPassThru(object sender, EventArgs e)

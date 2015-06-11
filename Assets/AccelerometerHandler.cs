@@ -22,7 +22,6 @@ public class AccelerometerHandler : MonoBehaviour
         if (OnShakingX != null)
         {
             var difference = previousValues - Input.acceleration.x;
-            Debug.Log(difference);
             if (difference > deltaThatTriggerEvents || difference < -deltaThatTriggerEvents)
                 OnShakingX(this, new EventArgs<float>(Input.acceleration.x));
         }
@@ -31,7 +30,6 @@ public class AccelerometerHandler : MonoBehaviour
     }
 }
 
-
 public class EventArgs<T> : EventArgs
 {
     public T Value;
@@ -39,5 +37,23 @@ public class EventArgs<T> : EventArgs
     public EventArgs(T value)
     {
         Value = value;
+    }
+}
+
+public static class GlobalComponents
+{
+    private static GameObject gameobject;
+    private const string GLOBAL_COMPONENTS = "GlobalComponents";
+
+    public static T Get<T>()
+    {
+        if (gameobject == null)
+        {
+            gameobject = GameObject.Find(GLOBAL_COMPONENTS);
+            if (gameobject == null)
+                gameobject = new GameObject(GLOBAL_COMPONENTS);       
+        }
+
+        return gameobject.GetComponent<T>();
     }
 }

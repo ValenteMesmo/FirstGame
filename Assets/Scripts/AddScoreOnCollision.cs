@@ -5,10 +5,16 @@ using System.Collections;
 public class AddScoreOnCollision : MonoBehaviour
 {
     public int Amount = 10;
+    private ScoreDisplayBehaviour ScoreDisplayBehaviour;
+
+    void Start()
+    {
+        ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player")
-            GameConstants.Score += Amount;
+            ScoreDisplayBehaviour.Score += Amount;
     }
 }
