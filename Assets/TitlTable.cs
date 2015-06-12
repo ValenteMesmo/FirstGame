@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class TitlTable : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class TitlTable : MonoBehaviour
     Camera Camera;
     Color CameraColor;
 
+    bool cooldown = false;
+
     void Start()
     {
         Camera = Camera.main;
@@ -16,33 +19,79 @@ public class TitlTable : MonoBehaviour
         GetComponent<AccelerometerHandler>().OnShakingX += TitlTable_OnShakingX;
     }
 
+    bool accelerometerOnCooldown = false;
+
     void TitlTable_OnShakingX(object sender, EventArgs<float> e)
     {
-        if(e.Value > 0)
-            AddForceOnTilt.AddForce(new Vector2(forceAmount, 0));
-        else
-            AddForceOnTilt.AddForce(new Vector2(-forceAmount, 0));
-
-        changeBackgroundColor();
+        if (GameFlags.FlippersEnabled && accelerometerOnCooldown == false)
+        {
+            if (e.Value > 0)
+                ExecuteRightTilt();
+            else
+                ExecuteLeftTilt();
+            accelerometerOnCooldown = true;
+            DelayExecution(() => accelerometerOnCooldown = false, 0.5f);
+        }
     }
 
-    private void changeBackgroundColor()
-    {
-        Camera.backgroundColor = Color.black;
-        DelayExecution(() => { Camera.backgroundColor = CameraColor; }, 0.5f);
-    }
 
     void Update()
     {
-        if (WrappedInput2.TiltLeft())
+        if (GameFlags.FlippersEnabled)
         {
-            AddForceOnTilt.AddForce(new Vector2(-forceAmount, 0));
-            changeBackgroundColor();
+            if (WrappedInput2.TiltLeft())
+                ExecuteLeftTilt();
+            else if (WrappedInput2.TiltRight())
+                ExecuteRightTilt();
         }
-        else if (WrappedInput2.TiltRight())
+    }
+
+    private void ExecuteRightTilt()
+    {
+
+        if (cooldown)
         {
+            GameFlags.FlippersEnabled = false;
+            Camera.backgroundColor = Color.black;
+        }
+        else
+        {
+            SetTiltCooldown();
+            Camera.backgroundColor = Color.grey;
+
             AddForceOnTilt.AddForce(new Vector2(forceAmount, 0));
-            changeBackgroundColor();
+            DelayExecution(() =>
+            {
+                if (GameFlags.FlippersEnabled)
+                    Camera.backgroundColor = CameraColor;
+            }, 0.5f);
+        }
+    }
+
+    private void SetTiltCooldown()
+    {
+        cooldown = true;
+        DelayExecution(() => cooldown = false, UnityEngine.Random.Range(0.1f, 10f));
+    }
+
+    private void ExecuteLeftTilt()
+    {
+        if (cooldown)
+        {
+            GameFlags.FlippersEnabled = false;
+            Camera.backgroundColor = Color.black;
+        }
+        else
+        {
+            SetTiltCooldown();
+            Camera.backgroundColor = Color.grey;
+
+            AddForceOnTilt.AddForce(new Vector2(-forceAmount, 0));
+            DelayExecution(() =>
+            {
+                if (GameFlags.FlippersEnabled)
+                    Camera.backgroundColor = CameraColor;
+            }, 0.5f);
         }
     }
 }

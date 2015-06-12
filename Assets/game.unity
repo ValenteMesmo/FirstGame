@@ -3929,7 +3929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intervalInSeconds: .100000001
-  deltaThatTriggerEvents: 1
+  deltaThatTriggerEvents: .600000024
 --- !u!1001 &1402371135
 Prefab:
   m_ObjectHideFlags: 0

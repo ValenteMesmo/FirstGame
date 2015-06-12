@@ -34,6 +34,8 @@ public abstract class BaseFlipper : MonoBehaviour
             else
                 MoveDown();
         }
+        else
+            MoveDown();
     }
 
     private void MoveDown()
