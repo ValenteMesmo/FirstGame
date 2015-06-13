@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VibrationComponent : MonoBehaviour
+public class VibrateOnCollision : MonoBehaviour
 {
-    public long milliseconds;
+    public long milliseconds =100;
 
     protected override void OnAwake()
     {
-        new VibrateOnCollision(new VibrationHandler(), GetComponent<BaseCollider2DHandler>(), milliseconds);
+        new VibrateOnCollision2(new VibrationHandler(), GetComponent<BaseCollider2DHandler>(), milliseconds);
     }
 }
 
-public class VibrateOnCollision
+public class VibrateOnCollision2
 {
     IVibration Vibration;
     long Milliseconds;
 
-    public VibrateOnCollision(IVibration vibration, ICollider2DHandler collider, long milliseconds)
+    public VibrateOnCollision2(IVibration vibration, ICollider2DHandler collider, long milliseconds)
     {
         Vibration = vibration;
         Milliseconds = milliseconds;

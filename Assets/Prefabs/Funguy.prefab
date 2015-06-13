@@ -62,6 +62,7 @@ GameObject:
   - 95: {fileID: 9587902}
   - 114: {fileID: 11435430}
   - 114: {fileID: 11425180}
+  - 114: {fileID: 11474080}
   m_Layer: 0
   m_Name: Funguy
   m_TagString: Untagged
@@ -195,6 +196,18 @@ MonoBehaviour:
   m_Script: {fileID: -179192559, guid: e34302d489f787f428b200e60d517d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11474080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbbd2ffe464bcd43a4c5f3c64805b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 100
 --- !u!212 &21233210
 SpriteRenderer:
   m_ObjectHideFlags: 1
