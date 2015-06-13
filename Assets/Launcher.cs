@@ -17,6 +17,7 @@ public class Launcher : MonoBehaviour
         var collider = GetComponent<BaseCollider2DHandler>();
         SpriteRendererHandler = GetComponent<SpriteRendererHandler>();
         collider.OnCollisionStay += collider_OnCollisionStay;
+        
     }
 
     void Update()
