@@ -7,7 +7,9 @@ public class Launcher : MonoBehaviour
 {
     float currentPontential = 0f;
     public float potentialIncrement = 10f;
-    public float maximumPotential = 1000f;
+    public float maximumPotential = 4000f;
+    IVibration Vibration;
+    bool vibrating;
 
     ISpriteRendererHandler SpriteRendererHandler;
 
@@ -17,11 +19,26 @@ public class Launcher : MonoBehaviour
         var collider = GetComponent<BaseCollider2DHandler>();
         SpriteRendererHandler = GetComponent<SpriteRendererHandler>();
         collider.OnCollisionStay += collider_OnCollisionStay;
-        
+        Vibration = new VibrationHandler();
     }
+
+
 
     void Update()
     {
+        if (!vibrating && (WrappedInput2.LeftInputPressed() || WrappedInput2.RightInputPressed()) && !GameFlags.FlippersEnabled)
+        {
+            vibrating = true;
+
+            if (currentPontential <= maximumPotential)
+                Vibration.Vibrate(10);
+
+            DelayExecution(() =>
+            {
+                vibrating = false;
+            }, 0.2f);
+        }
+
         SpriteRendererHandler.SetColor((currentPontential / maximumPotential), 0.5f, 0.5f);
     }
 
