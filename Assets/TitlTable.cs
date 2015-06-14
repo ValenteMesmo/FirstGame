@@ -10,6 +10,8 @@ public class TitlTable : MonoBehaviour
     Camera Camera;
     Color CameraColor;
 
+    IVibration vibrationHandler;
+
     bool cooldown = false;
 
     void Start()
@@ -17,6 +19,7 @@ public class TitlTable : MonoBehaviour
         Camera = Camera.main;
         CameraColor = Camera.backgroundColor;
         GetComponent<AccelerometerHandler>().OnShakingX += TitlTable_OnShakingX;
+        vibrationHandler = new VibrationHandler();
     }
 
     bool accelerometerOnCooldown = false;
@@ -65,6 +68,7 @@ public class TitlTable : MonoBehaviour
                 if (GameFlags.FlippersEnabled)
                     Camera.backgroundColor = CameraColor;
             }, 0.5f);
+            vibrationHandler.Vibrate(300);
         }
     }
 
@@ -92,6 +96,7 @@ public class TitlTable : MonoBehaviour
                 if (GameFlags.FlippersEnabled)
                     Camera.backgroundColor = CameraColor;
             }, 0.5f);
+            vibrationHandler.Vibrate(300);
         }
     }
 }

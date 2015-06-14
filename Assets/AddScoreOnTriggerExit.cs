@@ -4,8 +4,6 @@ using System.Collections;
 [RequireComponent(typeof(Trigger2DHandler))]
 public class AddScoreOnTriggerExit : MonoBehaviour
 {
-    private Color OriginalColor;
-    public Color NewColor;
     ScoreDisplayBehaviour Score;
 
     protected override void OnAwake()
