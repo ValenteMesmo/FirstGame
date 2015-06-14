@@ -51,7 +51,7 @@ public static class GlobalComponents
         {
             gameobject = GameObject.Find(GLOBAL_COMPONENTS);
             if (gameobject == null)
-                gameobject = new GameObject(GLOBAL_COMPONENTS);       
+                throw new Exception(string.Format("An gameobject named '{0}' must exist with the components you are looking for!", GLOBAL_COMPONENTS));
         }
 
         return gameobject.GetComponent<T>();
