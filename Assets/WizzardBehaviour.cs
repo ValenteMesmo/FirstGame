@@ -25,25 +25,35 @@ public class WizzardBehaviour : MonoBehaviour
         Vibration = new VibrationHandler();
     }
 
+    public void EnableCollisions()
+    {
+        Collider.EnableCollider2D();
+    }
+
+    public void DisableCollisions()
+    {
+        Collider.DisableCollider2D();
+    }
+
     void onhit(object sender, Collision2DEventArgs e)
     {
         if (e.Tag == "Player")
         {
             animator.SetBool("dead", true);
-            Collider.DisableCollider2D();
 
             Score.Score += 1000;
             Vibration.Vibrate(200);
 
             DelayExecution(() =>
             {
-                transform.position = positions[currentPosition].position;
                 currentPosition++;
                 if (currentPosition > positions.Length - 1)
                     currentPosition = 0;
+
+                transform.position = positions[currentPosition].position;
+
                 animator.SetBool("dead", false);
-                Collider.EnableCollider2D();
-            }, 10); 
+            }, 10);
         }
     }
 }

@@ -33,7 +33,7 @@ public class TitlTable : MonoBehaviour
             else
                 ExecuteLeftTilt();
             accelerometerOnCooldown = true;
-            DelayExecution(() => accelerometerOnCooldown = false, 0.5f);
+            DelayExecution(() => accelerometerOnCooldown = false, 1f);
         }
     }
 
