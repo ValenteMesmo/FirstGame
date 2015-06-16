@@ -17,12 +17,15 @@ public class ScoreDisplayBehaviour : MonoBehaviour
 
     void OnGUI()
     {
-        GUILayout.BeginArea(scoreDisplayArea);
-        GUILayout.BeginHorizontal();
-        GUILayout.FlexibleSpace();
-        GUILayout.Label(string.Format(scoreTextFormat, Score));
-        GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
-        GUILayout.EndArea();
+        if (Score > 0)
+        {
+            GUILayout.BeginArea(scoreDisplayArea);
+            GUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
+            GUILayout.Label(string.Format(scoreTextFormat, Score));
+            GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
+            GUILayout.EndArea();
+        }
     }
 }
