@@ -10,7 +10,7 @@ public class MoveLeftOrRightOnInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (WrappedInput2.LeftInputPressed() && transform.position.x> minX)
+        if (WrappedInput2.LeftInputPressed() && transform.position.x > minX)
         {
             transform.position = new Vector2(transform.position.x - speed, transform.position.y);
         }
