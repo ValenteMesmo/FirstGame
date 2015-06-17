@@ -7,4 +7,12 @@ public class MenuBehaviour : MonoBehaviour {
     {
         Application.LoadLevel("game");
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        {
+            Application.LoadLevel("game");
+        }
+    }
 }
