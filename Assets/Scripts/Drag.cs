@@ -5,7 +5,6 @@ using System.Collections;
 public class Drag : MonoBehaviour
 {
     private Vector2 screenPoint;
-    //private Vector2 offset;
 
     private Vector3 MinPosition;
     public Transform Max;
@@ -28,11 +27,8 @@ public class Drag : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, MinPosition, maxDistPerSecondGoingBack * Time.deltaTime);
     }
 
-    //void OnMouseDown()
-    //{
-    //    //offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-    //}
-
+    //TODO: change to touchinput
+    //TODO: keyboard compatibility
     void OnMouseDrag()
     {
         if (!GameFlags.FlippersEnabled)
@@ -42,7 +38,8 @@ public class Drag : MonoBehaviour
             Vector2 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
 
             if (curPosition.y > Max.position.y && curPosition.y < MinPosition.y)
-                transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z); 
+                //TODO: Vector3.MoveTowards
+                transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z);
         }
     }
 
@@ -51,8 +48,12 @@ public class Drag : MonoBehaviour
         if (!GameFlags.FlippersEnabled && dragging)
         {
             dragging = false;
-            RigidbodyHandler.AddForce(0, MaxPowerLaunch);
+
+            var percentage = -(((transform.position.y - MinPosition.y) / MinPosition.y) * 100);
+            var force = (MaxPowerLaunch / 100) * percentage;
+            
+
+            RigidbodyHandler.AddForce(0, force);
         }
     }
-
 }
