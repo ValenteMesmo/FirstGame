@@ -22,7 +22,7 @@ public class WizzardBehaviour : MonoBehaviour
         Score = GlobalComponents.Get<ScoreDisplayBehaviour>();
 
         Collider.OnCollisionEnter += onhit;
-        Vibration = new VibrationHandler();
+        Vibration = new VibrationHandler(this);
     }
 
     public void EnableCollisions()

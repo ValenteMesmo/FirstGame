@@ -19,6 +19,8 @@ public class Drag : MonoBehaviour
     {
         base.OnAwake();
         MinPosition = transform.position;
+        Vibration = new VibrationHandler(this);
+        yPreviousValue = transform.position.y;
     }
 
     void Update()
@@ -40,8 +42,23 @@ public class Drag : MonoBehaviour
             if (curPosition.y > Max.position.y && curPosition.y < MinPosition.y)
                 //TODO: Vector3.MoveTowards
                 transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z);
+
+            if (!vibrating && curPosition.y < yPreviousValue)
+            {
+                vibrating = true;
+                Vibration.Vibrate(5);
+
+                DelayExecution(() => vibrating = false, 0.05f);
+            }
+            yPreviousValue = curPosition.y;
         }
     }
+
+    bool vibrating;
+
+    float yPreviousValue;
+
+    VibrationHandler Vibration;
 
     void OnMouseUp()
     {
@@ -51,8 +68,8 @@ public class Drag : MonoBehaviour
 
             var percentage = -(((transform.position.y - MinPosition.y) / MinPosition.y) * 100);
             var force = (MaxPowerLaunch / 100) * percentage;
-            
 
+            Vibration.Vibrate(50);
             RigidbodyHandler.AddForce(0, force);
         }
     }

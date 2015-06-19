@@ -12,7 +12,7 @@ public class VibrateOnTriggerEnter : MonoBehaviour {
         base.OnAwake();
         var trigger = GetComponent<Trigger2DHandler>();
         trigger.OnTriggerEnter += trigger_OnTriggerEnter;
-        VibrationHandler = new VibrationHandler();
+        VibrationHandler = new VibrationHandler(this);
     }
 
     void trigger_OnTriggerEnter(object sender, Trigger2DEventArgs e)

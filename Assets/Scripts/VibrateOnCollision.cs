@@ -3,11 +3,11 @@ using System.Collections;
 
 public class VibrateOnCollision : MonoBehaviour
 {
-    public long milliseconds =100;
+    public long milliseconds = 100;
 
     protected override void OnAwake()
     {
-        new VibrateOnCollision2(new VibrationHandler(), GetComponent<BaseCollider2DHandler>(), milliseconds);
+        new VibrateOnCollision2(new VibrationHandler(this), GetComponent<BaseCollider2DHandler>(), milliseconds);
     }
 }
 
@@ -25,15 +25,7 @@ public class VibrateOnCollision2
 
     void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)
     {
-        try
-        {
-            Vibration.Vibrate(Milliseconds);
-        }
-        catch (System.Exception ex)
-        {
-            Logger.Log(ex.ToString());
-            // GuiTextDebug.debug(ex.ToString());
-        }
+        Vibration.Vibrate(Milliseconds);
     }
 }
 

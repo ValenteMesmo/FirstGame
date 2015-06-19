@@ -19,7 +19,7 @@ public class TitlTable : MonoBehaviour
         Camera = Camera.main;
         CameraColor = Camera.backgroundColor;
         GetComponent<AccelerometerHandler>().OnShakingX += TitlTable_OnShakingX;
-        vibrationHandler = new VibrationHandler();
+        vibrationHandler = new VibrationHandler(this);
     }
 
     bool accelerometerOnCooldown = false;
