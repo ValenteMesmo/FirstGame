@@ -1,26 +1,65 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RightFlipper : BaseFlipper
+[RequireComponent(typeof(AudioClipPlus))]
+public class RightFlipper : MonoBehaviour
 {
-    protected override void OnInit()
+    public float speed = 600f;
+    protected float LowerAngleLimit;
+    public float UpperAngleLimit = 45f;
+    protected Rigidbody2D rb2D;
+    bool rightButtomPressed;
+
+    private AudioClipPlus Audio;
+
+    void Awake()
     {
+        rb2D = GetComponent<Rigidbody2D>();
+        Audio = GetComponent<AudioClipPlus>();
+        LowerAngleLimit = (float)System.Math.Round(rb2D.rotation, 2);
         speed = -speed;
         UpperAngleLimit = -UpperAngleLimit;
+        var inputs = GlobalComponents.Get<ControlsPlayerInputs>();
+        inputs.RightButtonUp += inputs_RightButtonUp;
+        inputs.RightButtonDown += inputs_RightButtonDown;
     }
 
-    protected override bool ConditionToMoveUp()
+    void inputs_RightButtonUp(object sender, System.EventArgs e)
     {
-        return rb2D.rotation > UpperAngleLimit;
+        rightButtomPressed = false;
     }
 
-    protected override bool ConditionToMoveDown()
+    void inputs_RightButtonDown(object sender, System.EventArgs e)
     {
-        return rb2D.rotation < LowerAngleLimit;
+        if (GlobalComponents.FlippersEnabled)
+        {
+            rightButtomPressed = true;
+            Audio.Play();
+        }
     }
 
-    protected override bool CheckButtomPressed()
+    void FixedUpdate()
     {
-        return WrappedInput2.GetRightInputPressed();
+        if (rightButtomPressed)
+            MoveUp();
+        else
+            MoveDown();
+    }
+
+    private void MoveDown()
+    {
+        if (rb2D.rotation < LowerAngleLimit)
+            rb2D.MoveRotation(rb2D.rotation - speed * Time.fixedDeltaTime);
+        else
+            rb2D.MoveRotation(LowerAngleLimit);
+    }
+
+    private void MoveUp()
+    {
+        if (rb2D.rotation > UpperAngleLimit)
+            rb2D.MoveRotation(rb2D.rotation + speed * Time.fixedDeltaTime);
+        else
+            rb2D.MoveRotation(UpperAngleLimit);
     }
 }
+

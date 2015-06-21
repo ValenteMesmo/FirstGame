@@ -32,7 +32,7 @@ public class FungusController : MonoBehaviour
         MiddleCollider.OnCollisionEnter += Middle_OnCollisionEnter;
         RightCollider.OnCollisionEnter += Right_OnCollisionEnter;
 
-        ScoreDisplayBehaviour = GlobalComponents.GetGlobalComponent<ScoreDisplayBehaviour>();
+        ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
     }
 
     void Middle_OnCollisionEnter(object sender, Collision2DEventArgs e)

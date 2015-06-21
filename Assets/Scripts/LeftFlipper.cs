@@ -1,19 +1,63 @@
 ﻿using UnityEngine;
 
-public class LeftFlipper : BaseFlipper
+[RequireComponent(typeof(AudioClipPlus))]
+public class LeftFlipper : MonoBehaviour
 {
-    protected override bool ConditionToMoveUp()
+    public float speed = 600f;
+    protected float LowerAngleLimit;
+    public float UpperAngleLimit = 45f;
+    protected Rigidbody2D rb2D;
+    bool leftButtomPressed;
+
+    private AudioClipPlus Audio;
+
+    void Awake()
     {
-        return rb2D.rotation < UpperAngleLimit;
+        rb2D = GetComponent<Rigidbody2D>();
+        Audio = GetComponent<AudioClipPlus>();
+        LowerAngleLimit = (float)System.Math.Round(rb2D.rotation, 2);
+        var inputs = GlobalComponents.Get<ControlsPlayerInputs>();
+        inputs.LeftButtonUp += inputs_LeftButtonUp;
+        inputs.LeftButtonDown += inputs_LeftButtonDown;
     }
 
-    protected override bool ConditionToMoveDown()
+    void inputs_LeftButtonDown(object sender, System.EventArgs e)
     {
-        return rb2D.rotation > LowerAngleLimit;
+        if (GlobalComponents.FlippersEnabled)
+        {
+            leftButtomPressed = true;
+            Audio.Play();
+        }
     }
 
-    protected override bool CheckButtomPressed()
+    void inputs_LeftButtonUp(object sender, System.EventArgs e)
     {
-        return WrappedInput2.GetLeftInputPressed();
+        leftButtomPressed = false;
     }
+
+    void FixedUpdate()
+    {
+        if (leftButtomPressed)
+            MoveUp();
+        else
+            MoveDown();
+    }
+
+    private void MoveDown()
+    {
+        if (rb2D.rotation > LowerAngleLimit)
+            rb2D.MoveRotation(rb2D.rotation - speed * Time.fixedDeltaTime);
+        else
+            rb2D.MoveRotation(LowerAngleLimit);
+    }
+
+    private void MoveUp()
+    {
+        if (rb2D.rotation < UpperAngleLimit)
+            rb2D.MoveRotation(rb2D.rotation + speed * Time.fixedDeltaTime);
+        else
+            rb2D.MoveRotation(UpperAngleLimit);
+    }
+
+
 }

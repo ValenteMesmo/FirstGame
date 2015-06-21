@@ -22,7 +22,7 @@ public class Drag : MonoBehaviour
         Vibration = new VibrationHandler(this);
         yPreviousValue = transform.position.y;
 
-        var input = GlobalComponents.GetGlobalComponent<DetectsTouchOnAnyCollidersInScene>();
+        var input = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
         input.OnTouch += input_OnTouch;
         input.OffTouch += input_OffTouch;
     }

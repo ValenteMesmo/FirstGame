@@ -9,7 +9,7 @@ public class UseGlobalColor : MonoBehaviour
     void Start()
     {
         Renderer = GetComponent<SpriteRenderer>();
-        ColorSequence = GlobalComponents.GetGlobalComponent<ColorSequence>();
+        ColorSequence = GlobalComponents.Get<ColorSequence>();
     }
 
     void Update()

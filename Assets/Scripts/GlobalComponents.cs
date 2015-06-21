@@ -30,7 +30,7 @@ public class GlobalComponents : MonoBehaviour
     }
 
 
-    public static T GetGlobalComponent<T>()
+    public static T Get<T>()
     {
         return Global.GetComponent<T>();
     }

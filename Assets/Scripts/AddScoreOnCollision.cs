@@ -9,7 +9,7 @@ public class AddScoreOnCollision : MonoBehaviour
 
     void Start()
     {
-        ScoreDisplayBehaviour = GlobalComponents.GetGlobalComponent<ScoreDisplayBehaviour>();
+        ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
