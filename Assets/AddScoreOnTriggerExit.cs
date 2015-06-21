@@ -8,7 +8,7 @@ public class AddScoreOnTriggerExit : MonoBehaviour
 
     protected override void OnAwake()
     {
-        Score = GlobalComponents.Get<ScoreDisplayBehaviour>();
+        Score = GlobalComponents.GetGlobalComponent<ScoreDisplayBehaviour>();
         var trigger = GetComponent<Trigger2DHandler>();
         trigger.OnTriggerExit += trigger_OnTriggerExit;
         base.OnAwake();

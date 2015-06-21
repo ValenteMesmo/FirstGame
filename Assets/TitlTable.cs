@@ -26,7 +26,7 @@ public class TitlTable : MonoBehaviour
 
     void TitlTable_OnShakingX(object sender, EventArgs<float> e)
     {
-        if (GameFlags.FlippersEnabled && accelerometerOnCooldown == false)
+        if (GlobalComponents.FlippersEnabled && accelerometerOnCooldown == false)
         {
             if (e.Value > 0)
                 ExecuteRightTilt();
@@ -40,7 +40,7 @@ public class TitlTable : MonoBehaviour
 
     void Update()
     {
-        if (GameFlags.FlippersEnabled)
+        if (GlobalComponents.FlippersEnabled)
         {
             if (WrappedInput2.TiltLeft())
                 ExecuteLeftTilt();
@@ -54,7 +54,7 @@ public class TitlTable : MonoBehaviour
 
         if (cooldown)
         {
-            GameFlags.FlippersEnabled = false;
+            GlobalComponents.FlippersEnabled = false;
             Camera.backgroundColor = Color.black;
         }
         else
@@ -65,7 +65,7 @@ public class TitlTable : MonoBehaviour
             AddForceOnTilt.AddForce(new Vector2(forceAmount, 0));
             DelayExecution(() =>
             {
-                if (GameFlags.FlippersEnabled)
+                if (GlobalComponents.FlippersEnabled)
                     Camera.backgroundColor = CameraColor;
             }, 0.5f);
             vibrationHandler.Vibrate(300);
@@ -82,7 +82,7 @@ public class TitlTable : MonoBehaviour
     {
         if (cooldown)
         {
-            GameFlags.FlippersEnabled = false;
+            GlobalComponents.FlippersEnabled = false;
             Camera.backgroundColor = Color.black;
         }
         else
@@ -93,7 +93,7 @@ public class TitlTable : MonoBehaviour
             AddForceOnTilt.AddForce(new Vector2(-forceAmount, 0));
             DelayExecution(() =>
             {
-                if (GameFlags.FlippersEnabled)
+                if (GlobalComponents.FlippersEnabled)
                     Camera.backgroundColor = CameraColor;
             }, 0.5f);
             vibrationHandler.Vibrate(300);

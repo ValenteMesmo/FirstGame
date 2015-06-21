@@ -27,7 +27,7 @@ public abstract class BaseFlipper : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameFlags.FlippersEnabled)
+        if (GlobalComponents.FlippersEnabled)
         {
             if (CheckButtomPressed())
                 MoveUp();

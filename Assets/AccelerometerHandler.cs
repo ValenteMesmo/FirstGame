@@ -40,25 +40,3 @@ public class EventArgs<T> : EventArgs
     }
 }
 
-public static class GlobalComponents
-{
-    private static GameObject gameobject;
-    private const string GLOBAL_COMPONENTS = "GlobalComponents";
-
-    public static T Get<T>()
-    {
-        if (gameobject == null)
-        {
-            gameobject = GameObject.Find(GLOBAL_COMPONENTS);
-            if (gameobject == null)
-                throw new Exception(string.Format("An gameobject named '{0}' must exist with the components you are looking for!", GLOBAL_COMPONENTS));
-        }
-
-        return gameobject.GetComponent<T>();
-    }
-}
-
-public static class GameFlags
-{
-    public static bool FlippersEnabled = false;
-}

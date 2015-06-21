@@ -4,12 +4,12 @@ using System.Collections;
 public class UseGlobalColor : MonoBehaviour
 {
     SpriteRenderer Renderer;
-    private ColorSequence ColorSequence;
+    private ColorSequence ColorSequence;    
 
     void Start()
     {
         Renderer = GetComponent<SpriteRenderer>();
-        ColorSequence = GlobalComponents.Get<ColorSequence>();
+        ColorSequence = GlobalComponents.GetGlobalComponent<ColorSequence>();
     }
 
     void Update()

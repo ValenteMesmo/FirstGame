@@ -14,6 +14,6 @@ public class LeftFlipper : BaseFlipper
 
     protected override bool CheckButtomPressed()
     {
-        return WrappedInput2.LeftInputPressed();
+        return WrappedInput2.GetLeftInputPressed();
     }
 }

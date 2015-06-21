@@ -16,9 +16,9 @@ public class MovesOnKeyPress : MonoBehaviour {
 
     void Update()
     {
-        if (!GameFlags.FlippersEnabled)
+        if (!GlobalComponents.FlippersEnabled)
         {
-            if (WrappedInput2.LeftInputPressed() || WrappedInput2.RightInputPressed())
+            if (WrappedInput2.GetLeftInputPressed() || WrappedInput2.GetRightInputPressed())
             {
                 transform.position = Vector3.MoveTowards(transform.position, TargetPosition.position, maxDistPerSecond * Time.deltaTime);
             }

@@ -25,7 +25,7 @@ public class Launcher : MonoBehaviour
 
     void Update()
     {
-        if ((WrappedInput2.LeftInputPressed() || WrappedInput2.RightInputPressed()) && !GameFlags.FlippersEnabled)
+        if ((WrappedInput2.GetLeftInputPressed() || WrappedInput2.GetRightInputPressed()) && !GlobalComponents.FlippersEnabled)
         {
             if (currentPontential <= maximumPotential)
                 Vibration.Vibrate(10);
@@ -38,7 +38,7 @@ public class Launcher : MonoBehaviour
     {
         if (e.Rigidbody != null)
         {
-            if (WrappedInput2.LeftInputPressed() || WrappedInput2.RightInputPressed())
+            if (WrappedInput2.GetLeftInputPressed() || WrappedInput2.GetRightInputPressed())
             {
                 currentPontential += potentialIncrement;
             }

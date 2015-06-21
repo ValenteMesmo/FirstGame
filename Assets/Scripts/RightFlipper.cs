@@ -21,6 +21,6 @@ public class RightFlipper : BaseFlipper
 
     protected override bool CheckButtomPressed()
     {
-        return WrappedInput2.RightInputPressed();
+        return WrappedInput2.GetRightInputPressed();
     }
 }

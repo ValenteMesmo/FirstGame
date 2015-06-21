@@ -15,7 +15,7 @@ public class ChangeColorOnCollision : MonoBehaviour
     void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
-        ColorSequence = GlobalComponents.Get<ColorSequence>();
+        ColorSequence = GlobalComponents.GetGlobalComponent<ColorSequence>();
     }
 
     void Update()

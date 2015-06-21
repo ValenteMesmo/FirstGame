@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(Trigger2DHandler))]
 public class DisableFlipperOnTrigger : MonoBehaviour {
-
+    //not used
     protected override void OnAwake()
     {
         base.OnAwake();
@@ -14,11 +14,11 @@ public class DisableFlipperOnTrigger : MonoBehaviour {
 
     void trigger_OnTriggerExit(object sender, Trigger2DEventArgs e)
     {
-        GameFlags.FlippersEnabled = true;
+        GlobalComponents.FlippersEnabled = true;
     }
 
     void trigger_OnTriggerStay(object sender, Trigger2DEventArgs e)
     {
-        GameFlags.FlippersEnabled = false;
+        GlobalComponents.FlippersEnabled = false;
     }
 }

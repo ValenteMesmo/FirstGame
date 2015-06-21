@@ -19,7 +19,7 @@ public class WizzardBehaviour : MonoBehaviour
         Collider = GetComponent<CircleCollider2DHandler>();
         animator = GetComponent<AnimatorHandler>();
 
-        Score = GlobalComponents.Get<ScoreDisplayBehaviour>();
+        Score = GlobalComponents.GetGlobalComponent<ScoreDisplayBehaviour>();
 
         Collider.OnCollisionEnter += onhit;
         Vibration = new VibrationHandler(this);

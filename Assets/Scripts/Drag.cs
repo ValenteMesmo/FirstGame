@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnitySolution.InputComponents;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Drag : MonoBehaviour
@@ -12,8 +13,7 @@ public class Drag : MonoBehaviour
     bool dragging;
 
     public float MaxPowerLaunch = 4000f;
-
-    public RigidBody2DHandler RigidbodyHandler;
+    public LauchCollidingRigidBodies laucher;
 
     protected override void OnAwake()
     {
@@ -21,37 +21,60 @@ public class Drag : MonoBehaviour
         MinPosition = transform.position;
         Vibration = new VibrationHandler(this);
         yPreviousValue = transform.position.y;
+
+        var input = GlobalComponents.GetGlobalComponent<DetectsTouchOnAnyCollidersInScene>();
+        input.OnTouch += input_OnTouch;
+        input.OffTouch += input_OffTouch;
+    }
+
+    void input_OffTouch(object sender, TransformEvevntArgs e)
+    {
+        if (e.Transform.gameObject == gameObject)
+            touchOff();
+    }
+
+    void input_OnTouch(object sender, PointEvevntArgs e)
+    {
+        if (e.Transform.gameObject == gameObject)
+            touchOn(e.Vector2);
     }
 
     void Update()
     {
+        if (WrappedInput2.GetJumpPressed())
+        {
+            touchOn(Camera.main.WorldToScreenPoint(new Vector2(transform.position.x, transform.position.y - 0.1f)));
+        }
+        if (WrappedInput2.GetJumpUp())
+        {
+            touchOff();
+        }
+
+
         if (!dragging && transform.position != MinPosition)
             transform.position = Vector3.MoveTowards(transform.position, MinPosition, maxDistPerSecondGoingBack * Time.deltaTime);
+        
+       
     }
 
-    //TODO: change to touchinput
-    //TODO: keyboard compatibility
-    void OnMouseDrag()
+    private void touchOn(Vector2 point)
     {
-        if (!GameFlags.FlippersEnabled)
+        dragging = true;
+
+        Vector2 curPosition = Camera.main.ScreenToWorldPoint(point);
+
+        if (curPosition.y > Max.position.y && curPosition.y < MinPosition.y)
+            //TODO: Vector3.MoveTowards
+            transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z);
+
+        if (!vibrating && curPosition.y < yPreviousValue)
         {
-            dragging = true;
-            Vector2 curScreenPoint = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
+            vibrating = true;
+            Vibration.Vibrate(5);
 
-            if (curPosition.y > Max.position.y && curPosition.y < MinPosition.y)
-                //TODO: Vector3.MoveTowards
-                transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z);
-
-            if (!vibrating && curPosition.y < yPreviousValue)
-            {
-                vibrating = true;
-                Vibration.Vibrate(5);
-
-                DelayExecution(() => vibrating = false, 0.05f);
-            }
-            yPreviousValue = curPosition.y;
+            DelayExecution(() => vibrating = false, 0.05f);
         }
+        yPreviousValue = curPosition.y;
     }
 
     bool vibrating;
@@ -60,17 +83,21 @@ public class Drag : MonoBehaviour
 
     VibrationHandler Vibration;
 
-    void OnMouseUp()
+    private void touchOff()
     {
-        if (!GameFlags.FlippersEnabled && dragging)
+        dragging = false;
+
+        if (laucher.BodiesCount > 0)
         {
-            dragging = false;
-
             var percentage = -(((transform.position.y - MinPosition.y) / MinPosition.y) * 100);
-            var force = (MaxPowerLaunch / 100) * percentage;
 
-            Vibration.Vibrate(50);
-            RigidbodyHandler.AddForce(0, force);
+            if (percentage > 0.01f)
+            {
+                var force = (MaxPowerLaunch / 100) * percentage;
+
+                Vibration.Vibrate(50);
+                laucher.Launch(force);
+            }
         }
     }
 }

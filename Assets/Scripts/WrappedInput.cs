@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public static class WrappedInput2
 {
-    //TODO: transformar tudo isso em eventos!
+    //TODO: transformar tudo isso em eventos?
     static WrappedInput2()
     {
         Application.logMessageReceived += HandleLog;
@@ -28,70 +25,28 @@ public static class WrappedInput2
        || UnityEngine.Input.GetKeyDown(KeyCode.LeftShift);
     }
 
-    public static bool LeftInputUp()
+    static bool leftInput;
+    public static bool GetLeftInputPressed()
     {
-        return CheckLeftTouch(TouchPhase.Ended)
-            || CheckLeftKeyUp();
+        return leftInput || CheckLeftKey();
     }
 
-    public static bool LeftInputPressed()
+    static bool rightInput;
+    public static bool GetRightInputPressed()
     {
-        return CheckLeftTouch(TouchPhase.Began, TouchPhase.Stationary, TouchPhase.Moved)
-            || CheckLeftKey();
+        return rightInput || CheckRightKeyPressed();
     }
 
-    public static bool RightInputUp()
+    public static void SetRightInput(bool pressed)
     {
-        return CheckRightTouch(TouchPhase.Ended)
-            || CheckRightKeyUp();
+        rightInput = pressed;
     }
 
-    public static bool RightInputPressed()
+    public static void SetLeftInput(bool pressed)
     {
-        return CheckRightTouch(TouchPhase.Began, TouchPhase.Stationary, TouchPhase.Moved)
-            || CheckRightKeyPressed();
+        leftInput = pressed;
     }
 
-    public static bool RightInputDown()
-    {
-        return CheckRightTouch(TouchPhase.Began)
-            || CheckRightKeyDown();
-    }
-
-    public static bool LeftInputDown()
-    {
-        return CheckLeftTouch(TouchPhase.Began)
-         || CheckLeftKeyDown();
-    }
-
-    private static bool CheckRightTouch(params TouchPhase[] phases)
-    {
-        return NewMethod(phases, touch => touch.position.x > Screen.width * 0.5f);
-    }
-
-    private static bool CheckLeftTouch(params TouchPhase[] phases)
-    {
-        return NewMethod(phases, touch => touch.position.x < Screen.width * 0.5f);
-    }
-
-    private static bool NewMethod(TouchPhase[] phases, Func<Touch, bool> AditionalCondition)
-    {
-        for (var i = 0; i < UnityEngine.Input.touchCount; ++i)
-        {
-            Touch touch = UnityEngine.Input.GetTouch(i);
-            foreach (var phase in phases)
-            {
-                if (touch.phase == phase)
-                {
-                    if (AditionalCondition(touch))
-                    {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    }
 
     private static bool CheckLeftKey()
     {
@@ -101,21 +56,7 @@ public static class WrappedInput2
             || UnityEngine.Input.GetKey(KeyCode.LeftControl);
     }
 
-    private static bool CheckLeftKeyUp()
-    {
-        return UnityEngine.Input.GetKeyUp(KeyCode.LeftArrow)
-            || UnityEngine.Input.GetKeyUp(KeyCode.Z)
-            || UnityEngine.Input.GetKeyUp(KeyCode.N)
-            || UnityEngine.Input.GetKeyUp(KeyCode.LeftControl);
-    }
 
-    private static bool CheckLeftKeyDown()
-    {
-        return UnityEngine.Input.GetKeyDown(KeyCode.LeftArrow)
-            || UnityEngine.Input.GetKeyDown(KeyCode.Z)
-            || UnityEngine.Input.GetKeyDown(KeyCode.N)
-            || UnityEngine.Input.GetKeyDown(KeyCode.LeftControl);
-    }
 
     private static bool CheckRightKeyPressed()
     {
@@ -125,19 +66,21 @@ public static class WrappedInput2
             || UnityEngine.Input.GetKey(KeyCode.RightControl);
     }
 
-    private static bool CheckRightKeyUp()
+
+
+    public static void Reset()
     {
-        return UnityEngine.Input.GetKeyUp(KeyCode.RightArrow)
-            || UnityEngine.Input.GetKeyUp(KeyCode.X)
-            || UnityEngine.Input.GetKeyUp(KeyCode.M)
-            || UnityEngine.Input.GetKeyUp(KeyCode.RightControl);
+        leftInput = false;
+        rightInput = false;
     }
 
-    private static bool CheckRightKeyDown()
+    public static bool GetJumpPressed()
     {
-        return UnityEngine.Input.GetKeyDown(KeyCode.RightArrow)
-            || UnityEngine.Input.GetKeyDown(KeyCode.X)
-            || UnityEngine.Input.GetKeyDown(KeyCode.M)
-            || UnityEngine.Input.GetKeyDown(KeyCode.RightControl);
+        return Input.GetButton("Jump");
+    }
+
+    public static bool GetJumpUp()
+    {
+        return Input.GetButtonUp("Jump");
     }
 }

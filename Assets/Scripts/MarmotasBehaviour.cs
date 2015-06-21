@@ -33,8 +33,8 @@ public class MarmotasBehaviour : MonoBehaviour
         MarmotaController = new MarmotaController();
         MarmotaController.OnAllActivated += MarmotaController_OnAllActivated;
 
-        ColorSequence = GlobalComponents.Get<ColorSequence>();
-        ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
+        ColorSequence = GlobalComponents.GetGlobalComponent<ColorSequence>();
+        ScoreDisplayBehaviour = GlobalComponents.GetGlobalComponent<ScoreDisplayBehaviour>();
     }
 
     void MarmotaController_OnAllActivated(object sender, EventArgs e)
@@ -62,11 +62,14 @@ public class MarmotasBehaviour : MonoBehaviour
         MarmotaController.ToggleLeft();
     }
 
+    bool leftButtonDown;
+    bool rightButtonDown;
+
     void Update()
     {
-        if (WrappedInput2.LeftInputDown())
+        if (WrappedInput2.GetLeftInputPressed())
             MarmotaController.ShuffleLeft();
-        if (WrappedInput2.RightInputDown())
+        if (WrappedInput2.GetRightInputPressed())
             MarmotaController.ShuffleRight();
 
         ChangeColors();
