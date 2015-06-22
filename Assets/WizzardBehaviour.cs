@@ -53,7 +53,7 @@ public class WizzardBehaviour : MonoBehaviour
                 transform.position = positions[currentPosition].position;
 
                 animator.SetBool("dead", false);
-            }, 10);
+            }, 5);
         }
     }
 }
