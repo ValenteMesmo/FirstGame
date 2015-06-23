@@ -19,12 +19,16 @@ public class LeftInputOnTouch : MonoBehaviour
     void inputs_OffTouch(object sender, TransformEvevntArgs e)
     {
         if (e.Transform.gameObject == gameObject)
+        {
             inputs.ReleaseLeftButton();
+        }
     }
 
     void inputs_OnTouch(object sender, PointEvevntArgs e)
     {
         if (e.Transform.gameObject == gameObject)
+        {
             inputs.PressLeftButton();
+        }
     }
 }

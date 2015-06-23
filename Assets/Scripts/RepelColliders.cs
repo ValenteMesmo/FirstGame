@@ -1,35 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(BaseCollider2DHandler))]
+[RequireComponent(typeof(Collider2D))]
 public class RepelColliders : MonoBehaviour
 {
     public float ExplosionStrength = 1400f;
 
-    protected override void OnAwake()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        new MyClass(GetComponent<BaseCollider2DHandler>(), ExplosionStrength);
-    }
-}
-
-public class MyClass
-{
-    float ExplosionStrength;
-    ITransform Transform;
-
-    public MyClass(ICollider2DHandler collider, float RepelStrength)
-    {
-        ExplosionStrength = RepelStrength;
-        Transform = collider;
-        collider.OnCollisionEnter += collider_OnCollisionEnter;
-    }
-
-    void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)
-    {
-        if (e.Rigidbody != null)
+        if (collision.rigidbody != null)
         {
-            e.Rigidbody.SetVelocity(e.Rigidbody.VelocityX * 0.5f, e.Rigidbody.VelocityY * 0.5f);
-            e.Rigidbody.AddForceFromDirection(ExplosionStrength, Transform.X, Transform.Y);
+            collision.rigidbody.velocity *= 0.5f;
+            var dir = collision.rigidbody.position - (Vector2)transform.position;
+            collision.rigidbody.AddForce(dir.normalized * ExplosionStrength);
         }
     }
 }
