@@ -16,7 +16,7 @@ PlayerSettings:
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
-  defaultScreenWidthWeb: 960
+  defaultScreenWidthWeb: 800
   defaultScreenHeightWeb: 600
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
@@ -37,7 +37,7 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   defaultIsFullScreen: 1
   defaultIsNativeResolution: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   Override IPod Music: 0
   Prepare IOS For Recording: 0
@@ -410,7 +410,7 @@ PlayerSettings:
   - WebGL::emscriptenArgs
   - WebGL::template
   WebGL::emscriptenArgs: 
-  WebGL::template: APPLICATION:Minimal
+  WebGL::template: APPLICATION:Default
   firstStreamedSceneWithResources: 0
   cloudProjectId: 
   projectId: 
