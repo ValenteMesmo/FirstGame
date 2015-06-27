@@ -748,7 +748,7 @@ GameObject:
   - 114: {fileID: 192785701}
   - 61: {fileID: 192785699}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Laucher Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,7 +761,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 192785697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.80999994, z: 0}
+  m_LocalPosition: {x: 0, y: -1.90999997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 462373405}
@@ -804,7 +804,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 963540357b5d00f4294b2f85576eb14a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 013266b48c1f39e4ca0b458f93a81f67, type: 3}
   m_Color: {r: .0968053564, g: .610294104, b: 0, a: 1}
 --- !u!114 &192785701
 MonoBehaviour:
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Max: {fileID: 160311495}
   maxDistPerSecondGoingBack: 100
-  MaxPowerLaunch: 8000
+  MaxPowerLaunch: 3500
   laucher: {fileID: 233942358}
 --- !u!4 &199645545 stripped
 Transform:
@@ -975,7 +975,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 839d06c1b082c4e4fb6a348f118f7d3a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: .0896551609, a: 1}
 --- !u!4 &233942360
 Transform:
   m_ObjectHideFlags: 0
@@ -2364,7 +2364,7 @@ GameObject:
   - 4: {fileID: 462373405}
   - 96: {fileID: 462373406}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Laucher Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2377,7 +2377,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462373404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.23000002, z: 0}
+  m_LocalPosition: {x: 0, y: .109999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 192785698}
@@ -2406,8 +2406,8 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 1
-  m_StartWidth: 1.29999995
+  m_Time: .5
+  m_StartWidth: 1.79999995
   m_EndWidth: 0
   m_Colors:
     m_Color[0]:
@@ -2415,16 +2415,16 @@ TrailRenderer:
       rgba: 4282544427
     m_Color[1]:
       serializedVersion: 2
-      rgba: 4280841771
+      rgba: 3760748075
     m_Color[2]:
       serializedVersion: 2
-      rgba: 4280709410
+      rgba: 2737205538
     m_Color[3]:
       serializedVersion: 2
-      rgba: 4280381745
+      rgba: 1445032241
     m_Color[4]:
       serializedVersion: 2
-      rgba: 4280179752
+      rgba: 1989672
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
 --- !u!1 &465849489
