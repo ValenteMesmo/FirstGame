@@ -9,11 +9,15 @@ public class ChangeColorOnTriggerStay : MonoBehaviour
     public Color NewColor;
 
     ISpriteRendererHandler SpriteRendererHandler;
-    protected override void OnAwake()
+    protected void Start()
     {
         var trigger = GetComponent<Trigger2DHandler>();
         SpriteRendererHandler = GetComponent<SpriteRendererHandler>();
-        OriginalColor = new Color(SpriteRendererHandler.Red, SpriteRendererHandler.Green, SpriteRendererHandler.Blue, SpriteRendererHandler.Alpha);
+        OriginalColor = new Color(
+            SpriteRendererHandler.Red, 
+            SpriteRendererHandler.Green, 
+            SpriteRendererHandler.Blue, 
+            SpriteRendererHandler.Alpha);
         trigger.OnTriggerStay += trigger_OnTriggerEnter;
         trigger.OnTriggerExit += trigger_OnTriggerExit;
         base.OnAwake();
