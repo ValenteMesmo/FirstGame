@@ -27,8 +27,10 @@ public class GlobalComponents : MonoBehaviour
         FlippersEnabled = true;
         _global.GetComponent<ScoreDisplayBehaviour>().Score = 0;
         WrappedInput2.Reset();
+        BallCount = 1;
     }
 
+    public static int BallCount;
 
     public static T Get<T>()
     {
