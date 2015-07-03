@@ -62,7 +62,6 @@ GameObject:
   - 58: {fileID: 5838438}
   - 114: {fileID: 11491100}
   - 50: {fileID: 5000222}
-  - 114: {fileID: 11407208}
   - 114: {fileID: 11425912}
   - 114: {fileID: 11403790}
   m_Layer: 11
@@ -103,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3000002, y: 22.1000004, z: 10}
+  m_LocalPosition: {x: 12.3199997, y: 38.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486288}
@@ -226,17 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaximunRotationSpeed: 300
---- !u!114 &11407208
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1629e2f300c16234893f999ad6d31761, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11425912
 MonoBehaviour:
   m_ObjectHideFlags: 1

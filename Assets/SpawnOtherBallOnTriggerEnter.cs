@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpawnOtherBallOnTriggerEnter : MonoBehaviour {
+public class SpawnOtherBallOnTriggerEnter : MonoBehaviour
+{
     bool onCooldown;
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player" && !onCooldown)
+        if (col.tag == "Player" && !onCooldown && GlobalComponents.BallCount < 10)
         {
             Instantiate(col.transform.root.gameObject);
             GlobalComponents.BallCount++;
