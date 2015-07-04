@@ -65,7 +65,7 @@ public class Drag : MonoBehaviour
 
         if (curPosition.y > Max.position.y && curPosition.y < MinPosition.y)
             //TODO: Vector3.MoveTowards
-            transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position,new Vector3(transform.position.x, curPosition.y, transform.position.z),0.5f);
 
         if (!vibrating && curPosition.y < yPreviousValue)
         {
