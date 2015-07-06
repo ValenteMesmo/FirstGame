@@ -44,16 +44,19 @@ public class WizzardBehaviour : MonoBehaviour
             Score.Score += 1000;
             Vibration.Vibrate(200);
 
-            DelayExecution(() =>
-            {
-                currentPosition++;
-                if (currentPosition > positions.Length - 1)
-                    currentPosition = 0;
-
-                transform.position = positions[currentPosition].position;
-
-                animator.SetBool("dead", false);
-            }, 5);
+            DelayExecution(ReappearOnNextPosition, 1f);
         }
+    }
+
+    private void ReappearOnNextPosition()
+    {
+        currentPosition++;
+
+        if (currentPosition > positions.Length - 1)
+            currentPosition = 0;
+
+        transform.position = positions[currentPosition].position;
+
+        animator.SetBool("dead", false);
     }
 }

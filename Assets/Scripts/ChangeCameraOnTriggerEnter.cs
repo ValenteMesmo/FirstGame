@@ -2,72 +2,29 @@
 using System.Collections;
 using System;
 
-[RequireComponent(typeof(Trigger2DHandler))]
 public class ChangeCameraOnTriggerEnter : MonoBehaviour
 {
     public Transform TargetPosition;
     public Transform CameraPosition;
     public float CameraZoom = 13f;
 
-    protected override void OnAwake()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        var trigger = GetComponent<Trigger2DHandler>();
-        new WarpOnTriggerEnter(trigger, TargetPosition.position.x, TargetPosition.position.y);
-        new MoveCameraOnTriggerEnter(
-            trigger,
-            new WrappedCamera(Camera.main),
-            CameraPosition.position.x,
-            CameraPosition.position.y,
-            CameraZoom);
-    }
-}
+        Camera.main.transform.position = new Vector3(CameraPosition.position.x, CameraPosition.position.y, Camera.main.transform.position.z);
+        Camera.main.orthographicSize = CameraZoom;
 
-//TODO: mover essas classes para um projeto que não referencie o unityengine dll
-public class MoveCameraOnTriggerEnter
-{
-    float Destiny_X;
-    float Destiny_Y;
-    float Size;
-    ICamera Camera;
+        DisableTrailRendererTemporarily(col);
 
-    public MoveCameraOnTriggerEnter(
-        ITrigger2DHandler trigger,
-        ICamera camera,
-        float destiny_x,
-        float destiny_y,
-        float size)
-    {
-        Camera = camera;
-        Destiny_X = destiny_x;
-        Destiny_Y = destiny_y;
-        Size = size;
-        trigger.OnTriggerEnter += trigger_OnTriggerEnter;
+        col.transform.position = new Vector3(TargetPosition.position.x, TargetPosition.position.y,col.transform.position.z);       
     }
 
-    void trigger_OnTriggerEnter(object sender, Trigger2DEventArgs e)
+    private void DisableTrailRendererTemporarily(Collider2D col)
     {
-        Camera.SetPosition(Destiny_X, Destiny_Y);
-        Camera.Size = Size;
-    }
-}
-
-public class WarpOnTriggerEnter
-{
-    float Destiny_X;
-    float Destiny_Y;
-
-    public WarpOnTriggerEnter(
-        ITrigger2DHandler trigger,
-        float destiny_x,
-        float destiny_y)
-    {
-        Destiny_X = destiny_x;
-        Destiny_Y = destiny_y;
-        trigger.OnTriggerEnter += trigger_OnTriggerEnter;
-    }
-
-    void trigger_OnTriggerEnter(object sender, Trigger2DEventArgs e)
-    {
-        e.Transform.SetPosition(Destiny_X, Destiny_Y);
+        var trail = col.GetComponentInChildren<TrailRenderer>();
+        if (trail != null)
+        {
+            trail.enabled = false;
+            DelayExecution(() => trail.enabled = true, 0.5f);
+        }
     }
 }

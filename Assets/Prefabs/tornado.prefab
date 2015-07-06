@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419000}
-  - 60: {fileID: 6081256}
   - 249: {fileID: 24972310}
   - 61: {fileID: 6123022}
   - 114: {fileID: 11434342}
@@ -28,7 +27,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 402098}
-  - 58: {fileID: 5893482}
   - 212: {fileID: 21255408}
   - 114: {fileID: 11426316}
   - 114: {fileID: 11419580}
@@ -47,7 +45,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401102}
-  - 60: {fileID: 6059156}
   - 249: {fileID: 24936894}
   - 61: {fileID: 6183964}
   - 114: {fileID: 11461102}
@@ -67,7 +64,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 418244}
-  - 60: {fileID: 6068106}
   - 249: {fileID: 24996068}
   - 61: {fileID: 6148756}
   - 114: {fileID: 11406896}
@@ -87,7 +83,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 445816}
-  - 60: {fileID: 6067084}
   - 249: {fileID: 24903822}
   - 61: {fileID: 6169988}
   - 114: {fileID: 11459650}
@@ -118,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 25.1000004, z: 0}
+  m_LocalPosition: {x: 127, y: -111.099998, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 418244}
@@ -163,96 +158,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402098}
   m_RootOrder: 3
---- !u!58 &5893482
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142252}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: .5
---- !u!60 &6059156
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159512}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 1.17980003, y: -.0396871567}
-      - {x: .346666962, y: -.676854432}
-      - {x: .588624835, y: -2.21396637}
-      - {x: 1.28497374, y: -1.83248711}
-      - {x: 1.99013066, y: -1.30098653}
-      - {x: 2.01223993, y: -.0721136704}
---- !u!60 &6067084
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193184}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: .398489624, y: 1.73849583}
-      - {x: 1.14095044, y: 1.02963924}
-      - {x: 1.14144957, y: .156089455}
-      - {x: 2.13429451, y: .375493348}
-      - {x: 1.75564122, y: 2.10721493}
-      - {x: .789724946, y: 2.54911566}
---- !u!60 &6068106
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191342}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -.361792237, y: .204195976}
-      - {x: .205853775, y: -.629463196}
-      - {x: .235226944, y: -1.9085741}
-      - {x: -1.21992743, y: -1.4394362}
-      - {x: -1.65415442, y: -.579090118}
-      - {x: -1.65532112, y: .10307312}
---- !u!60 &6081256
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136648}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -.572096467, y: 1.06277299}
-      - {x: -.999673188, y: .392305046}
-      - {x: -1.73698735, y: .356022507}
-      - {x: -1.40419674, y: 1.84497416}
-      - {x: -.90828526, y: 2.24739504}
-      - {x: .096708931, y: 2.49078274}
-      - {x: .222326905, y: 1.28774953}
 --- !u!61 &6123022
 BoxCollider2D:
   m_ObjectHideFlags: 1
