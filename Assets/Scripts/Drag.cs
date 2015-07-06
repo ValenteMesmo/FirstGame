@@ -50,11 +50,8 @@ public class Drag : MonoBehaviour
             touchOff();
         }
 
-
         if (!dragging && transform.position != MinPosition)
             transform.position = Vector3.MoveTowards(transform.position, MinPosition, maxDistPerSecondGoingBack * Time.deltaTime);
-        
-       
     }
 
     private void touchOn(Vector2 point)
@@ -65,7 +62,7 @@ public class Drag : MonoBehaviour
 
         if (curPosition.y > Max.position.y && curPosition.y < MinPosition.y)
             //TODO: Vector3.MoveTowards
-            transform.position = Vector3.MoveTowards(transform.position,new Vector3(transform.position.x, curPosition.y, transform.position.z),0.5f);
+            transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z);
 
         if (!vibrating && curPosition.y < yPreviousValue)
         {
