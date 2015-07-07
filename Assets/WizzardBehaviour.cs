@@ -41,7 +41,7 @@ public class WizzardBehaviour : MonoBehaviour
         {
             animator.SetBool("dead", true);
 
-            Score.Score += 1000;
+            Score.Score += 100;
             Vibration.Vibrate(200);
 
             DelayExecution(ReappearOnNextPosition, 1f);

@@ -64,7 +64,6 @@ public class TitlTable : MonoBehaviour
         }
 
         vibrationHandler.Vibrate(300);
-
     }
 
     private void SetTiltCooldown()
