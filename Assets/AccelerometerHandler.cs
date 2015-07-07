@@ -4,20 +4,9 @@ using UnityEngine;
 
 public class AccelerometerHandler : MonoBehaviour
 {
-    public float intervalInSeconds = 0.1f;
     public float deltaThatTriggerEvents = 1.0f;
 
-    protected override void OnAwake()
-    {
-        base.OnAwake();
-        DelayExecution(ProcessAccelerometerData, intervalInSeconds);
-    }
-
-    private float previousValues = 0f;
-
-    public event EventHandler<EventArgs<float>> OnShakingX;
-
-    private void ProcessAccelerometerData()
+    void Update()
     {
         if (OnShakingX != null)
         {
@@ -26,8 +15,11 @@ public class AccelerometerHandler : MonoBehaviour
                 OnShakingX(this, new EventArgs<float>(Input.acceleration.x));
         }
         previousValues = Input.acceleration.x;
-        DelayExecution(ProcessAccelerometerData, intervalInSeconds);
     }
+
+    private float previousValues = 0f;
+
+    public event EventHandler<EventArgs<float>> OnShakingX;
 }
 
 public class EventArgs<T> : EventArgs
