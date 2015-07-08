@@ -1,34 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Collider2D))]
 public class VibrateOnCollision : MonoBehaviour
 {
     public long milliseconds = 100;
 
-    protected override void OnAwake()
+    VibrationHandler VibrationHandler;
+
+    void Start()
     {
-        new VibrateOnCollision2(new VibrationHandler(this), GetComponent<BaseCollider2DHandler>(), milliseconds);
+        VibrationHandler = new VibrationHandler(this);
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        VibrationHandler.Vibrate(milliseconds);
     }
 }
-
-public class VibrateOnCollision2
-{
-    IVibration Vibration;
-    long Milliseconds;
-
-    public VibrateOnCollision2(IVibration vibration, ICollider2DHandler collider, long milliseconds)
-    {
-        Vibration = vibration;
-        Milliseconds = milliseconds;
-        collider.OnCollisionEnter += collider_OnCollisionEnter;
-    }
-
-    void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)
-    {
-        Vibration.Vibrate(Milliseconds);
-    }
-}
-
 
 public static class Logger
 {

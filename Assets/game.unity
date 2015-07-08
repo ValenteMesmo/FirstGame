@@ -650,7 +650,7 @@ GameObject:
   m_Layer: 0
   m_Name: laucher Max distance
   m_TagString: Untagged
-  m_Icon: {fileID: 5228209130450103505, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 1638116407661442457, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3497,6 +3497,21 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 492574, guid: ffc5a6eb3bbe9734f94ccc946c5007d0, type: 2}
   m_PrefabInternal: {fileID: 1049907973}
+--- !u!1 &767881360 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 187244, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+  m_PrefabInternal: {fileID: 2018879833}
+--- !u!114 &767881366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 767881360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32667cf75abf794f9c70a66674d9de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &780560499
 Prefab:
   m_ObjectHideFlags: 0
@@ -5847,11 +5862,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffc5a6eb3bbe9734f94ccc946c5007d0, type: 2}
   m_IsPrefabParent: 0
---- !u!50 &1335522458 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 5000222, guid: ac39c82f3afd88d46b441815432fa8ea,
-    type: 2}
-  m_PrefabInternal: {fileID: 2018879833}
 --- !u!1001 &1337474345
 Prefab:
   m_ObjectHideFlags: 0
@@ -6073,7 +6083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081b1d3e2cc7e4b4e99c7f7c191bbd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AddForceOnTilt: {fileID: 1335522458}
   forceAmount: 400
 --- !u!114 &1375097057
 MonoBehaviour:
@@ -6099,6 +6108,7 @@ GameObject:
   - 60: {fileID: 1379450646}
   - 114: {fileID: 1379450645}
   - 114: {fileID: 1379450644}
+  - 114: {fileID: 1379450643}
   m_Layer: 0
   m_Name: fairies_orb
   m_TagString: Untagged
@@ -6139,11 +6149,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1379450640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.26000023, y: 25.0599995, z: 0}
+  m_LocalPosition: {x: 9.86999989, y: 25.0499992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &1379450643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379450640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbbd2ffe464bcd43a4c5f3c64805b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 100
 --- !u!114 &1379450644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6181,14 +6203,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.65398407, y: 2.85295486}
-      - {x: .95105654, y: .309016973}
-      - {x: .976507187, y: -2.62306023}
-      - {x: .597565651, y: -2.38324928}
-      - {x: -1.03843737, y: -2.01920128}
-      - {x: -1.7580986, y: -.26679039}
-      - {x: -1.29465675, y: 1.48548698}
-      - {x: -.886269093, y: 2.43079758}
+    - - {x: -.634049416, y: 2.52178574}
+      - {x: .439204216, y: -.921737671}
+      - {x: -.26448822, y: -2.08946609}
+      - {x: -1.30650806, y: -2.10859871}
+      - {x: -2.05270052, y: -1.24288368}
+      - {x: -2.5865221, y: -.020488739}
+      - {x: -2.45684242, y: 1.82837296}
+      - {x: -1.91363811, y: 2.72791481}
 --- !u!4 &1383848402 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
