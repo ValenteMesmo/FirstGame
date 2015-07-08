@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class GlobalComponents : MonoBehaviour
 {
@@ -27,10 +28,13 @@ public class GlobalComponents : MonoBehaviour
         FlippersEnabled = true;
         _global.GetComponent<ScoreDisplayBehaviour>().Score = 0;
         WrappedInput2.Reset();
-        BallCount = 1;
+        //BallCount = 1;
+        Balls.Clear();
     }
 
-    public static int BallCount;
+    public static List<Rigidbody2D> Balls = new List<Rigidbody2D>();
+
+    //public static int BallCount;
 
     public static T Get<T>()
     {

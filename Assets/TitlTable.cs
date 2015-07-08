@@ -2,7 +2,6 @@
 
 public class TitlTable : MonoBehaviour
 {
-    public Rigidbody2D AddForceOnTilt;
     public float forceAmount = 200f;
     Camera Camera;
     Color CameraColor;
@@ -33,7 +32,7 @@ public class TitlTable : MonoBehaviour
             DelayExecution(() => accelerometerOnCooldown = false, 0.5f);
         }
     }
-    
+
     void Update()
     {
         if (WrappedInput2.TiltLeft())
@@ -55,7 +54,11 @@ public class TitlTable : MonoBehaviour
             if (GlobalComponents.FlippersEnabled)
                 Camera.backgroundColor = Color.grey;
 
-            AddForceOnTilt.AddForce(new Vector2(forceAmount, 0));
+            foreach (var ball in GlobalComponents.Balls)
+            {
+                ball.AddForce(new Vector2(forceAmount, 0));
+            }
+
             DelayExecution(() =>
             {
                 if (GlobalComponents.FlippersEnabled)

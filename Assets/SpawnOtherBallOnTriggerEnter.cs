@@ -7,10 +7,9 @@ public class SpawnOtherBallOnTriggerEnter : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player" && !onCooldown && GlobalComponents.BallCount < 10)
+        if (col.tag == "Player" && !onCooldown && GlobalComponents.Balls.Count < 10)
         {
             Instantiate(col.transform.root.gameObject);
-            GlobalComponents.BallCount++;
             onCooldown = true;
             DelayExecution(() => { onCooldown = false; }, 2f);
         }
