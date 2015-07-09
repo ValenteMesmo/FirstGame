@@ -4,6 +4,9 @@ using UnityEngine;
 public class GlobalComponents : MonoBehaviour
 {
     public static bool FlippersEnabled;
+    public static List<Rigidbody2D> Balls = new List<Rigidbody2D>();
+    public static bool HideFireflyWave;
+
     private static GlobalComponents _global;
     protected static GlobalComponents Global
     {
@@ -28,13 +31,9 @@ public class GlobalComponents : MonoBehaviour
         FlippersEnabled = true;
         _global.GetComponent<ScoreDisplayBehaviour>().Score = 0;
         WrappedInput2.Reset();
-        //BallCount = 1;
+        HideFireflyWave = true;
         Balls.Clear();
     }
-
-    public static List<Rigidbody2D> Balls = new List<Rigidbody2D>();
-
-    //public static int BallCount;
 
     public static T Get<T>()
     {

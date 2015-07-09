@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(Animator))]
 public class SetAnimatorBooleanOnCollisionEnter : MonoBehaviour
@@ -15,6 +14,6 @@ public class SetAnimatorBooleanOnCollisionEnter : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Animator.SetBool(ParameterName,true);
+        Animator.SetBool(ParameterName, ParameterValue);
     }
 }

@@ -13,9 +13,8 @@ GameObject:
   - 114: {fileID: 11481260}
   - 58: {fileID: 5882692}
   - 114: {fileID: 11429060}
-  - 114: {fileID: 11444076}
   - 95: {fileID: 9555708}
-  - 114: {fileID: 11444182}
+  - 114: {fileID: 11462190}
   m_Layer: 0
   m_Name: phantom wizard
   m_TagString: Untagged
@@ -77,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Amount: 10
---- !u!114 &11444076
+--- !u!114 &11462190
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,20 +84,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 106558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fae5f82800beb4c907196e5d2d54ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParameterName: dead
-  ParameterValue: 1
---- !u!114 &11444182
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f6d365aa10f4148bcf3cff275fcea5, type: 3}
+  m_Script: {fileID: 11500000, guid: d5549022aeabfe04091e97b66da34243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11472320
@@ -150,9 +136,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07c5220b5b5e0734aa7af08ad1b998aa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: .331}
+  m_SortingOrder: 30
+  m_Sprite: {fileID: 21300000, guid: 8bda0317698cf9b43aef40d05d92328d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
