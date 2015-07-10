@@ -19,9 +19,9 @@ public class SetAnimatorBoolBasedOnGlobalComponents : MonoBehaviour
             currentIsDead = false;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.collider.tag == "Player" && currentIsDead == false)
+        if (col.tag == "Player" && currentIsDead == false)
         {
             currentIsDead = true;
         }

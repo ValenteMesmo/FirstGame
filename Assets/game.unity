@@ -3254,7 +3254,7 @@ PolygonCollider2D:
 --- !u!4 &649655903 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-  m_PrefabInternal: {fileID: 1629189112}
+  m_PrefabInternal: {fileID: 1843648103}
 --- !u!4 &654082274 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
@@ -7203,52 +7203,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 431600, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
   m_PrefabInternal: {fileID: 393066847}
---- !u!1001 &1629189112
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1845634398}
-    m_Modifications:
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .699999988
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 20.7000008
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 29.6328125
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_Name
-      value: phantom wizard (8)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1636189210 stripped
 Transform:
   m_PrefabParentObject: {fileID: 461806, guid: 359bd8258e8bccb40bcd3683f50d46cd, type: 2}
@@ -8491,6 +8445,52 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 11717299}
   m_Script: {fileID: 779504259, guid: e34302d489f787f428b200e60d517d80, type: 3}
+--- !u!1001 &1843648103
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1845634398}
+    m_Modifications:
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 20.7000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.6328125
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_Name
+      value: phantom wizard (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1845634397
 GameObject:
   m_ObjectHideFlags: 0

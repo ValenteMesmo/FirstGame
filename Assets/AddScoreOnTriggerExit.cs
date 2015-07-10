@@ -1,21 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Trigger2DHandler))]
 public class AddScoreOnTriggerExit : MonoBehaviour
 {
     ScoreDisplayBehaviour Score;
 
-    protected override void OnAwake()
+    void Start()
     {
         Score = GlobalComponents.Get<ScoreDisplayBehaviour>();
-        var trigger = GetComponent<Trigger2DHandler>();
-        trigger.OnTriggerExit += trigger_OnTriggerExit;
-        base.OnAwake();
     }
 
-    void trigger_OnTriggerExit(object sender, Trigger2DEventArgs e)
+    void OnTriggerExit2D(Collider2D col)
     {
-        Score.Score += 10;
+        if (col.tag == "Player")
+            Score.Score += 10;
     }
 }
