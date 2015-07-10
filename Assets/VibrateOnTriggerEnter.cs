@@ -1,22 +1,18 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-[RequireComponent(typeof(Trigger2DHandler))]
-public class VibrateOnTriggerEnter : MonoBehaviour {
-
+public class VibrateOnTriggerEnter : MonoBehaviour
+{
     IVibration VibrationHandler;
     public long duration = 100;
 
-    protected override void OnAwake()
+    void Start()
     {
-        base.OnAwake();
-        var trigger = GetComponent<Trigger2DHandler>();
-        trigger.OnTriggerEnter += trigger_OnTriggerEnter;
         VibrationHandler = new VibrationHandler(this);
     }
 
-    void trigger_OnTriggerEnter(object sender, Trigger2DEventArgs e)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        VibrationHandler.Vibrate(duration);
+        if (col.tag == "Player")
+            VibrationHandler.Vibrate(duration);
     }
 }

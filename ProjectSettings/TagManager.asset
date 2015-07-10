@@ -40,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Bot
+    uniqueID: 659791581
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 880450911
     locked: 0

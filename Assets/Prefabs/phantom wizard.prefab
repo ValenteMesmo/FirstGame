@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11429060}
   - 95: {fileID: 9555708}
   - 114: {fileID: 11462190}
+  - 114: {fileID: 11423214}
   m_Layer: 0
   m_Name: phantom wizard
   m_TagString: Untagged
@@ -64,6 +65,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11423214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb04151323f90743b81111174b120cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 20
 --- !u!114 &11429060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,7 +147,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 880450911
   m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 8bda0317698cf9b43aef40d05d92328d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
