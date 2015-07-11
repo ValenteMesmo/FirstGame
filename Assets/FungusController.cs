@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class FungusController : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class FungusController : MonoBehaviour
     private const string REVIVE = "revive";
 
     private ScoreDisplayBehaviour ScoreDisplayBehaviour;
+
+    public event EventHandler FungusDestroyed;
 
     protected override void OnAwake()
     {
@@ -73,6 +76,9 @@ public class FungusController : MonoBehaviour
         ScoreDisplayBehaviour.Score += 10;
         if (leftDown && middleDown && rightDown)
         {
+            if (FungusDestroyed != null)
+                FungusDestroyed(this, null);
+
             ScoreDisplayBehaviour.Score += 500;
             DelayExecution(() =>
             {

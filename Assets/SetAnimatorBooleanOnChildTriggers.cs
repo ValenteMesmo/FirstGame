@@ -9,8 +9,6 @@ public class SetAnimatorBooleanOnChildTriggers : MonoBehaviour
 
     Animator Animator;
 
-    private int numberOfObjectsOnTrigger = 0;
-
     void Start()
     {
         if (string.IsNullOrEmpty(ParameterName))
@@ -22,6 +20,15 @@ public class SetAnimatorBooleanOnChildTriggers : MonoBehaviour
         {
             trigger.Enter += trigger_Enter;
             trigger.Exit += trigger_Exit;
+            trigger.Stay += trigger_Stay;
+        }
+    }
+
+    void trigger_Stay(object sender, TriggerEventArgs e)
+    {
+        if (e.Collider.tag == "Player")
+        {
+            Animator.SetBool(ParameterName, true);
         }
     }
 
@@ -29,8 +36,7 @@ public class SetAnimatorBooleanOnChildTriggers : MonoBehaviour
     {
         if (e.Collider.tag == "Player")
         {
-            numberOfObjectsOnTrigger--;
-            Animator.SetBool(ParameterName, numberOfObjectsOnTrigger > 0);
+            Animator.SetBool(ParameterName, false);
         }
     }
 
@@ -38,8 +44,7 @@ public class SetAnimatorBooleanOnChildTriggers : MonoBehaviour
     {
         if (e.Collider.tag == "Player")
         {
-            numberOfObjectsOnTrigger++;
-            Animator.SetBool(ParameterName, numberOfObjectsOnTrigger > 0);
+            Animator.SetBool(ParameterName, true);
         }
     }
 }
