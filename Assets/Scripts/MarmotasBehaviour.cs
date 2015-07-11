@@ -51,6 +51,8 @@ public class MarmotasBehaviour : MonoBehaviour
         MarmotaController.ShuffleLeft();        
     }
 
+    public event EventHandler OnObjectiveAchieved;
+
     void MarmotaController_OnAllActivated(object sender, EventArgs e)
     {
         MarmotaController.ToggleRight();
@@ -58,6 +60,9 @@ public class MarmotasBehaviour : MonoBehaviour
         MarmotaController.ToggleLeft();
         ScoreDisplayBehaviour.Score += 1000;
         ColorSequence.ChangeColor();
+
+        if (OnObjectiveAchieved != null)
+            OnObjectiveAchieved(this, null);
     }
 
     void right_OnPassThru(object sender, EventArgs e)

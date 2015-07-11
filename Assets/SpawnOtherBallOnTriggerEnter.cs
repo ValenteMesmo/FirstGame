@@ -9,7 +9,8 @@ public class SpawnOtherBallOnTriggerEnter : MonoBehaviour
     {
         if (col.tag == "Player" && !onCooldown && GlobalComponents.Balls.Count < 10)
         {
-            Instantiate(col.transform.root.gameObject);
+            var newBall = Instantiate(col.transform.root.gameObject);
+            newBall.GetComponentInChildren<Rigidbody2D>().velocity = col.GetComponentInChildren<Rigidbody2D>().velocity;
             onCooldown = true;
             DelayExecution(() => { onCooldown = false; }, 2f);
         }
