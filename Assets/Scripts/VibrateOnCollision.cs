@@ -19,7 +19,7 @@ public class VibrateOnCollision : MonoBehaviour
     }
 }
 
-public static class Logger
+public static class Logger2
 {
     static GUIText btnTexts;
     public static void Log(string msg)

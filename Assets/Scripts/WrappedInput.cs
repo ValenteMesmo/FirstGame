@@ -11,7 +11,7 @@ public static class WrappedInput2
 
     private static void HandleLog(string logString, string stackTrace, LogType type)
     {
-        Logger.Log(logString);
+        Logger2.Log(logString);
     }
 
     public static bool TiltRight()

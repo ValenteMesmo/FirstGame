@@ -1,11 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
+using GooglePlayGames;
 
-public class MenuBehaviour : MonoBehaviour {
+public class MenuBehaviour : MonoBehaviour
+{
+    void Start()
+    {
+        PlayGamesPlatform.Activate();
+    }
 
-	public void StartGameScene()
+    public void StartGameScene()
     {
         Application.LoadLevel("game");
+    }
+
+    public void Login()
+    {
+        Social.localUser.Authenticate(success =>
+        {
+            if (success)
+            {
+                Debug.Log("You've successfully logged in");
+            }
+            else
+            {
+                Debug.Log("Login failed for some reason");
+            }
+        });
+    }
+
+    public void Logout()
+    {
+        ((PlayGamesPlatform)Social.Active).SignOut();
     }
 
     void Update()
