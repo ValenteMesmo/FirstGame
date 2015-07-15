@@ -4,7 +4,7 @@ using GooglePlayGames;
 
 public class MenuBehaviour : MonoBehaviour
 {
-    void Start()
+    protected override void OnAwake()
     {
         PlayGamesPlatform.Activate();
     }
