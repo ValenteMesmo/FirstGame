@@ -1,25 +1,23 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnitySolution.InputComponents;
+using System;
 
-public class ReplayGameOnTouch : MonoBehaviour {
+[RequireComponent(typeof(DetectTouchOnThisGameObject))]
+public class ReplayGameOnTouch : MonoBehaviour
+{
+    public Transform LocationOfGameOverMenu;
 
     void Start()
     {
-        var touches = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
-        touches.OnTouch += inputs_OnTouch;
-        touches.OffTouch += inputs_OffTouch;
+        if (LocationOfGameOverMenu == null)
+            throw new Exception("LocationOfGameOverMenu is Required!");
+
+        var touches = GetComponent<DetectTouchOnThisGameObject>();
+        touches.OnTouch += touches_OnTouch;
     }
 
-    private void inputs_OffTouch(object sender, TransformEvevntArgs e)
+    void touches_OnTouch(object sender, TransformEvevntArgs e)
     {
-    }
-
-    private void inputs_OnTouch(object sender, PointEvevntArgs e)
-    {
-        if (e.Transform.gameObject == gameObject)
-        {
-            Application.LoadLevel("menu");
-        }
+        Camera.main.transform.position = LocationOfGameOverMenu.position;
     }
 }
