@@ -316,11 +316,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.6500001
+      value: -4.73000002
       objectReference: {fileID: 0}
     - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.75
+      value: -10.9499998
       objectReference: {fileID: 0}
     - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2830,11 +2830,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.97000003
+      value: -3.05999994
       objectReference: {fileID: 0}
     - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -17.9500008
+      value: -18.2199993
       objectReference: {fileID: 0}
     - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2859,10 +2859,6 @@ Prefab:
     - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 473692, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
@@ -4110,11 +4106,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.65999985
+      value: 5.69000006
       objectReference: {fileID: 0}
     - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.75
+      value: -10.8199997
       objectReference: {fileID: 0}
     - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6796,10 +6792,8 @@ PolygonCollider2D:
       - {x: 10.716898, y: -1.5527153}
       - {x: 10.6327991, y: .364109039}
       - {x: 9.42545509, y: .372505188}
-      - {x: 6.01905727, y: -2.88641167}
-      - {x: 5.6480546, y: -2.70160866}
-      - {x: 5.51458073, y: -2.34970093}
-      - {x: 6.61756134, y: -.836906433}
+      - {x: 5.98995686, y: -2.88641167}
+      - {x: 6.91991711, y: -.839706421}
       - {x: 7.38559484, y: .881774902}
       - {x: 7.54760885, y: 2.7147789}
       - {x: 7.17342615, y: 4.42127609}
@@ -8230,11 +8224,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.36000013
+      value: 5.44999981
       objectReference: {fileID: 0}
     - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -17.9740009
+      value: -18.2099991
       objectReference: {fileID: 0}
     - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8259,10 +8253,6 @@ Prefab:
     - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
@@ -8481,11 +8471,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: .587677479, y: .283493042}
-      - {x: 1.61269903, y: -1.14003944}
-      - {x: 2.72125006, y: -2.26057816}
-      - {x: 2.37252474, y: -2.47444916}
-      - {x: 2.03447247, y: -2.34069824}
-      - {x: 1.11801624, y: -1.88051224}
+      - {x: 1.41787195, y: -1.19317436}
+      - {x: 1.91049147, y: -2.28756332}
+      - {x: 1.29513216, y: -1.8628006}
       - {x: -.132136822, y: -.350362778}
       - {x: -1.00891733, y: 1.62898254}
       - {x: -1.41710234, y: 3.38964844}
@@ -8574,7 +8562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1845634398
 Transform:
   m_ObjectHideFlags: 0

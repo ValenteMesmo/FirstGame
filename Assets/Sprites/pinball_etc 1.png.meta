@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: beaaec445410c7c40a13be4ce8f311f5
-timeCreated: 1429151917
+timeCreated: 1437098663
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,8 +58,8 @@ TextureImporter:
         y: 102
         width: 296
         height: 96
-      alignment: 5
-      pivot: {x: 1, y: .5}
+      alignment: 9
+      pivot: {x: 1, y: .25}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: pinball_etc 1_1
       rect:
@@ -68,8 +68,8 @@ TextureImporter:
         y: 2
         width: 296
         height: 96
-      alignment: 4
-      pivot: {x: 0, y: .5}
+      alignment: 9
+      pivot: {x: 0, y: .25}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
