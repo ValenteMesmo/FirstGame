@@ -10,7 +10,7 @@ public class GameOverBehaviour : MonoBehaviour
         if (GlobalComponents.Balls.Count <= 1)
         {
             var currentScore = GlobalComponents.Get<ScoreDisplayBehaviour>().Score;
-            var lastScore = HighScore.Load();
+            //var lastScore = SavedInfo.GetHighScore();
 
             //if (currentScore > lastScore)
             //{
@@ -33,15 +33,28 @@ public class GameOverBehaviour : MonoBehaviour
     }
 }
 
-public class HighScore
+public class SavedInfo
 {
-    public static void Save(int value)
+    public static void SetHighScore(int value)
     {
         PlayerPrefs.SetInt("HighScore", value);
     }
 
-    public static int Load()
+    public static int GetHighScore()
     {
         return PlayerPrefs.GetInt("HighScore");
+    }
+
+    public static void SetIsAuthenticated(bool value)
+    {
+        if (value)
+            PlayerPrefs.SetInt("Authenticated", 1);
+        else
+            PlayerPrefs.SetInt("Authenticated", 0);
+    }
+
+    public static bool GetIsAuthenticated()
+    {
+        return PlayerPrefs.GetInt("Authenticated") > 0;
     }
 }
