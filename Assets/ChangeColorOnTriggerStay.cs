@@ -14,9 +14,9 @@ public class ChangeColorOnTriggerStay : MonoBehaviour
         var trigger = GetComponent<Trigger2DHandler>();
         SpriteRendererHandler = GetComponent<SpriteRendererHandler>();
         OriginalColor = new Color(
-            SpriteRendererHandler.Red, 
-            SpriteRendererHandler.Green, 
-            SpriteRendererHandler.Blue, 
+            SpriteRendererHandler.Red,
+            SpriteRendererHandler.Green,
+            SpriteRendererHandler.Blue,
             SpriteRendererHandler.Alpha);
         trigger.OnTriggerStay += trigger_OnTriggerEnter;
         trigger.OnTriggerExit += trigger_OnTriggerExit;
@@ -25,11 +25,13 @@ public class ChangeColorOnTriggerStay : MonoBehaviour
 
     void trigger_OnTriggerExit(object sender, Trigger2DEventArgs e)
     {
-        SpriteRendererHandler.SetColor(OriginalColor.r, OriginalColor.g, OriginalColor.b, OriginalColor.a);
+        if (e.Tag == "Player")
+            SpriteRendererHandler.SetColor(OriginalColor.r, OriginalColor.g, OriginalColor.b, OriginalColor.a);
     }
 
     void trigger_OnTriggerEnter(object sender, Trigger2DEventArgs e)
     {
-        SpriteRendererHandler.SetColor(NewColor.r, NewColor.g, NewColor.b, NewColor.a);
+        if (e.Tag == "Player")
+            SpriteRendererHandler.SetColor(NewColor.r, NewColor.g, NewColor.b, NewColor.a);
     }
 }

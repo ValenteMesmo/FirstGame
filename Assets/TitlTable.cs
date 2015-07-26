@@ -25,9 +25,9 @@ public class TitlTable : MonoBehaviour
         if (accelerometerOnCooldown == false)
         {
             if (e.Value > 0)
-                ExecuteRightTilt(forceAmount);
+                ExecuteTilt(forceAmount);
             else
-                ExecuteRightTilt(-forceAmount);
+                ExecuteTilt(-forceAmount);
             accelerometerOnCooldown = true;
             DelayExecution(() => accelerometerOnCooldown = false, 0.5f);
         }
@@ -36,12 +36,12 @@ public class TitlTable : MonoBehaviour
     void Update()
     {
         if (WrappedInput2.TiltLeft())
-            ExecuteRightTilt(-forceAmount);
+            ExecuteTilt(-forceAmount);
         else if (WrappedInput2.TiltRight())
-            ExecuteRightTilt(forceAmount);
+            ExecuteTilt(forceAmount);
     }
 
-    private void ExecuteRightTilt(float forceAmount)
+    private void ExecuteTilt(float forceAmount)
     {
         if (cooldown)
         {
