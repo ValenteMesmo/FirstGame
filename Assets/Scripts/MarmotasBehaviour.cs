@@ -9,6 +9,7 @@ public class MarmotasBehaviour : MonoBehaviour
     SpriteRenderer leftRenderer;
     SpriteRenderer centralRenderer;
     SpriteRenderer rightRenderer;
+    Animator Animator;
 
     private ColorSequence ColorSequence;
     private ScoreDisplayBehaviour ScoreDisplayBehaviour;
@@ -39,6 +40,8 @@ public class MarmotasBehaviour : MonoBehaviour
         var inputs = GlobalComponents.Get<ControlsPlayerInputs>();
         inputs.LeftButtonDown += inputs_LeftButtonDown;
         inputs.RightButtonDown += inputs_RightButtonDown;
+
+        Animator = GetComponent<Animator>();
     }
 
     void inputs_RightButtonDown(object sender, EventArgs e)
@@ -58,8 +61,10 @@ public class MarmotasBehaviour : MonoBehaviour
         MarmotaController.ToggleRight();
         MarmotaController.ToggleCentral();
         MarmotaController.ToggleLeft();
-        ScoreDisplayBehaviour.Score += 1000;
+        ScoreDisplayBehaviour.Score += 100;
         ColorSequence.ChangeColor();
+
+        Animator.SetTrigger("boom");
 
         if (OnObjectiveAchieved != null)
             OnObjectiveAchieved(this, null);
@@ -86,11 +91,6 @@ public class MarmotasBehaviour : MonoBehaviour
 
     void Update()
     {
-        //if (WrappedInput2.GetLeftInputPressed())
-        //    MarmotaController.ShuffleLeft();
-        //if (WrappedInput2.GetRightInputPressed())
-        //    MarmotaController.ShuffleRight();
-
         ChangeColors();
     }
 
