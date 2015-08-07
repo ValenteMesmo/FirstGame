@@ -1,20 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class FungusController : MonoBehaviour
 {
-    public BaseCollider2DHandler LeftCollider;
-    public BaseCollider2DHandler MiddleCollider;
-    public BaseCollider2DHandler RightCollider;
+    public class FungusInstance
+    {
+        public bool IsDown;
+        public IAnimatorHandler Animator;
+        public BaseCollider2DHandler Collider;
 
-    private IAnimatorHandler LeftAnimator;
-    private IAnimatorHandler RightAnimator;
-    private IAnimatorHandler MiddleAnimator;
+        public FungusInstance(BaseCollider2DHandler collider)
+        {
+            Animator = collider.gameObject.GetComponent<AnimatorHandler>();
+            Collider = collider;
+            Collider.OnCollisionEnter += collider_OnCollisionEnter;
+        }
 
-    protected bool leftDown;
-    protected bool middleDown;
-    protected bool rightDown;
+        void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)
+        {
+            if (e.Tag == "Player")
+            {
+                IsDown = true;
+                Animator.SetTrigger(DIE);
+                Collider.DisableCollider2D();                
+            }
+        }
+    }
+
+    public BaseCollider2DHandler[] Colliders;
+    private IList<FungusInstance> fungusCollection; 
 
     private const string DIE = "die";
     private const string REVIVE = "revive";
@@ -27,46 +43,21 @@ public class FungusController : MonoBehaviour
     {
         base.OnAwake();
 
-        LeftAnimator = LeftCollider.gameObject.GetComponent<AnimatorHandler>();
-        MiddleAnimator = MiddleCollider.gameObject.GetComponent<AnimatorHandler>();
-        RightAnimator = RightCollider.gameObject.GetComponent<AnimatorHandler>();
+        fungusCollection = new List<FungusInstance>();
 
-        LeftCollider.OnCollisionEnter += Left_OnCollisionEnter;
-        MiddleCollider.OnCollisionEnter += Middle_OnCollisionEnter;
-        RightCollider.OnCollisionEnter += Right_OnCollisionEnter;
+        foreach (var item in Colliders)
+        {
+            fungusCollection.Add(new FungusInstance(item));
+            item.OnCollisionEnter += item_OnCollisionEnter;
+        }
 
         ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
     }
 
-    void Middle_OnCollisionEnter(object sender, Collision2DEventArgs e)
+    void item_OnCollisionEnter(object sender, Collision2DEventArgs e)
     {
         if (e.Tag == "Player")
         {
-            middleDown = true;
-            MiddleAnimator.SetTrigger(DIE);
-            MiddleCollider.DisableCollider2D();
-            ResetIfObjectiveComplete();
-        }
-    }
-
-    void Left_OnCollisionEnter(object sender, Collision2DEventArgs e)
-    {
-        if (e.Tag == "Player")
-        {
-            leftDown = true;
-            LeftAnimator.SetTrigger(DIE);
-            LeftCollider.DisableCollider2D();
-            ResetIfObjectiveComplete();
-        }
-    }
-
-    void Right_OnCollisionEnter(object sender, Collision2DEventArgs e)
-    {
-        if (e.Tag == "Player")
-        {
-            rightDown = true;
-            RightAnimator.SetTrigger(DIE);
-            RightCollider.DisableCollider2D();
             ResetIfObjectiveComplete();
         }
     }
@@ -74,7 +65,15 @@ public class FungusController : MonoBehaviour
     void ResetIfObjectiveComplete()
     {
         ScoreDisplayBehaviour.Score += 10;
-        if (leftDown && middleDown && rightDown)
+
+        bool allDown = true;
+
+        foreach (var item in fungusCollection)
+        {
+            allDown = allDown && item.IsDown;
+        }
+
+        if (allDown)
         {
             if (FungusDestroyed != null)
                 FungusDestroyed(this, null);
@@ -82,15 +81,12 @@ public class FungusController : MonoBehaviour
             ScoreDisplayBehaviour.Score += 500;
             DelayExecution(() =>
             {
-                leftDown = false;
-                middleDown = false;
-                rightDown = false;
-                MiddleAnimator.SetTrigger(REVIVE);
-                LeftAnimator.SetTrigger(REVIVE);
-                RightAnimator.SetTrigger(REVIVE);
-                LeftCollider.EnableCollider2D();
-                MiddleCollider.EnableCollider2D();
-                RightCollider.EnableCollider2D();
+                foreach (var item in fungusCollection)
+                {
+                    item.IsDown = false;
+                    item.Animator.SetTrigger(REVIVE);
+                    item.Collider.EnableCollider2D();
+                }
             }, 3f);
         }
     }
