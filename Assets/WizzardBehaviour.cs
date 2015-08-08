@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CircleCollider2DHandler))]
-[RequireComponent(typeof(AnimatorHandler))]
+//[RequireComponent(typeof(CircleCollider2DHandler))]
+//[RequireComponent(typeof(AnimatorHandler))]
 public class WizzardBehaviour : MonoBehaviour
 {
     CircleCollider2DHandler Collider;

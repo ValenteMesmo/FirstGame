@@ -1277,7 +1277,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 284382889}
   m_LocalRotation: {x: 0, y: 0, z: -.342692286, w: .939447761}
-  m_LocalPosition: {x: .99000001, y: 8.52999973, z: 10}
+  m_LocalPosition: {x: .99000001, y: 8.65999985, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1675541799}
@@ -4672,11 +4672,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 1154926763}
   - 212: {fileID: 1154926762}
-  - 95: {fileID: 1154926764}
-  - 58: {fileID: 1154926768}
-  - 114: {fileID: 1154926767}
-  - 114: {fileID: 1154926766}
   - 114: {fileID: 1154926765}
+  - 95: {fileID: 1154926768}
+  - 58: {fileID: 1154926767}
+  - 114: {fileID: 1154926766}
+  - 114: {fileID: 1154926764}
   m_Layer: 0
   m_Name: wizard
   m_TagString: Untagged
@@ -4722,23 +4722,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1115242265}
   m_RootOrder: 0
---- !u!95 &1154926764
-Animator:
-  serializedVersion: 3
+--- !u!114 &1154926764
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1154926761}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d863372e9b59bdd4bbb9046734e1144b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 779504259, guid: e34302d489f787f428b200e60d517d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1154926765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4768,18 +4762,7 @@ MonoBehaviour:
   m_Script: {fileID: -179192559, guid: e34302d489f787f428b200e60d517d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1154926767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1154926761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 779504259, guid: e34302d489f787f428b200e60d517d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &1154926768
+--- !u!58 &1154926767
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4792,6 +4775,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!95 &1154926768
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154926761}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c36e870a2cf7eab41b559a6df95cf094, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1156711634 stripped
 Transform:
   m_PrefabParentObject: {fileID: 492574, guid: ffc5a6eb3bbe9734f94ccc946c5007d0, type: 2}
@@ -5811,6 +5811,7 @@ GameObject:
   - 114: {fileID: 1379450643}
   - 114: {fileID: 1379450647}
   - 95: {fileID: 1379450648}
+  - 114: {fileID: 1379450645}
   m_Layer: 0
   m_Name: Firefly Orb
   m_TagString: Untagged
@@ -5880,6 +5881,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Amount: 10
+--- !u!114 &1379450645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379450640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b825c6add41b995409ba4bd07faeb046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionStrength: 400
 --- !u!60 &1379450646
 PolygonCollider2D:
   m_ObjectHideFlags: 0

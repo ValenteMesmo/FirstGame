@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-[RequireComponent(typeof(Animator))]
 public class SetAnimatorBoolBasedOnGlobalComponents : MonoBehaviour
 {
-    Animator Animator;
-    bool currentIsDead;
+    private Animator Animator;
+    private bool currentIsDead;
 
     void Start()
     {
-        Animator = GetComponent<Animator>();
+        Animator = transform.parent.GetComponent<Animator>();
+        if (Animator == null)
+            throw new Exception("Sorry! Im trying to get the animator from the parent object~");
     }
 
     void Update()
