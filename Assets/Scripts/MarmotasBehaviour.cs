@@ -61,7 +61,7 @@ public class MarmotasBehaviour : MonoBehaviour
         MarmotaController.ToggleRight();
         MarmotaController.ToggleCentral();
         MarmotaController.ToggleLeft();
-        ScoreDisplayBehaviour.Score += 100;
+        ScoreDisplayBehaviour.AddScore(100);
         ColorSequence.ChangeColor();
 
         Animator.SetTrigger("boom");

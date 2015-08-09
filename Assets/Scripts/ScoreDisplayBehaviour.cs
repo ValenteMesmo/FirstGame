@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScoreDisplayBehaviour : MonoBehaviour
 {
-    public int Score = 0;
+    private int Score = 0;
 
     private Rect scoreDisplayArea;
     private string scoreTextFormat;
@@ -13,6 +13,21 @@ public class ScoreDisplayBehaviour : MonoBehaviour
         base.OnAwake();
         scoreDisplayArea = new Rect(0, Screen.height - Screen.height * 0.1f, Screen.width, Screen.height);
         scoreTextFormat = "<size=" + Screen.height * 0.05f + ">{0}</size>";
+    }
+
+    public void AddScore(int value)
+    {
+        Score += value;
+    }
+
+    public int  GetScore()
+    {
+        return Score;
+    }
+
+    public void ClearScore()
+    {
+        Score = 0;
     }
 
     //void OnApplicationFocus() { Debug.Log("OnApplicationFocus"); }

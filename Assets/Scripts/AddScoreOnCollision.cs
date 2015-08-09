@@ -15,6 +15,6 @@ public class AddScoreOnCollision : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player")
-            ScoreDisplayBehaviour.Score += Amount;
+            ScoreDisplayBehaviour.AddScore(Amount);
     }
 }

@@ -29,7 +29,7 @@ public class GlobalComponents : MonoBehaviour
     private static void Initialaze()
     {
         FlippersEnabled = true;
-        _global.GetComponent<ScoreDisplayBehaviour>().Score = 0;
+        _global.GetComponent<ScoreDisplayBehaviour>().ClearScore();
         WrappedInput2.Reset();
         HideFireflyWave = true;
         Balls.Clear();

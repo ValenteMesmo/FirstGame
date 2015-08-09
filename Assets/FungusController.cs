@@ -64,7 +64,7 @@ public class FungusController : MonoBehaviour
 
     void ResetIfObjectiveComplete()
     {
-        ScoreDisplayBehaviour.Score += 10;
+        ScoreDisplayBehaviour.AddScore(10);
 
         bool allDown = true;
 
@@ -78,7 +78,7 @@ public class FungusController : MonoBehaviour
             if (FungusDestroyed != null)
                 FungusDestroyed(this, null);
 
-            ScoreDisplayBehaviour.Score += 500;
+            ScoreDisplayBehaviour.AddScore(500);
             DelayExecution(() =>
             {
                 foreach (var item in fungusCollection)

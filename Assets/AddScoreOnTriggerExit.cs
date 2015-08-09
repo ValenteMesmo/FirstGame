@@ -13,6 +13,6 @@ public class AddScoreOnTriggerExit : MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag == "Player")
-            Score.Score += 10;
+            Score.AddScore(10);
     }
 }

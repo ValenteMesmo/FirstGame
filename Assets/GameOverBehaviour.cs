@@ -9,7 +9,7 @@ public class GameOverBehaviour : MonoBehaviour
 
         if (GlobalComponents.Balls.Count <= 1)
         {
-            var currentScore = GlobalComponents.Get<ScoreDisplayBehaviour>().Score;
+            var currentScore = GlobalComponents.Get<ScoreDisplayBehaviour>().GetScore();
             //var lastScore = SavedInfo.GetHighScore();
 
             //if (currentScore > lastScore)
