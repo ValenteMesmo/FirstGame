@@ -638,10 +638,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 880450911
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 013266b48c1f39e4ca0b458f93a81f67, type: 3}
-  m_Color: {r: .189259887, g: .602941155, b: .0576340631, a: 1}
+  m_Color: {r: .639215708, g: .639215708, b: .639215708, a: 1}
 --- !u!114 &192785701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1246,7 +1246,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 880450911
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d99ebb11d549b824bad700bb72eca985, type: 3}
   m_Color: {r: .230163455, g: .352941155, b: .225778535, a: 1}
 --- !u!4 &276417429
@@ -1413,6 +1413,7 @@ Transform:
   - {fileID: 1845634398}
   - {fileID: 1379450642}
   - {fileID: 1682814587}
+  - {fileID: 1743260257}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!212 &296705786
@@ -3309,7 +3310,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 880450911
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a0a47791d6fc25049b84de8d0e51b087, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &686714758
@@ -3479,21 +3480,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 492574, guid: ffc5a6eb3bbe9734f94ccc946c5007d0, type: 2}
   m_PrefabInternal: {fileID: 1049907973}
---- !u!1 &767881360 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 187244, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-  m_PrefabInternal: {fileID: 2018879833}
---- !u!114 &767881366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 767881360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f32667cf75abf794f9c70a66674d9de7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &777144694
 GameObject:
   m_ObjectHideFlags: 0
@@ -5887,7 +5873,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 880450911
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d847186f22dcb8c49bf7a24cf4c233e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1379450642
@@ -7897,6 +7883,60 @@ Transform:
   - {fileID: 189961260}
   m_Father: {fileID: 1771447934}
   m_RootOrder: 1
+--- !u!1 &1743260256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1743260257}
+  - 212: {fileID: 1743260258}
+  m_Layer: 0
+  m_Name: main_table_border (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1743260257
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743260256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 296705785}
+  m_RootOrder: 13
+--- !u!212 &1743260258
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743260256}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 880450911
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8cc9211aa8ea23443952cec52c155da8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1745615924
 GameObject:
   m_ObjectHideFlags: 0

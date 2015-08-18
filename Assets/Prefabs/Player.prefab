@@ -64,6 +64,7 @@ GameObject:
   - 50: {fileID: 5000222}
   - 114: {fileID: 11425912}
   - 114: {fileID: 11403790}
+  - 114: {fileID: 11488172}
   m_Layer: 11
   m_Name: Body
   m_TagString: Player
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3199997, y: 38.5, z: 10}
+  m_LocalPosition: {x: 10.4099998, y: 41.8100014, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486288}
@@ -273,6 +274,17 @@ MonoBehaviour:
   m_Script: {fileID: -179192559, guid: e34302d489f787f428b200e60d517d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11488172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32667cf75abf794f9c70a66674d9de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11491100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,8 +318,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 880450911
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8a1ff18594a9564429fd4350a0289c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
