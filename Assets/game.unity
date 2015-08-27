@@ -3142,15 +3142,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -1.08475876, y: -.327987671}
+    - - {x: -.349826097, y: .395801544}
+      - {x: -.869249105, y: .083442688}
       - {x: -.552654505, y: .657936096}
       - {x: .451587677, y: 1.54977369}
       - {x: .942611217, y: 1.32052946}
       - {x: 1.30167329, y: 1.12465239}
       - {x: 1.09808326, y: .542598248}
-      - {x: .309533358, y: .261795044}
-      - {x: -.510557652, y: -.535953522}
-      - {x: -1.17963219, y: -1.55637789}
+      - {x: .289940834, y: .614444733}
 --- !u!4 &649655903 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
@@ -5256,7 +5255,7 @@ GameObject:
   m_Layer: 0
   m_Name: RightUpperFlipper
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1638116407661442457, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5273,7 +5272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 650
-  UpperAngleLimit: 30
+  UpperAngleLimit: 20
 --- !u!60 &1284240310
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6803,15 +6802,15 @@ PolygonCollider2D:
       - {x: 10.5588608, y: -11.8143883}
       - {x: 9.96095848, y: -11.8227482}
       - {x: 9.20267105, y: -11.8477974}
-      - {x: 7.58833838, y: -6.97837067}
+      - {x: 7.78067255, y: -7.75427818}
       - {x: 10.8900948, y: -1.79085922}
       - {x: 10.8906364, y: .484249115}
       - {x: 10.5584488, y: 3.73027802}
-      - {x: 7.96095419, y: .68113327}
-      - {x: 7.93685293, y: 1.72349167}
-      - {x: 7.57916975, y: 4.09091568}
-      - {x: 7.00323629, y: 5.45368958}
-      - {x: 5.77552795, y: 6.99970627}
+      - {x: 8.41594696, y: 1.20112228}
+      - {x: 8.29434586, y: 3.6734581}
+      - {x: 7.57916784, y: 5.84588623}
+      - {x: 6.22563362, y: 7.28911972}
+      - {x: 4.86554241, y: 7.97468948}
       - {x: 3.66484356, y: 8.2091713}
       - {x: 3.32234287, y: 9.18010712}
       - {x: 5.16947174, y: 9.1040535}
@@ -7576,8 +7575,8 @@ Transform:
   m_PrefabParentObject: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1284240308}
-  m_LocalRotation: {x: 0, y: 0, z: .367449343, w: .930043578}
-  m_LocalPosition: {x: 10.0100002, y: 2.61999893, z: 10}
+  m_LocalRotation: {x: 0, y: 0, z: .173648223, w: .984807789}
+  m_LocalPosition: {x: 9.93000031, y: 1.64999998, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1886926924}
@@ -8848,7 +8847,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1886926923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.360000014, y: -.159999996, z: 0}
+  m_LocalPosition: {x: -.0199999996, y: -0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1682814587}
@@ -9436,11 +9435,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.4099998
+      value: 10.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 41.8100014
+      value: 41.5099983
       objectReference: {fileID: 0}
     - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
       propertyPath: m_LocalPosition.z
