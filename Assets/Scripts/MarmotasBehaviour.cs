@@ -6,9 +6,9 @@ public class MarmotasBehaviour : MonoBehaviour
 {
     MarmotaController MarmotaController;
 
-    SpriteRenderer leftRenderer;
-    SpriteRenderer centralRenderer;
-    SpriteRenderer rightRenderer;
+    Animator leftAnimator;
+    Animator centralAnimator;
+    Animator rightAnimator;
     Animator Animator;
 
     private ColorSequence ColorSequence;
@@ -17,17 +17,17 @@ public class MarmotasBehaviour : MonoBehaviour
     void Start()
     {
         var left = transform.Find("left");
-        leftRenderer = left.GetComponent<SpriteRenderer>();
+        leftAnimator = left.GetComponentInChildren<Animator>();
         var leftPassThruBehaviour = left.GetComponent<PassThruBehaviour>();
         leftPassThruBehaviour.OnPassThru += left_OnPassThru;
 
         var central = transform.Find("central");
-        centralRenderer = central.GetComponent<SpriteRenderer>();
+        centralAnimator = central.GetComponentInChildren<Animator>();
         var centralPassThruBehaviour = central.GetComponent<PassThruBehaviour>();
         centralPassThruBehaviour.OnPassThru += central_OnPassThru;
 
         var right = transform.Find("right");
-        rightRenderer = right.GetComponent<SpriteRenderer>();
+        rightAnimator = right.GetComponentInChildren<Animator>();
         var rightPassThruBehaviour = right.GetComponent<PassThruBehaviour>();
         rightPassThruBehaviour.OnPassThru += right_OnPassThru;
 
@@ -41,7 +41,7 @@ public class MarmotasBehaviour : MonoBehaviour
         inputs.LeftButtonDown += inputs_LeftButtonDown;
         inputs.RightButtonDown += inputs_RightButtonDown;
 
-        Animator = GetComponent<Animator>();
+        Animator = transform.Find("boom").GetComponent<Animator>();
     }
 
     void inputs_RightButtonDown(object sender, EventArgs e)
@@ -96,20 +96,26 @@ public class MarmotasBehaviour : MonoBehaviour
 
     private void ChangeColors()
     {
-        if (MarmotaController.IsLeftMarmotaActive())
-            leftRenderer.color = Color.yellow;
-        else
-            leftRenderer.color = Color.black;
+        //if (MarmotaController.IsLeftMarmotaActive())
+        //    leftRenderer.color = Color.yellow;
+        //else
+        //    leftRenderer.color = Color.black;
 
-        if (MarmotaController.IsCentralMarmotaActive())
-            centralRenderer.color = Color.yellow;
-        else
-            centralRenderer.color = Color.black;
+        //if (MarmotaController.IsCentralMarmotaActive())
+        //    centralRenderer.color = Color.yellow;
+        //else
+        //    centralRenderer.color = Color.black;
 
-        if (MarmotaController.IsRightMarmotaActive())
-            rightRenderer.color = Color.yellow;
-        else
-            rightRenderer.color = Color.black;
+        //if (MarmotaController.IsRightMarmotaActive())
+        //    rightRenderer.color = Color.yellow;
+        //else
+        //    rightRenderer.color = Color.black;
+
+        leftAnimator.SetBool("open", MarmotaController.IsLeftMarmotaActive());
+        centralAnimator.SetBool("open", MarmotaController.IsCentralMarmotaActive());
+        rightAnimator.SetBool("open", MarmotaController.IsRightMarmotaActive());
+
+
     }
 }
 

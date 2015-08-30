@@ -25,6 +25,16 @@ public class ColorSequence : MonoBehaviour
         }
     }
 
+    public Color FutureColor
+    {
+        get
+        {
+            if (currentColor >= Colors.Length)
+                return Colors[0];
+            return Colors[currentColor+1];
+        }
+    }
+
     public void ChangeColor()
     {
         currentColor++;
