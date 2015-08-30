@@ -15,7 +15,7 @@ public class ColorSequence : MonoBehaviour
             var color = tempColors[i];
             Colors[i] = new Color(color.r, color.g, color.b);
         }
-    }    
+    }
 
     public Color CurrentColor
     {
@@ -29,9 +29,9 @@ public class ColorSequence : MonoBehaviour
     {
         get
         {
-            if (currentColor >= Colors.Length)
+            if (currentColor + 1 >= Colors.Length)
                 return Colors[0];
-            return Colors[currentColor+1];
+            return Colors[currentColor + 1];
         }
     }
 
