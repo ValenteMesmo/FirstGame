@@ -3118,7 +3118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2079118291}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!60 &641331590
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5386,12 +5386,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colors:
-  - {r: 0, g: 1, b: .0482759476, a: 0}
-  - {r: 1, g: .550912738, b: .20588237, a: 0}
-  - {r: .986206889, g: 1, b: 0, a: 0}
-  - {r: .448529422, g: .612068951, b: 1, a: 0}
-  - {r: 0, g: .83448267, b: 1, a: 0}
-  - {r: 1, g: .448529422, b: .961967826, a: 0}
+  - {r: .158620596, g: 1, b: 0, a: 0}
+  - {r: 1, g: .931034565, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: .793103218, b: 1, a: 0}
+  - {r: 1, g: 0, b: .80689621, a: 0}
 --- !u!114 &1291723187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6502,10 +6501,6 @@ Prefab:
     - target: {fileID: 188902, guid: c0262640f0570a64592f74bd43cd3ce7, type: 2}
       propertyPath: m_Name
       value: Funguy 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 188902, guid: c0262640f0570a64592f74bd43cd3ce7, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0262640f0570a64592f74bd43cd3ce7, type: 2}
@@ -7855,7 +7850,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431600, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 153354, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
       propertyPath: m_Name
@@ -9744,8 +9739,8 @@ Transform:
   m_Children:
   - {fileID: 1975279484}
   - {fileID: 284382890}
-  - {fileID: 199645545}
   - {fileID: 641331589}
+  - {fileID: 199645545}
   - {fileID: 109064332}
   m_Father: {fileID: 465849490}
   m_RootOrder: 1
