@@ -10,16 +10,25 @@ public class AccelerometerHandler : MonoBehaviour
     {
         if (OnShakingX != null)
         {
-            var difference = previousValues - Input.acceleration.x;
+            var difference = previousX - Input.acceleration.x;
             if (difference > deltaThatTriggerEvents || difference < -deltaThatTriggerEvents)
                 OnShakingX(this, new EventArgs<float>(Input.acceleration.x));
         }
-        previousValues = Input.acceleration.x;
+        if(OnShakingZ!=null)
+        { 
+            var difference = previousZ - Input.acceleration.z;
+            if (difference > deltaThatTriggerEvents || difference < -deltaThatTriggerEvents)
+                OnShakingZ(this, new EventArgs<float>(Input.acceleration.z));
+        }
+        previousZ = Input.acceleration.z;
+        previousX = Input.acceleration.x;
     }
 
-    private float previousValues = 0f;
+    private float previousZ = 0f;
+    private float previousX = 0f;
 
     public event EventHandler<EventArgs<float>> OnShakingX;
+    public event EventHandler<EventArgs<float>> OnShakingZ;
 }
 
 public class EventArgs<T> : EventArgs

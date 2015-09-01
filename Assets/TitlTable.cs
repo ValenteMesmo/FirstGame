@@ -14,7 +14,9 @@ public class TitlTable : MonoBehaviour
     {
         Camera = Camera.main;
         CameraColor = Camera.backgroundColor;
-        GetComponent<AccelerometerHandler>().OnShakingX += TitlTable_OnShakingX;
+        var accelerometer = GetComponent<AccelerometerHandler>();
+        accelerometer.OnShakingX += TitlTable_OnShakingX;
+        
         vibrationHandler = new VibrationHandler(this);
     }
 
@@ -25,9 +27,9 @@ public class TitlTable : MonoBehaviour
         if (accelerometerOnCooldown == false)
         {
             if (e.Value > 0)
-                ExecuteTilt(forceAmount);
-            else
                 ExecuteTilt(-forceAmount);
+            else
+                ExecuteTilt(forceAmount);
             accelerometerOnCooldown = true;
             DelayExecution(() => accelerometerOnCooldown = false, 0.5f);
         }

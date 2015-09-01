@@ -5945,7 +5945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e777405e3a4edfd4f80d10652abedb0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deltaThatTriggerEvents: 1.5
+  deltaThatTriggerEvents: 1
 --- !u!1 &1379450640
 GameObject:
   m_ObjectHideFlags: 0
