@@ -1,37 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Trigger2DHandler))]
-[RequireComponent(typeof(SpriteRendererHandler))]
 public class ChangeColorOnTriggerStay : MonoBehaviour
 {
     private Color OriginalColor;
     public Color NewColor;
 
-    ISpriteRendererHandler SpriteRendererHandler;
+    SpriteRenderer SpriteRendererHandler;
     protected void Start()
     {
-        var trigger = GetComponent<Trigger2DHandler>();
-        SpriteRendererHandler = GetComponent<SpriteRendererHandler>();
-        OriginalColor = new Color(
-            SpriteRendererHandler.Red,
-            SpriteRendererHandler.Green,
-            SpriteRendererHandler.Blue,
-            SpriteRendererHandler.Alpha);
-        trigger.OnTriggerStay += trigger_OnTriggerEnter;
-        trigger.OnTriggerExit += trigger_OnTriggerExit;
-        base.OnAwake();
+        SpriteRendererHandler = GetComponent<SpriteRenderer>();
+        OriginalColor = SpriteRendererHandler.color;
     }
 
-    void trigger_OnTriggerExit(object sender, Trigger2DEventArgs e)
+    void OnTriggerExit2D(Collider2D e)
     {
-        if (e.Tag == "Player")
-            SpriteRendererHandler.SetColor(OriginalColor.r, OriginalColor.g, OriginalColor.b, OriginalColor.a);
+        if (e.tag == "Player")
+            SpriteRendererHandler.color = OriginalColor;
     }
 
-    void trigger_OnTriggerEnter(object sender, Trigger2DEventArgs e)
+    void OnTriggerEnter2D(Collider2D e)
     {
-        if (e.Tag == "Player")
-            SpriteRendererHandler.SetColor(NewColor.r, NewColor.g, NewColor.b, NewColor.a);
+        if (e.tag == "Player")
+            SpriteRendererHandler.color = NewColor;
     }
 }

@@ -7,7 +7,7 @@ public class AudioClipPlus : MonoBehaviour
     private AudioHandler AudioHandler;
     public AudioClip audioClip;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
         var source = gameObject.AddComponent<AudioSource>();
         source.clip = audioClip;

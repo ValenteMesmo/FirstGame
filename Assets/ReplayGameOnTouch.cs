@@ -13,7 +13,7 @@ public class ReplayGameOnTouch : MonoBehaviour
             throw new Exception("LocationOfGameOverMenu is Required!");
 
         var touches = GetComponent<DetectTouchOnThisGameObject>();
-        touches.OnTouch += touches_OnTouch;
+        touches.OnStart += touches_OnTouch;
 
         var inputs = GlobalComponents.Get<ControlsPlayerInputs>();
         inputs.JumpButtonDown += inputs_JumpButtonDown;

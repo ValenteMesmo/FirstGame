@@ -31,7 +31,6 @@ GameObject:
   - 114: {fileID: 11467298}
   - 114: {fileID: 11490142}
   - 58: {fileID: 5826396}
-  - 114: {fileID: 11419622}
   - 95: {fileID: 9566472}
   - 114: {fileID: 11456794}
   - 114: {fileID: 11429592}
@@ -78,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .680000007, y: -.119999997, z: 20}
+  m_LocalPosition: {x: 2.98000002, y: 4.38999987, z: 20}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 414790}
@@ -161,17 +160,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e4203a748204f94ebb040252cbe5043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11419622
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 779504259, guid: e34302d489f787f428b200e60d517d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11429592

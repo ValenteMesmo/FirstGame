@@ -11,7 +11,7 @@ public class LogoffOnTouch : MonoBehaviour
         //    throw new Exception("You need to set the reference to a menu that will be enabled when NOT Authenticated.");
 
         var touches = GetComponent<DetectTouchOnThisGameObject>();
-        touches.OnTouch += touches_OnTouch;
+        touches.OnStart += touches_OnTouch;
     }
 
     public event EventHandler OnClick;

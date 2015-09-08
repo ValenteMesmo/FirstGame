@@ -6,12 +6,12 @@ public class LeftInputOnTouch : MonoBehaviour
 {
     ControlsPlayerInputs inputs;
 
-    protected override void OnAwake()
-    {
-        base.OnAwake();
+    protected void Awake()
+    {        
         var touches = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
-        touches.OnTouch += inputs_OnTouch;
-        touches.OffTouch += inputs_OffTouch;       
+        touches.OnStart += inputs_OnTouch;
+        touches.OnStay += inputs_OnTouch;
+        touches.OnEnd += inputs_OffTouch;       
 
         inputs = GlobalComponents.Get<ControlsPlayerInputs>();
     }

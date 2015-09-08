@@ -12,8 +12,8 @@ public class SetAnimatorBoolOnTouch : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         var touch = GetComponent<DetectTouchOnThisGameObject>();
-        touch.OnTouch += touch_OnTouch;
-        touch.OffTouch += touch_OffTouch;
+        touch.OnStart += touch_OnTouch;
+        touch.OnEnd += touch_OffTouch;
     }
 
     void touch_OffTouch(object sender, UnitySolution.InputComponents.TransformEvevntArgs e)

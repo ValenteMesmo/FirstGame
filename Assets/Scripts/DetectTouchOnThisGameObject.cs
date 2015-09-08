@@ -7,22 +7,29 @@ public class DetectTouchOnThisGameObject : MonoBehaviour
     void Start()
     {
         var touches = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
-        touches.OnTouch += inputs_OnTouch;
-        touches.OffTouch += inputs_OffTouch;
+        touches.OnStart += inputs_OnTouch;
+        touches.OnEnd += inputs_OffTouch;
+        touches.OnStay += inputs_OnTouchStay;
     }
 
-    public event EventHandler<TransformEvevntArgs> OnTouch;
-    public event EventHandler<TransformEvevntArgs> OffTouch;
-
+    public event EventHandler<TransformEvevntArgs> OnEnd;
     private void inputs_OffTouch(object sender, TransformEvevntArgs e)
     {
-        if (OffTouch != null && e.Transform.gameObject == gameObject)
-            OffTouch(this, e);
+        if (OnEnd != null && e.Transform.gameObject == gameObject)
+            OnEnd(this, e);
     }
 
+    public event EventHandler<TransformEvevntArgs> OnStart;
     private void inputs_OnTouch(object sender, PointEvevntArgs e)
     {
-        if (OnTouch != null && e.Transform.gameObject == gameObject)
-            OnTouch(this, e);
+        if (OnStart != null && e.Transform.gameObject == gameObject)
+            OnStart(this, e);
+    }
+
+    public event EventHandler<TransformEvevntArgs> OnStay;
+    private void inputs_OnTouchStay(object sender, PointEvevntArgs e)
+    {
+        if (OnStay != null && e.Transform.gameObject == gameObject)
+            OnStay(this, e);
     }
 }

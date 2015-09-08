@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(BaseCollider2DHandler))]
-[RequireComponent(typeof(SpriteRendererHandler))]
 public class Launcher : MonoBehaviour
 {
     float currentPontential = 0f;
@@ -10,18 +8,13 @@ public class Launcher : MonoBehaviour
     public float maximumPotential = 4000f;
     IVibration Vibration;
 
-    ISpriteRendererHandler SpriteRendererHandler;
+    SpriteRenderer SpriteRendererHandler;
 
-    protected override void OnAwake()
-    {
-        base.OnAwake();
-        var collider = GetComponent<BaseCollider2DHandler>();
-        SpriteRendererHandler = GetComponent<SpriteRendererHandler>();
-        collider.OnCollisionStay += collider_OnCollisionStay;
+    protected void Awake()
+    {       
+        SpriteRendererHandler = GetComponent<SpriteRenderer>();
         Vibration = new VibrationHandler(this);
     }
-
-
 
     void Update()
     {
@@ -31,12 +24,12 @@ public class Launcher : MonoBehaviour
                 Vibration.Vibrate(10);
         }
 
-        SpriteRendererHandler.SetColor((currentPontential / maximumPotential), 0.5f, 0.5f);
+        SpriteRendererHandler.color = new Color((currentPontential / maximumPotential), 0.5f, 0.5f);
     }
 
-    void collider_OnCollisionStay(object sender, Collision2DEventArgs e)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (e.Rigidbody != null)
+        if (collision.rigidbody != null)
         {
             if (WrappedInput2.GetLeftInputPressed() || WrappedInput2.GetRightInputPressed())
             {
@@ -46,7 +39,7 @@ public class Launcher : MonoBehaviour
             {
                 if (currentPontential > 0f)
                 {
-                    e.Rigidbody.AddForce(0f, currentPontential);
+                    collision.rigidbody.AddForce(new Vector2( 0f, currentPontential));
                     currentPontential = 0f;
                 }
             }

@@ -6,12 +6,13 @@ public class RightInputOnTouch : MonoBehaviour
 {
     ControlsPlayerInputs inputs;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
-        base.OnAwake();
+        
         var touches = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
-        touches.OnTouch += inputs_OnTouch;
-        touches.OffTouch += inputs_OffTouch;
+        touches.OnStart += inputs_OnTouch;
+        touches.OnStay += inputs_OnTouch;
+        touches.OnEnd += inputs_OffTouch;
 
         inputs = GlobalComponents.Get<ControlsPlayerInputs>();
     }

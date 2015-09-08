@@ -15,10 +15,10 @@ public class SmoothFollowCamera2D : MonoBehaviour
 
     private Vector3 targetPosition;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
         targetPosition = transform.position;
-        base.OnAwake();
+        
     }
 
     void LateUpdate()

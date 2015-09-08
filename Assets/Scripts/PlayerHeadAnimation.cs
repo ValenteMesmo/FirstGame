@@ -9,7 +9,7 @@ public class PlayerHeadAnimation : MonoBehaviour {
 
     public float speedToCHangeAnimation = 5f;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
         Animator = GetComponent<Animator>();
         //Rigidbody2D = GetComponent<Rigidbody2D>();

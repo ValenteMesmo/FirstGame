@@ -7,10 +7,10 @@ public class MenuBehaviour : MonoBehaviour
     private LoginOnTouch btnLogin;
     private LogoffOnTouch btnLogoff;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
         PlayGamesPlatform.Activate();
-        base.OnAwake();
+        
     }
 
     void Start()

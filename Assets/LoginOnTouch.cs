@@ -10,7 +10,7 @@ public class LoginOnTouch : MonoBehaviour
     void Start()
     {
         var touches = GetComponent<DetectTouchOnThisGameObject>();
-        touches.OnTouch += touches_OnTouch;
+        touches.OnStart += touches_OnTouch;
     }
 
     void touches_OnTouch(object sender, TransformEvevntArgs e)

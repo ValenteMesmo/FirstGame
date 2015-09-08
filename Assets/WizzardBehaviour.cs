@@ -1,43 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//[RequireComponent(typeof(CircleCollider2DHandler))]
-//[RequireComponent(typeof(AnimatorHandler))]
 public class WizzardBehaviour : MonoBehaviour
 {
-    CircleCollider2DHandler Collider;
-    AnimatorHandler animator;
+    Animator animator;
     public Transform[] positions;
     private int currentPosition = 0;
 
     ScoreDisplayBehaviour Score;
     IVibration Vibration;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
-        base.OnAwake();
-        Collider = GetComponent<CircleCollider2DHandler>();
-        animator = GetComponent<AnimatorHandler>();
+        animator = GetComponent<Animator>();
 
         Score = GlobalComponents.Get<ScoreDisplayBehaviour>();
 
-        Collider.OnCollisionEnter += onhit;
         Vibration = new VibrationHandler(this);
     }
 
-    public void EnableCollisions()
-    {
-        Collider.EnableCollider2D();
-    }
+    //public void EnableCollisions()
+    //{
+    //    Collider.EnableCollider2D();
+    //}
 
-    public void DisableCollisions()
-    {
-        Collider.DisableCollider2D();
-    }
+    //public void DisableCollisions()
+    //{
+    //    Collider.DisableCollider2D();
+    //}
 
-    void onhit(object sender, Collision2DEventArgs e)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (e.Tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             animator.SetBool("dead", true);
 

@@ -8,29 +8,28 @@ public class FungusController : MonoBehaviour
     public class FungusInstance
     {
         public bool IsDown;
-        public IAnimatorHandler Animator;
-        public BaseCollider2DHandler Collider;
+        public Animator Animator;
+        public FireEventOnCollision Collider;
 
-        public FungusInstance(BaseCollider2DHandler collider)
+        public FungusInstance(FireEventOnCollision collider)
         {
-            Animator = collider.gameObject.GetComponent<AnimatorHandler>();
+            Animator = collider.gameObject.GetComponent<Animator>();
             Collider = collider;
-            Collider.OnCollisionEnter += collider_OnCollisionEnter;
+            Collider.Enter += collider_OnCollisionEnter;
         }
 
-        void collider_OnCollisionEnter(object sender, Collision2DEventArgs e)
+        void collider_OnCollisionEnter(object sender, TriggerEventArgs e)
         {
-            if (e.Tag == "Player")
+            if (e.Collider.tag == "Player")
             {
                 IsDown = true;
                 Animator.SetTrigger(DIE);
-                Collider.DisableCollider2D();                
             }
         }
     }
 
-    public BaseCollider2DHandler[] Colliders;
-    private IList<FungusInstance> fungusCollection; 
+    public FireEventOnCollision[] Colliders;
+    private IList<FungusInstance> fungusCollection;
 
     private const string DIE = "die";
     private const string REVIVE = "revive";
@@ -39,24 +38,22 @@ public class FungusController : MonoBehaviour
 
     public event EventHandler FungusDestroyed;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
-        base.OnAwake();
-
         fungusCollection = new List<FungusInstance>();
 
         foreach (var item in Colliders)
         {
             fungusCollection.Add(new FungusInstance(item));
-            item.OnCollisionEnter += item_OnCollisionEnter;
+            item.Enter += item_OnCollisionEnter;
         }
 
         ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
     }
 
-    void item_OnCollisionEnter(object sender, Collision2DEventArgs e)
+    void item_OnCollisionEnter(object sender, TriggerEventArgs e)
     {
-        if (e.Tag == "Player")
+        if (e.Collider.tag == "Player")
         {
             ResetIfObjectiveComplete();
         }
@@ -85,7 +82,6 @@ public class FungusController : MonoBehaviour
                 {
                     item.IsDown = false;
                     item.Animator.SetTrigger(REVIVE);
-                    item.Collider.EnableCollider2D();
                 }
             }, 3f);
         }

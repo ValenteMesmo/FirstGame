@@ -8,10 +8,10 @@ public class MovesOnKeyPress : MonoBehaviour {
     public float maxDistPerSecond = 1f;
     public float maxDistPerSecondGoingBack = 10f;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
         OriginalPosition = transform.position;
-        base.OnAwake();
+        
     }
 
     void Update()

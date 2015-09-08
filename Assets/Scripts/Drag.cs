@@ -15,16 +15,16 @@ public class Drag : MonoBehaviour
     public float MaxPowerLaunch = 4000f;
     public LauchCollidingRigidBodies laucher;
 
-    protected override void OnAwake()
+    protected void Awake()
     {
-        base.OnAwake();
         MinPosition = transform.position;
         Vibration = new VibrationHandler(this);
         yPreviousValue = transform.position.y;
 
         var input = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
-        input.OnTouch += input_OnTouch;
-        input.OffTouch += input_OffTouch;
+        input.OnStart += input_OnTouch;
+        input.OnStay += input_OnTouch;
+        input.OnEnd += input_OffTouch;
     }
 
     void input_OffTouch(object sender, TransformEvevntArgs e)

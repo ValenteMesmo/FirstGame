@@ -58,11 +58,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 439754}
   - 58: {fileID: 5870352}
-  - 114: {fileID: 11407378}
   - 95: {fileID: 9587902}
-  - 114: {fileID: 11435430}
   - 114: {fileID: 11425180}
   - 114: {fileID: 11474080}
+  - 114: {fileID: 11462480}
   m_Layer: 0
   m_Name: Funguy
   m_TagString: Untagged
@@ -151,17 +150,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11407378
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 779504259, guid: e34302d489f787f428b200e60d517d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11422830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionStrength: 300
---- !u!114 &11435430
+--- !u!114 &11462480
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -193,7 +181,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 188902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -179192559, guid: e34302d489f787f428b200e60d517d80, type: 3}
+  m_Script: {fileID: 11500000, guid: d92929d558c8a4049a48a760d5efbb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11474080

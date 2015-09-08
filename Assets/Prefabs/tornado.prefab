@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 419000}
   - 249: {fileID: 24972310}
   - 61: {fileID: 6123022}
-  - 114: {fileID: 11434342}
   - 114: {fileID: 11444618}
   m_Layer: 0
   m_Name: LeftWind
@@ -47,7 +46,6 @@ GameObject:
   - 4: {fileID: 401102}
   - 249: {fileID: 24936894}
   - 61: {fileID: 6183964}
-  - 114: {fileID: 11461102}
   - 114: {fileID: 11410590}
   m_Layer: 0
   m_Name: RightWind
@@ -66,7 +64,6 @@ GameObject:
   - 4: {fileID: 418244}
   - 249: {fileID: 24996068}
   - 61: {fileID: 6148756}
-  - 114: {fileID: 11406896}
   - 114: {fileID: 11473400}
   m_Layer: 0
   m_Name: DownWind
@@ -85,7 +82,6 @@ GameObject:
   - 4: {fileID: 445816}
   - 249: {fileID: 24903822}
   - 61: {fileID: 6169988}
-  - 114: {fileID: 11459650}
   - 114: {fileID: 11413232}
   m_Layer: 0
   m_Name: UpWind
@@ -113,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 127, y: -111.099998, z: 0}
+  m_LocalPosition: {x: 199.199997, y: -99.8000031, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 418244}
@@ -210,17 +206,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
---- !u!114 &11406896
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1505562071, guid: e34302d489f787f428b200e60d517d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11410590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,23 +253,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points:
-  - {x: 0, y: 25}
+  - {x: 0, y: 19}
   - {x: -11, y: 21}
   - {x: 0, y: 36}
   - {x: 59, y: 39}
   - {x: 87, y: 23}
   - {x: 51, y: 23}
---- !u!114 &11434342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1505562071, guid: e34302d489f787f428b200e60d517d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11444618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,28 +268,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9589c6a4ad1da60449f30ff74e9f8f05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11459650
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1505562071, guid: e34302d489f787f428b200e60d517d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11461102
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1505562071, guid: e34302d489f787f428b200e60d517d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11473400
@@ -351,8 +303,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 880450911
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: b266b2a657361ca4db8cd70a49b9a31f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .509000003}
 --- !u!249 &24903822

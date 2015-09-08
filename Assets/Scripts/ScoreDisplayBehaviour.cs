@@ -10,7 +10,7 @@ public class ScoreDisplayBehaviour : MonoBehaviour
 
     void Start()
     {
-        base.OnAwake();
+        
         scoreDisplayArea = new Rect(0, Screen.height - Screen.height * 0.1f, Screen.width, Screen.height);
         scoreTextFormat = "<size=" + Screen.height * 0.05f + ">{0}</size>";
     }
