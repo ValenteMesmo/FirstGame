@@ -625,6 +625,14 @@ Prefab:
       propertyPath: m_Name
       value: phantom wizard (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 429836, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.0140000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 429836, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .32100001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
   m_IsPrefabParent: 0
@@ -765,7 +773,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -3370,7 +3378,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -5490,7 +5498,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -5542,7 +5550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -6349,10 +6357,10 @@ Transform:
   - {fileID: 2014693943}
   - {fileID: 1894686897}
   - {fileID: 649655903}
-  - {fileID: 1689297973}
   - {fileID: 436127058}
-  - {fileID: 1951617429}
+  - {fileID: 1689297973}
   - {fileID: 654082274}
+  - {fileID: 1951617429}
   - {fileID: 1896816791}
   - {fileID: 534067799}
   m_Father: {fileID: 296705785}
