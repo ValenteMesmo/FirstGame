@@ -12,156 +12,31 @@ AnimationClip:
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
   m_CompressedRotationCurves: []
-  m_PositionCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: {x: -.0140000004, y: .32100001, z: 0}
-        inSlope: {x: .557999969, y: -.654000044, z: 0}
-        outSlope: {x: .557999969, y: -.654000044, z: 0}
-        tangentMode: 0
-      - time: .166666672
-        value: {x: .0790000036, y: .211999997, z: 0}
-        inSlope: {x: -.279000044, y: .327000082, z: 0}
-        outSlope: {x: -.279000044, y: .327000082, z: 0}
-        tangentMode: 0
-      - time: .25
-        value: {x: -.0140000004, y: .32100001, z: 0}
-        inSlope: {x: -.279000014, y: .327000052, z: 0}
-        outSlope: {x: -.279000014, y: .327000052, z: 0}
-        tangentMode: 0
-      - time: .416666657
-        value: {x: .0790000036, y: .211999997, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - time: .583333313
-        value: {x: -.0140000004, y: .32100001, z: 0}
-        inSlope: {x: -.0930000544, y: .109000072, z: 0}
-        outSlope: {x: -.0930000544, y: .109000072, z: 0}
-        tangentMode: 0
-      - time: .833333373
-        value: {x: .0790000036, y: .211999997, z: 0}
-        inSlope: {x: -.093000114, y: .109000131, z: 0}
-        outSlope: {x: -.093000114, y: .109000131, z: 0}
-        tangentMode: 0
-      - time: 1
-        value: {x: -.0140000004, y: .32100001, z: 0}
-        inSlope: {x: -.279000074, y: .327000111, z: 0}
-        outSlope: {x: -.279000074, y: .327000111, z: 0}
-        tangentMode: 0
-      - time: 2
-        value: {x: -.0140000004, y: .32100001, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Firefly body/skull_part
+  m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .166666672
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .25
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .416666657
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .583333313
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .833333373
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 1
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 2
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Enabled
-    path: Firefly body
-    classID: 58
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: .800000012
-        inSlope: 1.19999993
-        outSlope: 1.19999993
-        tangentMode: 10
-      - time: .166666672
-        value: 1
-        inSlope: .599999964
-        outSlope: .599999964
-        tangentMode: 10
-      - time: .25
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .416666657
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .583333313
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .833333373
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 0
+        inSlope: .800000012
+        outSlope: .800000012
         tangentMode: 10
       - time: 1
-        value: 1
-        inSlope: -2.39999866
-        outSlope: -2.39999866
-        tangentMode: 10
-      - time: 1.08333337
-        value: .600000024
-        inSlope: -2.29090786
-        outSlope: -2.29090786
+        value: .800000012
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 2
-        value: .800000012
-        inSlope: .218181819
-        outSlope: .218181819
+        value: 0
+        inSlope: -.800000012
+        outSlope: -.800000012
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: Firefly body
+    path: Firefly body/skull_part
     classID: 212
     script: {fileID: 0}
   - curve:
@@ -169,53 +44,23 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: .800000012
-        inSlope: 1.19999993
-        outSlope: 1.19999993
-        tangentMode: 10
-      - time: .166666672
-        value: 1
-        inSlope: .599999964
-        outSlope: .599999964
-        tangentMode: 10
-      - time: .25
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .416666657
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .583333313
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .833333373
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -.5
+        outSlope: -.5
         tangentMode: 10
       - time: 1
-        value: 1
-        inSlope: -2.39999866
-        outSlope: -2.39999866
-        tangentMode: 10
-      - time: 1.08333337
-        value: .600000024
-        inSlope: -2.29090786
-        outSlope: -2.29090786
+        value: .300000012
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 2
         value: .800000012
-        inSlope: .218181819
-        outSlope: .218181819
+        inSlope: .5
+        outSlope: .5
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: Firefly body/skull_part
+    path: Firefly body
     classID: 212
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -227,24 +72,12 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - path: 892266913
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 650691970
-      attribute: 3305885265
-      script: {fileID: 0}
-      classID: 58
-      customType: 0
-      isPPtrCurve: 0
-    - path: 650691970
       attribute: 304273561
       script: {fileID: 0}
       classID: 212
       customType: 0
       isPPtrCurve: 0
-    - path: 892266913
+    - path: 650691970
       attribute: 304273561
       script: {fileID: 0}
       classID: 212
@@ -273,152 +106,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .166666672
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .25
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .416666657
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .583333313
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .833333373
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 1
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 2
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Enabled
-    path: Firefly body
-    classID: 58
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: .800000012
-        inSlope: 1.19999993
-        outSlope: 1.19999993
-        tangentMode: 10
-      - time: .166666672
-        value: 1
-        inSlope: .599999964
-        outSlope: .599999964
-        tangentMode: 10
-      - time: .25
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .416666657
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .583333313
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .833333373
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 0
+        inSlope: .800000012
+        outSlope: .800000012
         tangentMode: 10
       - time: 1
-        value: 1
-        inSlope: -2.39999866
-        outSlope: -2.39999866
-        tangentMode: 10
-      - time: 1.08333337
-        value: .600000024
-        inSlope: -2.29090786
-        outSlope: -2.29090786
+        value: .800000012
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 2
-        value: .800000012
-        inSlope: .218181819
-        outSlope: .218181819
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.a
-    path: Firefly body
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: .800000012
-        inSlope: 1.19999993
-        outSlope: 1.19999993
-        tangentMode: 10
-      - time: .166666672
-        value: 1
-        inSlope: .599999964
-        outSlope: .599999964
-        tangentMode: 10
-      - time: .25
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .416666657
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .583333313
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .833333373
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 1
-        value: 1
-        inSlope: -2.39999866
-        outSlope: -2.39999866
-        tangentMode: 10
-      - time: 1.08333337
-        value: .600000024
-        inSlope: -2.29090786
-        outSlope: -2.29090786
-        tangentMode: 10
-      - time: 2
-        value: .800000012
-        inSlope: .218181819
-        outSlope: .218181819
+        value: 0
+        inSlope: -.800000012
+        outSlope: -.800000012
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -430,148 +130,25 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -.0140000004
-        inSlope: .557999969
-        outSlope: .557999969
-        tangentMode: 10
-      - time: .166666672
-        value: .0790000036
-        inSlope: -.279000044
-        outSlope: -.279000044
-        tangentMode: 10
-      - time: .25
-        value: -.0140000004
-        inSlope: -.279000014
-        outSlope: -.279000014
-        tangentMode: 10
-      - time: .416666657
-        value: .0790000036
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .583333313
-        value: -.0140000004
-        inSlope: -.0930000544
-        outSlope: -.0930000544
-        tangentMode: 10
-      - time: .833333373
-        value: .0790000036
-        inSlope: -.093000114
-        outSlope: -.093000114
+        value: .800000012
+        inSlope: -.5
+        outSlope: -.5
         tangentMode: 10
       - time: 1
-        value: -.0140000004
-        inSlope: -.279000074
-        outSlope: -.279000074
-        tangentMode: 10
-      - time: 2
-        value: -.0140000004
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.x
-    path: Firefly body/skull_part
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: .32100001
-        inSlope: -.654000044
-        outSlope: -.654000044
-        tangentMode: 10
-      - time: .166666672
-        value: .211999997
-        inSlope: .327000082
-        outSlope: .327000082
-        tangentMode: 10
-      - time: .25
-        value: .32100001
-        inSlope: .327000052
-        outSlope: .327000052
-        tangentMode: 10
-      - time: .416666657
-        value: .211999997
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .583333313
-        value: .32100001
-        inSlope: .109000072
-        outSlope: .109000072
-        tangentMode: 10
-      - time: .833333373
-        value: .211999997
-        inSlope: .109000131
-        outSlope: .109000131
-        tangentMode: 10
-      - time: 1
-        value: .32100001
-        inSlope: .327000111
-        outSlope: .327000111
-        tangentMode: 10
-      - time: 2
-        value: .32100001
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.y
-    path: Firefly body/skull_part
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .166666672
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .25
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .416666657
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .583333313
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .833333373
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 1
-        value: 0
+        value: .300000012
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 2
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: .800000012
+        inSlope: .5
+        outSlope: .5
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalPosition.z
-    path: Firefly body/skull_part
-    classID: 4
+    attribute: m_Color.a
+    path: Firefly body
+    classID: 212
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0

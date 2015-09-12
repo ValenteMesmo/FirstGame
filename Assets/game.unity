@@ -625,11 +625,11 @@ Prefab:
       propertyPath: m_Name
       value: phantom wizard (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 429836, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
       value: -.0140000004
       objectReference: {fileID: 0}
-    - target: {fileID: 429836, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
       value: .32100001
       objectReference: {fileID: 0}
@@ -2036,6 +2036,52 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 499774, guid: 5213619eef70d3041948db4fa5442ba8, type: 2}
   m_PrefabInternal: {fileID: 950070337}
+--- !u!1001 &504837447
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1845634398}
+    m_Modifications:
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.10000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.8569832
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.6328125
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_Name
+      value: phantom wizard (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &513220025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,6 +3211,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1115242265}
   m_RootOrder: 4
+--- !u!1001 &939212199
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1845634398}
+    m_Modifications:
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.30000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.8569832
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.6328125
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+      propertyPath: m_Name
+      value: phantom wizard (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &950070337
 Prefab:
   m_ObjectHideFlags: 0
@@ -3378,7 +3470,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -3661,7 +3753,7 @@ Transform:
 --- !u!4 &1148913737 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-  m_PrefabInternal: {fileID: 1309694071}
+  m_PrefabInternal: {fileID: 939212199}
 --- !u!1 &1154926761
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,52 +4314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParameterName: open
---- !u!1001 &1309694071
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1845634398}
-    m_Modifications:
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 8.30000019
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 11.8569832
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 29.6328125
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_Name
-      value: phantom wizard (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1310415047
 Prefab:
   m_ObjectHideFlags: 0
@@ -5498,7 +5544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -5513,52 +5559,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1330759948}
   m_Script: {fileID: 11500000, guid: d92929d558c8a4049a48a760d5efbb4c, type: 3}
---- !u!1001 &1664873865
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1845634398}
-    m_Modifications:
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.10000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 11.8569832
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 29.6328125
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-      propertyPath: m_Name
-      value: phantom wizard (9)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1672487952
 Prefab:
   m_ObjectHideFlags: 0
@@ -5639,7 +5639,7 @@ Transform:
 --- !u!4 &1689297973 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
-  m_PrefabInternal: {fileID: 1664873865}
+  m_PrefabInternal: {fileID: 504837447}
 --- !u!1 &1699625626
 GameObject:
   m_ObjectHideFlags: 0
@@ -6359,8 +6359,8 @@ Transform:
   - {fileID: 649655903}
   - {fileID: 436127058}
   - {fileID: 1689297973}
-  - {fileID: 654082274}
   - {fileID: 1951617429}
+  - {fileID: 654082274}
   - {fileID: 1896816791}
   - {fileID: 534067799}
   m_Father: {fileID: 296705785}
