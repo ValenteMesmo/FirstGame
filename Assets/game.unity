@@ -421,6 +421,7 @@ GameObject:
   - 212: {fileID: 192785700}
   - 114: {fileID: 192785701}
   - 61: {fileID: 192785699}
+  - 114: {fileID: 192785702}
   m_Layer: 0
   m_Name: Laucher Face
   m_TagString: Untagged
@@ -494,6 +495,17 @@ MonoBehaviour:
   maxDistPerSecondGoingBack: 100
   MaxPowerLaunch: 4000
   laucher: {fileID: 233942358}
+--- !u!114 &192785702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 192785697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4203a748204f94ebb040252cbe5043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &199645545 stripped
 Transform:
   m_PrefabParentObject: {fileID: 431600, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
@@ -1583,18 +1595,6 @@ Prefab:
     - target: {fileID: 461806, guid: 359bd8258e8bccb40bcd3683f50d46cd, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 21278386, guid: 359bd8258e8bccb40bcd3683f50d46cd, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21278386, guid: 359bd8258e8bccb40bcd3683f50d46cd, type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21278386, guid: 359bd8258e8bccb40bcd3683f50d46cd, type: 2}
-      propertyPath: m_Color.b
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 359bd8258e8bccb40bcd3683f50d46cd, type: 2}
@@ -6797,18 +6797,6 @@ Prefab:
     - target: {fileID: 488418, guid: 1ce483f2098d8e5438021ad2d923a4bc, type: 2}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 21242854, guid: 1ce483f2098d8e5438021ad2d923a4bc, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21242854, guid: 1ce483f2098d8e5438021ad2d923a4bc, type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21242854, guid: 1ce483f2098d8e5438021ad2d923a4bc, type: 2}
-      propertyPath: m_Color.b
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ce483f2098d8e5438021ad2d923a4bc, type: 2}

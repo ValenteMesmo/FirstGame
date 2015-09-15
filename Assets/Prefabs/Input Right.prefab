@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11402690}
   - 114: {fileID: 11495300}
   - 114: {fileID: 11442700}
+  - 114: {fileID: 11404370}
   m_Layer: 0
   m_Name: Input Right
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 125950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.1000004, y: -20, z: -10}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,6 +78,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterName: down
+--- !u!114 &11404370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4203a748204f94ebb040252cbe5043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11426120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +160,7 @@ SpriteRenderer:
   m_SortingLayerID: 880450911
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 37154bdd5fee8354b84d7390f54d7d92, type: 3}
-  m_Color: {r: .639215708, g: .639215708, b: .639215708, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

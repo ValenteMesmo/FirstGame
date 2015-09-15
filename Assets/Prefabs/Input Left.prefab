@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11494912}
   - 114: {fileID: 11472262}
   - 114: {fileID: 11451800}
+  - 114: {fileID: 11412640}
   m_Layer: 0
   m_Name: Input Left
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 180966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.46000004, y: -20, z: -10}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -65,6 +66,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11412640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4203a748204f94ebb040252cbe5043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11418174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +160,7 @@ SpriteRenderer:
   m_SortingLayerID: 880450911
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 37154bdd5fee8354b84d7390f54d7d92, type: 3}
-  m_Color: {r: .639705896, g: .639705896, b: .639705896, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
