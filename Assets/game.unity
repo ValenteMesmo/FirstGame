@@ -2111,8 +2111,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 513220026}
-  - 212: {fileID: 513220028}
-  - 114: {fileID: 513220029}
   - 114: {fileID: 513220032}
   - 114: {fileID: 513220031}
   - 114: {fileID: 513220033}
@@ -2152,45 +2150,6 @@ EdgeCollider2D:
   m_Points:
   - {x: .0537739508, y: -.824838936}
   - {x: .154129431, y: .686016798}
---- !u!212 &513220028
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 513220025}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 880450911
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 839d06c1b082c4e4fb6a348f118f7d3a, type: 3}
-  m_Color: {r: 0, g: .875862122, b: 1, a: 1}
---- !u!114 &513220029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 513220025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44366021ff7501045a0770b7212f9a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Color: {r: 1, g: 0, b: 0, a: 1}
-  Duration: .300000012
 --- !u!114 &513220030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6935,8 +6894,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1908717364}
-  - 212: {fileID: 1908717368}
-  - 114: {fileID: 1908717370}
   - 114: {fileID: 1908717369}
   - 114: {fileID: 1908717366}
   - 114: {fileID: 1908717371}
@@ -6999,32 +6956,6 @@ EdgeCollider2D:
   m_Points:
   - {x: .0575862601, y: -.812525034}
   - {x: .218245745, y: .709912539}
---- !u!212 &1908717368
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1908717363}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 880450911
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 839d06c1b082c4e4fb6a348f118f7d3a, type: 3}
-  m_Color: {r: 0, g: .875862122, b: 1, a: 1}
 --- !u!114 &1908717369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7038,19 +6969,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StreamingAssetsFilePath: Audio/pss.wav
   audioClip: {fileID: 8300000, guid: 9e328006ac78df3478b28c5abb68830c, type: 3}
---- !u!114 &1908717370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1908717363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44366021ff7501045a0770b7212f9a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Color: {r: 1, g: 0, b: 0, a: 1}
-  Duration: .300000012
 --- !u!114 &1908717371
 MonoBehaviour:
   m_ObjectHideFlags: 0
