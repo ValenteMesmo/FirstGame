@@ -1151,7 +1151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1001 &279633061
 Prefab:
   m_ObjectHideFlags: 0
@@ -1286,7 +1286,7 @@ Transform:
   - {fileID: 1845634398}
   - {fileID: 1379450642}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!212 &296705786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4252,7 +4252,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1291723185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4723,7 +4723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1375097056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5316,7 +5316,7 @@ GameObject:
   - 212: {fileID: 1542740106}
   - 95: {fileID: 1542740108}
   m_Layer: 0
-  m_Name: main_table_black_layer0001
+  m_Name: main_table_shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5355,12 +5355,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542740105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.961765826, y: 25.1354599, z: 0}
+  m_LocalPosition: {x: -.961765766, y: 25.1354599, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 633780615}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
 --- !u!95 &1542740108
 Animator:
   serializedVersion: 3
@@ -5724,7 +5724,7 @@ Transform:
   - {fileID: 24611781}
   - {fileID: 470161616}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!114 &1583765508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5826,7 +5826,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &1648469801
 Prefab:
   m_ObjectHideFlags: 0
@@ -7027,7 +7027,7 @@ Transform:
   - {fileID: 658906590}
   - {fileID: 1115242265}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!212 &1943610245
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7286,7 +7286,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
