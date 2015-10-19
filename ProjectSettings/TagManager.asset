@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Very Bot
+    uniqueID: 1560075367
+    locked: 0
   - name: Bot
     uniqueID: 659791581
     locked: 0
