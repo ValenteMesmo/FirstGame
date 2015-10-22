@@ -480,7 +480,7 @@ SpriteRenderer:
   m_SortingLayerID: 880450911
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 013266b48c1f39e4ca0b458f93a81f67, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &192785701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4113,11 +4113,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colors:
-  - {r: .158620596, g: 1, b: 0, a: 0}
-  - {r: 1, g: .931034565, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 0, g: .793103218, b: 1, a: 0}
-  - {r: 1, g: 0, b: .80689621, a: 0}
+  - {r: .414616466, g: .764705896, b: .348615944, a: 0}
+  - {r: .772058845, g: .738389015, b: .283845156, a: 0}
+  - {r: .816176474, g: .378081769, b: .378081769, a: 0}
+  - {r: .368728399, g: .717769265, b: .808823526, a: 0}
+  - {r: .816176474, g: .510110319, b: .757073939, a: 0}
 --- !u!114 &1291723187
 MonoBehaviour:
   m_ObjectHideFlags: 0
