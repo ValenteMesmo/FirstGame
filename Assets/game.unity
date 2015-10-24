@@ -638,14 +638,6 @@ Prefab:
       propertyPath: m_Name
       value: floor light 2
       objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.8178525
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .622220039
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
   m_IsPrefabParent: 0
@@ -1588,7 +1580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402098, guid: 4378e8cca77175446ba8c3f6a43a2e7f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4378e8cca77175446ba8c3f6a43a2e7f, type: 2}
@@ -1902,18 +1894,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5 (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.8240819
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .421306074
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .538578331
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -2335,14 +2315,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.78122568
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .662293971
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
   m_IsPrefabParent: 0
@@ -2649,18 +2621,6 @@ Prefab:
       propertyPath: m_Name
       value: floor light 5 (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.54685855
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .529411674
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .446447879
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
   m_IsPrefabParent: 0
@@ -2765,11 +2725,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.39999962
+      value: -9.23999977
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.41999817
+      value: 3.3900001
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2957,11 +2917,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.0999999
+      value: -4.90999985
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.24000001
+      value: 2.9000001
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2990,18 +2950,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.57017183
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .409499943
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .538578331
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -3121,18 +3069,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5 (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.97259831
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .373273164
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .461314946
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -3579,14 +3515,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.61584973
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .64574939
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -4276,11 +4204,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.730000019
+      value: -.879999995
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.65999985
+      value: 4.05999994
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4309,18 +4237,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.04122734
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .639683664
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .66887033
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -4378,7 +4294,7 @@ SpriteRenderer:
   m_SortingLayerID: 1560075367
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e7c267f2627df60468aac2c035068991, type: 3}
-  m_Color: {r: .409331739, g: .41335386, b: .492647052, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .296999991}
 --- !u!1001 &1330759948
 Prefab:
   m_ObjectHideFlags: 0
@@ -4912,18 +4828,6 @@ Prefab:
       propertyPath: m_Name
       value: floor light 5 (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.54686022
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .529411793
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .446447879
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
   m_IsPrefabParent: 0
@@ -4994,7 +4898,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.44000006
+      value: -3.47000003
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5023,14 +4927,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.89083695
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .651414096
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -6535,7 +6431,7 @@ SpriteRenderer:
   m_SortingLayerID: 1560075367
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ef5b8db3cd1ee4c439c50d0739ed77a9, type: 3}
-  m_Color: {r: .380352497, g: .399713635, b: .492647052, a: 1}
+  m_Color: {r: .580882311, g: .913285911, b: 1, a: 1}
 --- !u!4 &1838564871
 Transform:
   m_ObjectHideFlags: 0
@@ -7184,7 +7080,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 463954, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 463954, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .170000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 463954, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
@@ -7358,14 +7266,6 @@ Prefab:
       propertyPath: m_Name
       value: floor light 1
       objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.4910202
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .648532987
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
   m_IsPrefabParent: 0
@@ -7415,18 +7315,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5 (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.54685736
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .529411554
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .446447879
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -7536,11 +7424,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.10999966
+      value: -2.96000004
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.35999966
+      value: 3.86999989
       objectReference: {fileID: 0}
     - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7569,18 +7457,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.16204739
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .579356253
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .595630705
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -7712,18 +7588,6 @@ Prefab:
     - target: {fileID: 148416, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
       propertyPath: m_Name
       value: floor light 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.37851095
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .660089195
-      objectReference: {fileID: 0}
-    - target: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .774319112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
