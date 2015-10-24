@@ -1,11 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnitySolution.InputComponents;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Drag : MonoBehaviour
 {
+     private AudioClipPlus Audio;
+
+  
+        
     private Vector2 screenPoint;
+    public GameObject ExplosionPrefab;
 
     private Vector3 MinPosition;
     public Transform Max;
@@ -17,6 +23,10 @@ public class Drag : MonoBehaviour
 
     protected void Awake()
     {
+        if (ExplosionPrefab == null)
+            throw new NullReferenceException("ExplosionPrefab");
+        Audio = GetComponent<AudioClipPlus>();
+
         MinPosition = transform.position;
         Vibration = new VibrationHandler(this);
         yPreviousValue = transform.position.y;
@@ -79,22 +89,31 @@ public class Drag : MonoBehaviour
     float yPreviousValue;
 
     VibrationHandler Vibration;
-
+    bool onCooldown;
     private void touchOff()
     {
         dragging = false;
 
-        if (laucher.BodiesCount > 0)
+        if (onCooldown == false)
         {
-            var percentage = -(((transform.position.y - MinPosition.y) / MinPosition.y) * 100);
+            onCooldown = true;
+            DelayExecution(() => onCooldown = false, 0.5f);
 
-            if (percentage > 0.01f)
+            if (laucher.BodiesCount > 0)
             {
-                var force = (MaxPowerLaunch / 100) * percentage;
+                var percentage = -(((transform.position.y - MinPosition.y) / MinPosition.y) * 100);
 
-                Vibration.Vibrate(50);
-                laucher.Launch(force);
-            }
+                if (percentage > 0.01f)
+                {
+                    var force = (MaxPowerLaunch / 100) * percentage;
+
+                    Vibration.Vibrate(50);
+                    laucher.Launch(force);
+                }
+            } 
         }
+
+        Audio.Play();
+        Instantiate(ExplosionPrefab, transform.parent.transform.position, Quaternion.identity);
     }
 }

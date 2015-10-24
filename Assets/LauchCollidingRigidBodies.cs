@@ -6,12 +6,12 @@ using System.Linq;
 public class LauchCollidingRigidBodies : MonoBehaviour
 {
     private List<Rigidbody2D> RigidbodyHandlers = new List<Rigidbody2D>();
-
     BoxCollider2D BoxCollider2D;
     float originalSizeY;
 
     void Start()
     {
+
         BoxCollider2D = GetComponents<BoxCollider2D>().FirstOrDefault(f => f.isTrigger);
         originalSizeY = BoxCollider2D.size.y;
         DelayExecution(asdsadasdasd, 2f);
@@ -27,7 +27,7 @@ public class LauchCollidingRigidBodies : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         var body = col.gameObject.GetComponent<Rigidbody2D>();
-        if (!RigidbodyHandlers.Contains(body) && onCooldown == false)
+        if (!RigidbodyHandlers.Contains(body))
         {
             BoxCollider2D.size = new Vector2(BoxCollider2D.size.x, BoxCollider2D.size.y + 1.5f);
             RigidbodyHandlers.Add(body);
@@ -36,17 +36,11 @@ public class LauchCollidingRigidBodies : MonoBehaviour
 
     public int BodiesCount { get { return RigidbodyHandlers.Count; } }
 
-    private bool onCooldown;
     public void Launch(float force)
     {
-        if (onCooldown == false)
+        foreach (var item in RigidbodyHandlers)
         {
-            onCooldown = true;
-            foreach (var item in RigidbodyHandlers)
-            {
-                item.AddForce(new Vector2(0, force));
-            }
-            DelayExecution(() => onCooldown = false, 0.5f);
+            item.AddForce(new Vector2(0, force));
         }
     }
 }
