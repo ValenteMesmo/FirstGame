@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class TitlTable : MonoBehaviour
 {
     public float forceAmount = 200f;
     Camera Camera;
     Color CameraColor;
+    public GameScreenController Controller;
 
     IVibration vibrationHandler;
 
@@ -16,6 +18,9 @@ public class TitlTable : MonoBehaviour
         CameraColor = Camera.backgroundColor;
         var accelerometer = GetComponent<AccelerometerHandler>();
         accelerometer.OnShakingX += TitlTable_OnShakingX;
+
+        if (Controller == null)
+            throw new NullReferenceException("GameScreenController");
         
         vibrationHandler = new VibrationHandler(this);
     }
@@ -24,7 +29,7 @@ public class TitlTable : MonoBehaviour
 
     void TitlTable_OnShakingX(object sender, EventArgs<float> e)
     {
-        if (accelerometerOnCooldown == false)
+        if (Controller.IsOnMainMenu() == false && accelerometerOnCooldown == false)
         {
             if (e.Value > 0)
                 ExecuteTilt(-forceAmount);

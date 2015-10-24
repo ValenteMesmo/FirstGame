@@ -5,13 +5,13 @@ using System;
 [RequireComponent(typeof(DetectTouchOnThisGameObject))]
 public class ReplayGameOnTouch : MonoBehaviour
 {
-    public Transform LocationOfGameOverMenu;
+    public GameScreenController Controller;
 
     void Start()
     {
-        if (LocationOfGameOverMenu == null)
-            throw new Exception("LocationOfGameOverMenu is Required!");
-
+        if (Controller == null)
+            throw new Exception("Controller is Required!");
+       
         var touches = GetComponent<DetectTouchOnThisGameObject>();
         touches.OnStart += touches_OnTouch;
 
@@ -21,11 +21,11 @@ public class ReplayGameOnTouch : MonoBehaviour
 
     void inputs_JumpButtonDown(object sender, EventArgs e)
     {
-        Camera.main.transform.position = LocationOfGameOverMenu.position;
+        Controller.GoToMainTablePosition();
     }
 
     void touches_OnTouch(object sender, TransformEvevntArgs e)
     {
-        Camera.main.transform.position = LocationOfGameOverMenu.position;
+        Controller.GoToMainTablePosition();
     }
 }
