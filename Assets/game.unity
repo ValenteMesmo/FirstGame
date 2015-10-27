@@ -5755,6 +5755,7 @@ GameObject:
   - 95: {fileID: 1707610612}
   - 114: {fileID: 1707610613}
   - 114: {fileID: 1707610614}
+  - 114: {fileID: 1707610617}
   m_Layer: 0
   m_Name: Safe ball
   m_TagString: Untagged
@@ -5857,6 +5858,18 @@ Transform:
   - {fileID: 1547230108}
   m_Father: {fileID: 1869469291}
   m_RootOrder: 2
+--- !u!114 &1707610617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1707610609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1898fe8e05b748640affacd06a09f063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1771447935}
 --- !u!1001 &1716096210
 Prefab:
   m_ObjectHideFlags: 0

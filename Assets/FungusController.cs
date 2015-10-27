@@ -76,14 +76,15 @@ public class FungusController : MonoBehaviour
                 FungusDestroyed(this, null);
 
             ScoreDisplayBehaviour.AddScore(500);
-            DelayExecution(() =>
-            {
-                foreach (var item in fungusCollection)
-                {
-                    item.IsDown = false;
-                    item.Animator.SetTrigger(REVIVE);
-                }
-            }, 3f);
+        }
+    }
+
+    public void Revive()
+    {
+        foreach (var item in fungusCollection)
+        {
+            item.IsDown = false;
+            item.Animator.SetTrigger(REVIVE);
         }
     }
 }
