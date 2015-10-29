@@ -1627,6 +1627,7 @@ GameObject:
   - 61: {fileID: 470161614}
   - 114: {fileID: 470161618}
   - 114: {fileID: 470161617}
+  - 95: {fileID: 470161619}
   m_Layer: 0
   m_Name: Btn_Play
   m_TagString: Untagged
@@ -1708,6 +1709,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ffdafc3bc4e8540b3d0cc35ef5cd01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &470161619
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470161613}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 712d692700cf1a44b9f9ee8b353b9bd2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &481778048
 GameObject:
   m_ObjectHideFlags: 0
