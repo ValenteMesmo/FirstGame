@@ -6,6 +6,7 @@ using System;
 public class ReplayGameOnTouch : MonoBehaviour
 {
     public GameScreenController Controller;
+    public ControlsPlayerInputs inputs;
     Animator Animator;
 
     void Start()
@@ -20,35 +21,38 @@ public class ReplayGameOnTouch : MonoBehaviour
         var touches = GetComponent<DetectTouchOnThisGameObject>();
         touches.OnStay += touches_OnStay;
         touches.OnEnd += touches_OnEnd;
+        touches.OnCancel += touches_OnCancel;
 
-        var inputs = GlobalComponents.Get<ControlsPlayerInputs>();
+        inputs = GlobalComponents.Get<ControlsPlayerInputs>();
         inputs.JumpButtonDown += inputs_JumpButtonDown;
         inputs.JumpButtonUp += inputs_JumpButtonUp;
     }
 
-    void touches_OnEnd(object sender, TransformEvevntArgs e)
+    void touches_OnCancel(object sender, PointEventArgs e)
     {
-        Btn_Release();
-
+        Animator.SetBool("pressed", false);
     }
 
-    void touches_OnStay(object sender, TransformEvevntArgs e)
+    void touches_OnEnd(object sender, PointEventArgs e)
+    {
+        Btn_Release();
+    }
+
+    void touches_OnStay(object sender, PointEventArgs e)
     {
         Btn_Pressed();
-
     }
 
     void inputs_JumpButtonUp(object sender, EventArgs e)
     {
-
         Btn_Release();
-
     }
 
     void inputs_JumpButtonDown(object sender, EventArgs e)
     {
         Btn_Pressed();
     }
+
     private void Btn_Pressed()
     {
         Animator.SetBool("pressed", true);

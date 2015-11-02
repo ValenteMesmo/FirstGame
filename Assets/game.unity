@@ -1698,6 +1698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controller: {fileID: 91809093}
+  inputs: {fileID: 0}
 --- !u!114 &470161618
 MonoBehaviour:
   m_ObjectHideFlags: 0

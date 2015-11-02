@@ -11,7 +11,7 @@ public class ShowLeaderBoardOnTouch : MonoBehaviour
         touches.OnStart += touches_OnTouch;
     }
 
-    void touches_OnTouch(object sender, UnitySolution.InputComponents.TransformEvevntArgs e)
+    void touches_OnTouch(object sender, UnitySolution.InputComponents.PointEventArgs e)
     {
         if (Social.localUser.authenticated)
         {

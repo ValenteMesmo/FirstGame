@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnitySolution.InputComponents;
 
 [RequireComponent(typeof(DetectTouchOnThisGameObject))]
 [RequireComponent(typeof(Animator))]
@@ -14,14 +15,15 @@ public class SetAnimatorBoolOnTouch : MonoBehaviour
         var touch = GetComponent<DetectTouchOnThisGameObject>();
         touch.OnStart += touch_OnTouch;
         touch.OnEnd += touch_OffTouch;
+        touch.OnCancel += touch_OffTouch;
     }
 
-    void touch_OffTouch(object sender, UnitySolution.InputComponents.TransformEvevntArgs e)
+    void touch_OffTouch(object sender, PointEventArgs e)
     {
         Animator.SetBool(parameterName, false);
     }
 
-    void touch_OnTouch(object sender, UnitySolution.InputComponents.TransformEvevntArgs e)
+    void touch_OnTouch(object sender, PointEventArgs e)
     {
         Animator.SetBool(parameterName, true);
     }

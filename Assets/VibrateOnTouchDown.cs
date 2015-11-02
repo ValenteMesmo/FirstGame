@@ -16,7 +16,7 @@ public class VibrateOnTouchDown : MonoBehaviour
         touches.OnStart += touches_OnTouch;
     }
 
-    void touches_OnTouch(object sender, TransformEvevntArgs e)
+    void touches_OnTouch(object sender, PointEventArgs e)
     {
         VibrationHandler.Vibrate(milliseconds);   
     }

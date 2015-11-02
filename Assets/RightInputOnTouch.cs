@@ -13,17 +13,18 @@ public class RightInputOnTouch : MonoBehaviour
         touches.OnStart += inputs_OnTouch;
         touches.OnStay += inputs_OnTouch;
         touches.OnEnd += inputs_OffTouch;
+        touches.OnCancel += inputs_OffTouch;
 
         inputs = GlobalComponents.Get<ControlsPlayerInputs>();
     }
 
-    void inputs_OffTouch(object sender, TransformEvevntArgs e)
+    void inputs_OffTouch(object sender, PointEventArgs e)
     {
         if (e.Transform.gameObject == gameObject)
             inputs.ReleaseRightButton();
     }
 
-    void inputs_OnTouch(object sender, PointEvevntArgs e)
+    void inputs_OnTouch(object sender, PointEventArgs e)
     {
         if (e.Transform.gameObject == gameObject)
             inputs.PressRightButton();

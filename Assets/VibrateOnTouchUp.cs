@@ -13,9 +13,10 @@ public class VibrateOnTouchUp : MonoBehaviour {
         VibrationHandler = new VibrationHandler(this);
         var touches = GetComponent<DetectTouchOnThisGameObject>();
         touches.OnEnd += touches_OffTouch;
+        touches.OnCancel += touches_OffTouch;
     }
 
-    void touches_OffTouch(object sender, TransformEvevntArgs e)
+    void touches_OffTouch(object sender, PointEventArgs e)
     {
         VibrationHandler.Vibrate(milliseconds);
     }

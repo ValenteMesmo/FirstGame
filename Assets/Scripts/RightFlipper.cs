@@ -19,6 +19,7 @@ public class RightFlipper : MonoBehaviour
         LowerAngleLimit = (float)System.Math.Round(rb2D.rotation, 2);
         speed = -speed;
         UpperAngleLimit = -UpperAngleLimit;
+
         var inputs = GlobalComponents.Get<ControlsPlayerInputs>();
         inputs.RightButtonUp += inputs_RightButtonUp;
         inputs.RightButtonDown += inputs_RightButtonDown;

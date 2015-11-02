@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using GooglePlayGames;
 using System;
+using UnitySolution.InputComponents;
 
 [RequireComponent(typeof(DetectTouchOnThisGameObject))]
 public class LogoffOnTouch : MonoBehaviour
@@ -16,7 +17,7 @@ public class LogoffOnTouch : MonoBehaviour
 
     public event EventHandler OnClick;
 
-    void touches_OnTouch(object sender, UnitySolution.InputComponents.TransformEvevntArgs e)
+    void touches_OnTouch(object sender, PointEventArgs e)
     {
         if (OnClick != null)
             OnClick(this, null);

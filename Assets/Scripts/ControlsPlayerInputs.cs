@@ -13,6 +13,7 @@ public class ControlsPlayerInputs : MonoBehaviour
     public event EventHandler RightButtonPressed;
 
     public event EventHandler JumpButtonDown;
+    public event EventHandler JumpButtonCancel;
     public event EventHandler JumpButtonUp;
     public event EventHandler JumpButtonPressed;
 
@@ -89,5 +90,11 @@ public class ControlsPlayerInputs : MonoBehaviour
             if (RightButtonUp != null)
                 RightButtonUp(this, null);
         }
+    }
+
+    public void CancelJumpButtoPress()
+    {
+        if (JumpButtonCancel != null)
+            JumpButtonCancel(this, null);
     }
 }

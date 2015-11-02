@@ -37,13 +37,13 @@ public class Drag : MonoBehaviour
         input.OnEnd += input_OffTouch;
     }
 
-    void input_OffTouch(object sender, TransformEvevntArgs e)
+    void input_OffTouch(object sender, PointEventArgs e)
     {
         if (e.Transform.gameObject == gameObject)
             touchOff();
     }
 
-    void input_OnTouch(object sender, PointEvevntArgs e)
+    void input_OnTouch(object sender, PointEventArgs e)
     {
         if (e.Transform.gameObject == gameObject)
             touchOn(e.Vector2);

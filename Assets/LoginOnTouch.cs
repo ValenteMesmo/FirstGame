@@ -13,7 +13,7 @@ public class LoginOnTouch : MonoBehaviour
         touches.OnStart += touches_OnTouch;
     }
 
-    void touches_OnTouch(object sender, TransformEvevntArgs e)
+    void touches_OnTouch(object sender, PointEventArgs e)
     {
         if (OnClick != null)
             OnClick(this, null);

@@ -11,12 +11,13 @@ public class LeftInputOnTouch : MonoBehaviour
         var touches = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
         touches.OnStart += inputs_OnTouch;
         touches.OnStay += inputs_OnTouch;
-        touches.OnEnd += inputs_OffTouch;       
+        touches.OnEnd += inputs_OffTouch;
+        touches.OnCancel += inputs_OffTouch;
 
         inputs = GlobalComponents.Get<ControlsPlayerInputs>();
     }
 
-    void inputs_OffTouch(object sender, TransformEvevntArgs e)
+    void inputs_OffTouch(object sender, PointEventArgs e)
     {
         if (e.Transform.gameObject == gameObject)
         {
@@ -24,7 +25,7 @@ public class LeftInputOnTouch : MonoBehaviour
         }
     }
 
-    void inputs_OnTouch(object sender, PointEvevntArgs e)
+    void inputs_OnTouch(object sender, PointEventArgs e)
     {
         if (e.Transform.gameObject == gameObject)
         {
