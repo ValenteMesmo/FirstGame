@@ -19,11 +19,12 @@ public class ReplayGameOnTouch : MonoBehaviour
             throw new Exception("Animator is Required!");
 
         var touches = GetComponent<DetectTouchOnThisGameObject>();
-        touches.OnStay += touches_OnStay;
-        touches.OnEnd += touches_OnEnd;
+        touches.OnStay += inputs_JumpButtonDown;
+        touches.OnEnd += inputs_JumpButtonUp;
         touches.OnCancel += touches_OnCancel;
 
-        inputs = GlobalComponents.Get<ControlsPlayerInputs>();
+        if (inputs == null)
+            throw new NullReferenceException("ControlsPlayerInputs");
         inputs.JumpButtonDown += inputs_JumpButtonDown;
         inputs.JumpButtonUp += inputs_JumpButtonUp;
     }
@@ -33,36 +34,15 @@ public class ReplayGameOnTouch : MonoBehaviour
         Animator.SetBool("pressed", false);
     }
 
-    void touches_OnEnd(object sender, PointEventArgs e)
-    {
-        Btn_Release();
-    }
-
-    void touches_OnStay(object sender, PointEventArgs e)
-    {
-        Btn_Pressed();
-    }
-
     void inputs_JumpButtonUp(object sender, EventArgs e)
     {
-        Btn_Release();
+        Animator.SetBool("pressed", false);
+
+        DelayExecution(() => Controller.GoToMainTablePosition(), 0.2f);
     }
 
     void inputs_JumpButtonDown(object sender, EventArgs e)
     {
-        Btn_Pressed();
-    }
-
-    private void Btn_Pressed()
-    {
         Animator.SetBool("pressed", true);
-
-    }
-
-    private void Btn_Release()
-    {
-        Animator.SetBool("pressed", false);
-
-        DelayExecution(() =>  Controller.GoToMainTablePosition(), 0.4f);
     }
 }

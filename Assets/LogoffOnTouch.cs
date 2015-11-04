@@ -6,29 +6,37 @@ using UnitySolution.InputComponents;
 [RequireComponent(typeof(DetectTouchOnThisGameObject))]
 public class LogoffOnTouch : MonoBehaviour
 {
+    Animator Animator;
     void Start()
     {
-        //if (MenuToToggle == null)
-        //    throw new Exception("You need to set the reference to a menu that will be enabled when NOT Authenticated.");
+        Animator = GetComponent<Animator>();
+        if (Animator == null)
+            throw new Exception("Animator is Required!");
 
         var touches = GetComponent<DetectTouchOnThisGameObject>();
-        touches.OnStart += touches_OnTouch;
+        touches.OnStay += inputs_JumpButtonDown;
+        touches.OnEnd += inputs_JumpButtonUp;
+        touches.OnCancel += touches_OnCancel;
     }
 
     public event EventHandler OnClick;
 
-    void touches_OnTouch(object sender, PointEventArgs e)
+
+    void touches_OnCancel(object sender, PointEventArgs e)
     {
-        if (OnClick != null)
-            OnClick(this, null);
-        //((PlayGamesPlatform)Social.Active).SignOut();
-        //if (Social.localUser.authenticated == false)
-        //    ChangeToLoginMenu();
+        Animator.SetBool("pressed", false);
     }
 
-    //private void ChangeToLoginMenu()
-    //{
-    //    MenuToToggle.gameObject.SetActive(true);
-    //    gameObject.SetActive(false);
-    //}
+    void inputs_JumpButtonUp(object sender, EventArgs e)
+    {
+        Animator.SetBool("pressed", false);
+
+        if (OnClick != null)
+            OnClick(this, null);
+    }
+
+    void inputs_JumpButtonDown(object sender, EventArgs e)
+    {
+        Animator.SetBool("pressed", true);
+    }
 }
