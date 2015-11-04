@@ -1739,6 +1739,8 @@ GameObject:
   - 114: {fileID: 481778052}
   - 114: {fileID: 481778053}
   - 95: {fileID: 481778054}
+  - 114: {fileID: 481778056}
+  - 114: {fileID: 481778055}
   m_Layer: 0
   m_Name: Btn_Login
   m_TagString: Untagged
@@ -1836,6 +1838,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &481778055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 481778048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a6795c6bbcdaa468b6ba857ed2bf42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 10
+--- !u!114 &481778056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 481778048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596beb1d8ba9c414db925fbebb5e01b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 10
 --- !u!114 &486427033 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11462480, guid: c0262640f0570a64592f74bd43cd3ce7,
@@ -3302,6 +3328,8 @@ GameObject:
   - 114: {fileID: 979058019}
   - 95: {fileID: 979058020}
   - 212: {fileID: 979058021}
+  - 114: {fileID: 979058023}
+  - 114: {fileID: 979058022}
   m_Layer: 0
   m_Name: Logoff btn
   m_TagString: Untagged
@@ -3399,6 +3427,30 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8e65f1e7d8c91be4f91398f422141a49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &979058022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 979058015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596beb1d8ba9c414db925fbebb5e01b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 10
+--- !u!114 &979058023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 979058015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a6795c6bbcdaa468b6ba857ed2bf42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 10
 --- !u!4 &987808946 stripped
 Transform:
   m_PrefabParentObject: {fileID: 478470, guid: 61e6eebeacc4ad14d9139cb1d60de9b0, type: 2}
@@ -5343,8 +5395,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547230107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .159999996, y: .400000006, z: 0}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_LocalPosition: {x: .159999996, y: .180000007, z: 0}
+  m_LocalScale: {x: 1.39999998, y: 1.39999998, z: 1}
   m_Children:
   - {fileID: 2084169802}
   m_Father: {fileID: 1707610616}
@@ -5933,7 +5985,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1707610609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .25, y: -29.1900005, z: -19.6328125}
+  m_LocalPosition: {x: .25, y: -29.0799999, z: -19.6328125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1547230108}
@@ -6123,6 +6175,8 @@ GameObject:
   - 114: {fileID: 1748716251}
   - 212: {fileID: 1748716253}
   - 95: {fileID: 1748716252}
+  - 114: {fileID: 1748716255}
+  - 114: {fileID: 1748716254}
   m_Layer: 0
   m_Name: Leaderboard btn
   m_TagString: Untagged
@@ -6220,6 +6274,30 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7fe0dedc77d22574da47491d8b383cba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1748716254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748716247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a6795c6bbcdaa468b6ba857ed2bf42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 10
+--- !u!114 &1748716255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748716247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596beb1d8ba9c414db925fbebb5e01b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  milliseconds: 10
 --- !u!1 &1763127057
 GameObject:
   m_ObjectHideFlags: 0
