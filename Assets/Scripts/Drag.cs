@@ -35,6 +35,7 @@ public class Drag : MonoBehaviour
         input.OnStart += input_OnTouch;
         input.OnStay += input_OnTouch;
         input.OnEnd += input_OffTouch;
+        input.OnCancel += input_OffTouch;
     }
 
     void input_OffTouch(object sender, PointEventArgs e)
