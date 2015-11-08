@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-[RequireComponent(typeof(Collider2D))]
 public class RepelColliders : MonoBehaviour
 {
     public float ExplosionStrength = 1400f;
+
+    void Start()
+    {
+        if (GetComponent<Collider2D>() == null)
+            throw new NullReferenceException("Collider2D is required for 'RepelColliders'");
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

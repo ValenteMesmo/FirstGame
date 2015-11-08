@@ -6,6 +6,7 @@ public class GlobalComponents : MonoBehaviour
     public static bool FlippersEnabled;
     public static List<Rigidbody2D> Balls = new List<Rigidbody2D>();
     public static bool HideFireflyWave;
+    public static bool WizardIsDead;
 
     private static GlobalComponents _global;
     protected static GlobalComponents Global
@@ -39,4 +40,5 @@ public class GlobalComponents : MonoBehaviour
     {
         return Global.GetComponent<T>();
     }
+
 }

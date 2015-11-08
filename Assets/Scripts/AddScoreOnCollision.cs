@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-[RequireComponent(typeof(Collider2D))]
 public class AddScoreOnCollision : MonoBehaviour
 {
     public int Amount = 10;
@@ -9,6 +9,9 @@ public class AddScoreOnCollision : MonoBehaviour
 
     void Start()
     {
+        if (GetComponent<Collider2D>() == null)
+            throw new NullReferenceException("Collider2D is required for 'RepelColliders'");
+
         ScoreDisplayBehaviour = GlobalComponents.Get<ScoreDisplayBehaviour>();
     }
 
