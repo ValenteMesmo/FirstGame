@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectPrefab: {fileID: 173008, guid: b862e17558c4eb64398ba24398fb4db7, type: 2}
+  CreateOnOtherColliderPosition: 0
 --- !u!114 &11430708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,6 +312,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 84e5708663912af4181f803de1ee8edd,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: CreateOnOtherColliderPosition
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153354}
