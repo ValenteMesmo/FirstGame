@@ -8,11 +8,11 @@ public class CreateObjectOnCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player")
+        //if (collision.collider.tag == "Player")
         {
             Vector2 pos;
             if (CreateOnOtherColliderPosition)
-                pos = collision.collider.transform.position;
+                pos = collision.contacts[0].point;
             else
                 pos = transform.position;
 

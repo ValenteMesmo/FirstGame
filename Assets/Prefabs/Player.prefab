@@ -64,6 +64,7 @@ GameObject:
   - 114: {fileID: 11425912}
   - 114: {fileID: 11403790}
   - 114: {fileID: 11488172}
+  - 114: {fileID: 11443220}
   m_Layer: 11
   m_Name: Body
   m_TagString: Player
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3999996, y: 28.1000004, z: 0}
+  m_LocalPosition: {x: 10.4700003, y: 40.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486288}
@@ -250,6 +251,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigidbody2D: {fileID: 5000222}
   speedToCHangeAnimation: 8
+--- !u!114 &11443220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49432ac9de8fcb44a959d6a46d768021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectPrefab: {fileID: 146118, guid: 00586b05d80eec24291db26113d3f686, type: 2}
+  CreateOnOtherColliderPosition: 1
 --- !u!114 &11444762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +323,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 880450911
-  m_SortingOrder: 12
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: 8a1ff18594a9564429fd4350a0289c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
