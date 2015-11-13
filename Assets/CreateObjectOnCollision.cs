@@ -8,6 +8,7 @@ public class CreateObjectOnCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.relativeVelocity.magnitude >= 10f)
         //if (collision.collider.tag == "Player")
         {
             Vector2 pos;
