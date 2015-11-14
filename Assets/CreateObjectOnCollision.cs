@@ -8,7 +8,8 @@ public class CreateObjectOnCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.relativeVelocity.magnitude >= 10f)
+
+        if(collision.relativeVelocity.magnitude >= 3f)
         //if (collision.collider.tag == "Player")
         {
             Vector2 pos;
@@ -18,6 +19,7 @@ public class CreateObjectOnCollision : MonoBehaviour
                 pos = transform.position;
 
             Instantiate(ObjectPrefab, pos, Quaternion.identity);
+
         }
     }
 }
