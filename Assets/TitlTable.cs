@@ -7,6 +7,7 @@ public class TitlTable : MonoBehaviour
     Camera Camera;
     Color CameraColor;
     public GameScreenController Controller;
+    public Animator CameraAnimator;
 
     IVibration vibrationHandler;
 
@@ -21,6 +22,9 @@ public class TitlTable : MonoBehaviour
 
         if (Controller == null)
             throw new NullReferenceException("GameScreenController");
+        if (CameraAnimator == null)
+            throw new NullReferenceException("CameraAnimator");
+        
         
         vibrationHandler = new VibrationHandler(this);
     }
@@ -36,7 +40,7 @@ public class TitlTable : MonoBehaviour
             else
                 ExecuteTilt(forceAmount);
             accelerometerOnCooldown = true;
-            DelayExecution(() => accelerometerOnCooldown = false, 0.5f);
+            DelayExecution(() => accelerometerOnCooldown = false, 1.0f);
         }
     }
 
@@ -69,11 +73,13 @@ public class TitlTable : MonoBehaviour
             DelayExecution(() =>
             {
                 if (GlobalComponents.FlippersEnabled)
+                    //TODO: remove this effect...
                     Camera.backgroundColor = CameraColor;
             }, 0.5f);
         }
 
-        vibrationHandler.Vibrate(300);
+        vibrationHandler.Vibrate(200);
+        CameraAnimator.SetTrigger("shake");
     }
 
     private void SetTiltCooldown()
