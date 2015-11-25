@@ -72,15 +72,17 @@ public class Drag : MonoBehaviour
         Vector2 curPosition = Camera.main.ScreenToWorldPoint(point);
 
         if (curPosition.y > Max.position.y && curPosition.y < MinPosition.y)
+        {
             //TODO: Vector3.MoveTowards
             transform.position = new Vector3(transform.position.x, curPosition.y, transform.position.z);
 
-        if (!vibrating && curPosition.y < yPreviousValue)
-        {
-            vibrating = true;
-            Vibration.Vibrate(5);
+            if (!vibrating && curPosition.y < yPreviousValue)
+            {
+                vibrating = true;
+                Vibration.Vibrate(5);
 
-            DelayExecution(() => vibrating = false, 0.1f);
+                DelayExecution(() => vibrating = false, 0.1f);
+            }
         }
         yPreviousValue = curPosition.y;
     }
