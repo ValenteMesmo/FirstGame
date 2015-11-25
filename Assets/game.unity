@@ -562,9 +562,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: .5}
   serializedVersion: 2
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 2, y: 3.5}
 --- !u!212 &192785700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5917,7 +5917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 192785698}
-  YValue: 14
+  YValue: 16
   ParameterName: fade
 --- !u!1 &1542797567
 GameObject:
