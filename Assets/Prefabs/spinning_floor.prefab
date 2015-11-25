@@ -11,10 +11,9 @@ GameObject:
   - 212: {fileID: 21247882}
   - 114: {fileID: 11432828}
   - 61: {fileID: 6158698}
-  - 114: {fileID: 11465036}
   - 114: {fileID: 11436464}
   - 95: {fileID: 9554266}
-  - 114: {fileID: 11489462}
+  - 114: {fileID: 11409114}
   m_Layer: 0
   m_Name: spinning_floor
   m_TagString: Untagged
@@ -28,9 +27,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174066}
-  m_LocalRotation: {x: 0, y: 0, z: .0925708711, w: .995706141}
-  m_LocalPosition: {x: -8.93000031, y: -.99000001, z: 10}
-  m_LocalScale: {x: 1.29999995, y: .800000012, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .224849761, w: .974393487}
+  m_LocalPosition: {x: -8.30000019, y: -2.88000011, z: 10}
+  m_LocalScale: {x: 1.5, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,6 +63,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11409114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ed1b0d9a639b64d843e8d96cbab884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 10
 --- !u!114 &11432828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,30 +87,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11436464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c9e7b837ef8af47aaedf2a93ef8fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParameterName: spin
---- !u!114 &11465036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb04151323f90743b81111174b120cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 10
---- !u!114 &11489462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
