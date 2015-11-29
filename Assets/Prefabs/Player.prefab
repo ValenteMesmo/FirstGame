@@ -61,10 +61,10 @@ GameObject:
   - 4: {fileID: 486288}
   - 58: {fileID: 5838438}
   - 50: {fileID: 5000222}
-  - 114: {fileID: 11425912}
   - 114: {fileID: 11403790}
   - 114: {fileID: 11488172}
   - 114: {fileID: 11443220}
+  - 114: {fileID: 11404430}
   m_Layer: 11
   m_Name: Body
   m_TagString: Player
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaximunRotationSpeed: 300
---- !u!114 &11425912
+--- !u!114 &11404430
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -234,10 +234,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 187244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffd81b917508f7343b33a884fe04b7ba, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a41c619cd26d14cbc6deb8f10dfdae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 2
+  CameraAnimator: {fileID: 0}
 --- !u!114 &11433300
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -651,7 +651,7 @@ GameObject:
   - 114: {fileID: 203006794}
   m_Layer: 0
   m_Name: top 1
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1292,9 +1292,10 @@ GameObject:
   - 114: {fileID: 272224248}
   - 114: {fileID: 272224244}
   - 114: {fileID: 272224247}
+  - 114: {fileID: 272224249}
   m_Layer: 0
   m_Name: MultiBallGoal
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1375,6 +1376,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e6f21b5116cf8479b287ae67e57c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &272224249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272224242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ed1b0d9a639b64d843e8d96cbab884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 20
 --- !u!1 &276417427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1640,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431600, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
@@ -1680,7 +1693,7 @@ GameObject:
   - 114: {fileID: 345542511}
   m_Layer: 0
   m_Name: bot 2
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2637,9 +2650,10 @@ GameObject:
   - 68: {fileID: 513220027}
   - 114: {fileID: 513220030}
   - 114: {fileID: 513220034}
+  - 114: {fileID: 513220028}
   m_Layer: 0
   m_Name: DeltaReflectorLeft
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2670,6 +2684,17 @@ EdgeCollider2D:
   m_Points:
   - {x: .0537739508, y: -.824838936}
   - {x: .154129431, y: .686016798}
+--- !u!114 &513220028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513220025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccd36f50375d514eb254df3639453f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &513220030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3316,6 +3341,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11404430, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: CameraAnimator
+      value: 
+      objectReference: {fileID: 1311622880}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
   m_IsPrefabParent: 0
@@ -3739,7 +3768,7 @@ GameObject:
   - 114: {fileID: 939504855}
   m_Layer: 0
   m_Name: bot 1
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4468,9 +4497,10 @@ GameObject:
   - 114: {fileID: 1154926769}
   - 114: {fileID: 1154926764}
   - 114: {fileID: 1154926765}
+  - 114: {fileID: 1154926770}
   m_Layer: 0
   m_Name: wizard
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4591,6 +4621,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1154926768}
+--- !u!114 &1154926770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154926761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccd36f50375d514eb254df3639453f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1170649705
 Prefab:
   m_ObjectHideFlags: 0
@@ -4924,6 +4965,7 @@ GameObject:
   - 114: {fileID: 1291723185}
   - 114: {fileID: 1291723187}
   - 114: {fileID: 1291723189}
+  - 114: {fileID: 1291723190}
   m_Layer: 0
   m_Name: GlobalComponents
   m_TagString: Untagged
@@ -5006,6 +5048,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6222a0f6b85634a8df0e4fcd6cb3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1291723190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291723183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd81b917508f7343b33a884fe04b7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 2
 --- !u!1 &1303233238
 GameObject:
   m_ObjectHideFlags: 0
@@ -5442,9 +5496,10 @@ GameObject:
   - 114: {fileID: 1379450647}
   - 95: {fileID: 1379450648}
   - 114: {fileID: 1379450645}
+  - 114: {fileID: 1379450649}
   m_Layer: 0
   m_Name: Firefly Orb
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5574,6 +5629,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1379450649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379450640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccd36f50375d514eb254df3639453f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1383848402 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
@@ -6680,7 +6746,7 @@ GameObject:
   - 114: {fileID: 1707610617}
   m_Layer: 0
   m_Name: Safe ball
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6829,7 +6895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431600, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 153354, guid: e8b57b4abbf4d7840a6ad5648e87089e, type: 2}
       propertyPath: m_Name
@@ -7315,7 +7381,7 @@ GameObject:
   - 114: {fileID: 1795758537}
   m_Layer: 0
   m_Name: top 2
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7993,9 +8059,10 @@ GameObject:
   - 68: {fileID: 1908717367}
   - 114: {fileID: 1908717365}
   - 114: {fileID: 1908717372}
+  - 114: {fileID: 1908717368}
   m_Layer: 0
   m_Name: DeltaReflectorLeft 2
-  m_TagString: Untagged
+  m_TagString: Vibrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8049,6 +8116,17 @@ EdgeCollider2D:
   m_Points:
   - {x: .0575862601, y: -.812525034}
   - {x: .218245745, y: .709912539}
+--- !u!114 &1908717368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908717363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccd36f50375d514eb254df3639453f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1908717369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8619,8 +8697,8 @@ Transform:
   - {fileID: 1975279484}
   - {fileID: 284382890}
   - {fileID: 641331589}
-  - {fileID: 199645545}
   - {fileID: 109064332}
+  - {fileID: 199645545}
   m_Father: {fileID: 465849490}
   m_RootOrder: 1
 --- !u!1001 &2082061397
