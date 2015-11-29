@@ -304,6 +304,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a51402f49bd778941b0be707ef4343ed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &87338241
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.4700003
+      objectReference: {fileID: 0}
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 40.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404430, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+      propertyPath: CameraAnimator
+      value: 
+      objectReference: {fileID: 1311622880}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &91809092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,52 +3348,6 @@ Transform:
   - {fileID: 1363558599}
   m_Father: {fileID: 523571543}
   m_RootOrder: 0
---- !u!1001 &711465171
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 10.4700003
-      objectReference: {fileID: 0}
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 40.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 470894, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404430, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-      propertyPath: CameraAnimator
-      value: 
-      objectReference: {fileID: 1311622880}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ac39c82f3afd88d46b441815432fa8ea, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &730089615
 Prefab:
   m_ObjectHideFlags: 0
