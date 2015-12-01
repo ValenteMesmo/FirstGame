@@ -4,7 +4,7 @@ using System.Collections;
 public class FreezeTimeOnCollision : MonoBehaviour
 {
     TimeScale timeScale;
-    float milliseconds = 30;
+    float milliseconds = 15;
 
     void Start()
     {

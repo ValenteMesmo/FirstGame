@@ -3,23 +3,20 @@ using System.Collections;
 
 public class HideEyesOnHighSpeed : MonoBehaviour
 {
-    public SpriteRenderer SpriteRenderer;
-    public Rigidbody2D Rigidbody2D;
+    private SpriteRenderer SpriteRenderer;
+    private Rigidbody2D Rigidbody2D;
 
     public float speedToCHangeAnimation = 8f;
-    Color oldCOlor;
-    Color invisible = new Color(0, 0, 0, 0);
+
     void Awake()
     {
-        oldCOlor = SpriteRenderer.color;
+        SpriteRenderer = transform.Find("Player Face").GetComponent<SpriteRenderer>();
+        Rigidbody2D = transform.Find("Player Bone").GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (IsMovingOnHighVelocity())
-            SpriteRenderer.color = invisible;
-        else
-            SpriteRenderer.color = oldCOlor;
+        SpriteRenderer.enabled = !IsMovingOnHighVelocity();
     }
 
     private bool IsMovingOnHighVelocity()

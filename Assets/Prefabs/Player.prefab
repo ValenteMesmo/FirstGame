@@ -317,8 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ee7416f8abe3d4d85e7a7b7ac5059f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteRenderer: {fileID: 21299380}
-  Rigidbody2D: {fileID: 5000222}
   speedToCHangeAnimation: 8
 --- !u!114 &11488020
 MonoBehaviour:
