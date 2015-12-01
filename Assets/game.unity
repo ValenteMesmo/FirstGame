@@ -965,14 +965,6 @@ Prefab:
       propertyPath: m_Name
       value: phantom wizard (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.x
-      value: -.0140000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.y
-      value: .32100001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
   m_IsPrefabParent: 0
@@ -2623,7 +2615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -3635,7 +3627,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409358, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 106558, guid: d0eed80ab5147e34fa1d55327e7db81d, type: 2}
       propertyPath: m_Name
@@ -7879,8 +7871,8 @@ Transform:
   - {fileID: 1689297973}
   - {fileID: 1951617429}
   - {fileID: 654082274}
-  - {fileID: 1896816791}
   - {fileID: 534067799}
+  - {fileID: 1896816791}
   m_Father: {fileID: 296705785}
   m_RootOrder: 10
 --- !u!1 &1855245626
