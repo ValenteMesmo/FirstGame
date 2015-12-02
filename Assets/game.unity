@@ -644,6 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2e4043f4474ad48a1f94f449e897b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraAnimator: {fileID: 1311622880}
   ExplosionPrefab: {fileID: 173008, guid: 76941de50471b0f45a98d26abf1d06dd, type: 2}
   Max: {fileID: 160311495}
   maxDistPerSecondGoingBack: 100

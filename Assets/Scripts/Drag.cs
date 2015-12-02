@@ -7,7 +7,7 @@ using UnitySolution.InputComponents;
 public class Drag : MonoBehaviour
 {
      private AudioClipPlus Audio;
-
+     public Animator CameraAnimator;
   
         
     private Vector2 screenPoint;
@@ -110,12 +110,13 @@ public class Drag : MonoBehaviour
                 {
                     var force = (MaxPowerLaunch / 100) * percentage;
 
-                    Vibration.Vibrate(50);
+                    
                     laucher.Launch(force);
                 }
             } 
         }
-
+        Vibration.Vibrate(50);
+        CameraAnimator.SetTrigger("easyShake");
         Audio.Play();
         Instantiate(ExplosionPrefab, transform.parent.transform.position, Quaternion.identity);
     }
