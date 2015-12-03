@@ -31,6 +31,7 @@ public class Drag : MonoBehaviour
         Vibration = new VibrationHandler(this);
         yPreviousValue = transform.position.y;
 
+        //CHANGE to the other touch component?
         var input = GlobalComponents.Get<DetectsTouchOnAnyCollidersInScene>();
         input.OnStart += input_OnTouch;
         input.OnStay += input_OnTouch;
@@ -81,7 +82,7 @@ public class Drag : MonoBehaviour
                 vibrating = true;
                 Vibration.Vibrate(5);
 
-                DelayExecution(() => vibrating = false, 0.1f);
+                DelayExecution(() => vibrating = false, 0.2f);
             }
         }
         yPreviousValue = curPosition.y;
@@ -115,7 +116,7 @@ public class Drag : MonoBehaviour
                 }
             } 
         }
-        Vibration.Vibrate(50);
+        Vibration.Vibrate(80);
         CameraAnimator.SetTrigger("easyShake");
         Audio.Play();
         Instantiate(ExplosionPrefab, transform.parent.transform.position, Quaternion.identity);
