@@ -82,7 +82,7 @@ public class Drag : MonoBehaviour
                 vibrating = true;
                 Vibration.Vibrate(5);
 
-                DelayExecution(() => vibrating = false, 0.2f);
+                DelayExecution(() => vibrating = false, 0.1f);
             }
         }
         yPreviousValue = curPosition.y;
